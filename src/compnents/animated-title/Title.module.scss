@@ -1,0 +1,25 @@
+@import "../../styles/var";
+
+.title {
+    margin: 100px auto;
+    max-width: 300px;
+
+    .main {
+        font-size: pxToRem(56px);
+        position: relative;
+        display: inline-block;
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            display: block;
+            transform: skew(0deg, -50deg);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            left: -40px;
+            background-color: transparent;
+        }
+    }
+}
