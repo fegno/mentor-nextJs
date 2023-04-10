@@ -2,6 +2,10 @@ import React from "react";
 import style from "./Contact.module.scss";
 import { INITIAL_VALUES, VALIDATION_SCHEMA } from "./schema";
 import { Formik, ErrorMessage } from "formik";
+import image from "../../assets/contact-vector.png";
+import arrow from "../../assets/arrow-right.png";
+import Container from "../container";
+
 const FormErrorField: React.FC<{ name: string }> = ({ name }) => {
   return (
     <ErrorMessage
@@ -15,13 +19,11 @@ const FormErrorField: React.FC<{ name: string }> = ({ name }) => {
 const ContactForm: React.FC = () => {
   const onSubmitHandler = () => {};
   return (
-    <section>
-      <div className={`container ${style.form}`}>
+    <Container>
+      <div className={`${style.form}`}>
         <div className="row">
-            <div className="col-12 mb-4">
-                <h1 className={style.title}>Apply</h1>
-            </div>
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-lg-5">
+            <h1 className={style.title}>Apply</h1>
             <Formik
               initialValues={INITIAL_VALUES}
               validationSchema={VALIDATION_SCHEMA}
@@ -41,7 +43,7 @@ const ContactForm: React.FC = () => {
                           value={values.name}
                           name="name"
                         />
-                        <FormErrorField  name="name" />
+                        <FormErrorField name="name" />
                       </div>
                       <div className={`col-12 ${style.wrapper}`}>
                         <input
@@ -53,7 +55,7 @@ const ContactForm: React.FC = () => {
                           value={values.email}
                           name="email"
                         />
-                         <FormErrorField  name="email" />
+                        <FormErrorField name="email" />
                       </div>
                       <div className={`col-12 ${style.wrapper}`}>
                         <input
@@ -65,7 +67,7 @@ const ContactForm: React.FC = () => {
                           value={values.mobile}
                           name="mobile"
                         />
-                         <FormErrorField  name="mobile" />
+                        <FormErrorField name="mobile" />
                       </div>
                       <div className={`col-12 ${style.wrapper}`}>
                         <input
@@ -77,7 +79,7 @@ const ContactForm: React.FC = () => {
                           value={values.state}
                           name="state"
                         />
-                         <FormErrorField  name="state" />
+                        <FormErrorField name="state" />
                       </div>
                       <div className={`col-12 ${style.wrapper}`}>
                         <input
@@ -89,10 +91,17 @@ const ContactForm: React.FC = () => {
                           value={values.course}
                           name="course"
                         />
-                         <FormErrorField  name="course" />
+                        <FormErrorField name="course" />
                       </div>
                       <div className="col-12">
-                        <button type="submit" className={style.submit}>Submit</button>
+                        <button type="submit" className={style.submit}>
+                          Submit
+                          <img
+                            src={arrow.src}
+                            alt="arrow"
+                            className={style.icon}
+                          />
+                        </button>
                       </div>
                     </div>
                   </form>
@@ -100,10 +109,14 @@ const ContactForm: React.FC = () => {
               }}
             </Formik>
           </div>
-          <div className="col-12 col-md-7"></div>
+          <div className="col-12 col-lg-7">
+            <div className={style.image_wrapper}>
+              <img src={image.src} />
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 export default ContactForm;

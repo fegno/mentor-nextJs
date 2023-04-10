@@ -1,36 +1,40 @@
 .header {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 50;
-    padding: 15px 0;
-    opacity: 0 ;
-    transform: translateY(-150px);
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  padding: 15px 0;
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: all ease 0.5s;
+  &.hide {
+    transform: translateY(-100%) !important;
+    transition: all ease 0.5s;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
 
-    .container {
-        width: 80%;
-        margin: 0 auto;
-    }
+  nav {
+    background-color: transparent;
+  }
 
-    nav {
-        background-color: transparent;
-    }
+  :global {
+    .navbar-nav {
+      margin-left: auto;
 
-    :global {
-        .navbar-nav {
-            margin-left: auto;
-
-            li {
-                &:not(:last-child) {
-                    margin: 0 15px;
-                }
-            }
+      li {
+        &:not(:last-child) {
+          margin: 0 15px;
         }
+      }
     }
+  }
 }
 
 .header a {
-    color: #fff !important;
+  color: #fff !important;
 }
