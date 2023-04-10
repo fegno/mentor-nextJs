@@ -10,11 +10,13 @@ import Header from "@/compnents/header";
 import Footer from "@/compnents/footer";
 import ContactForm from "@/compnents/contact-form";
 import Button from "@/compnents/button";
+import Courses from "@/compnents/courses";
 export default function Home() {
   return (
     <>
       <Header />
       <Banner />
+      <Courses />
       <section>
         <div className="container py-5">
           <div className="d-block card-glowing-blue p-5 rounded-20 animated-border-glow">
