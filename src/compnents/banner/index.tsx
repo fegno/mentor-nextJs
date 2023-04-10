@@ -59,29 +59,29 @@ const SplitedText: React.FC<{ text: string; className?: string }> = ({
 };
 const CAPTIONS = [
   {
-    line1: "Be yourself",
-    line2: "every",
-    highlight: "already",
+    line1: "Your future",
+    line2: "begins",
+    highlight: "here!",
   },
   {
-    line1: "I am selfish",
-    line2: "test and",
-    highlight: "little",
+    line1: "Your future",
+    line2: "begins",
+    highlight: "here!",
   },
   {
-    line1: "Be yourself",
-    line2: "every",
-    highlight: "already",
+    line1: "Your future",
+    line2: "begins",
+    highlight: "here!",
   },
   {
-    line1: "I am selfish",
-    line2: "test",
-    highlight: "insecure",
+    line1: "Your future",
+    line2: "begins",
+    highlight: "here!",
   },
   {
-    line1: "Be yourself",
-    line2: "every",
-    highlight: "already",
+    line1: "Your future",
+    line2: "begins",
+    highlight: "here!",
   },
 ];
 const Slider2: React.FC<any> = ({ caption, id }: any) => {
@@ -105,8 +105,8 @@ const Slider2: React.FC<any> = ({ caption, id }: any) => {
         <div>
           <p id={getSelector(id, "desc")}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since
+            industry. Lorem Ipsum has been the industry`&apos`s standard dummy
+            text ever since
           </p>
         </div>
       </div>
@@ -158,11 +158,11 @@ const Banner: React.FC = () => {
   useEffect(() => {
     interval.current = setTimeout(() => {
       setPopupVisibility(true);
-    }, 15000);
+    }, 2000);
     return () => {
       interval.current && clearTimeout(interval.current);
     };
-  }, [isPopupOpen]);
+  }, []);
   const onCloseHandle = useCallback(() => {
     setPopupVisibility(false);
   }, []);

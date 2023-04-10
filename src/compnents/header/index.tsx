@@ -1,19 +1,31 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./Header.module.scss";
 import logo from "../../assets/logo.png";
 import { gsap } from "gsap";
 const Header: React.FC = () => {
+  const [hideHeader, setHideHeader] = useState(false);
   const HEADER = useRef<any>(null);
   useEffect(() => {
     HEADER.current &&
       gsap.to(HEADER.current, {
-        y : 0,
-        opacity:  1 ,
-        duration : 1 
+        y: 0,
+        opacity: 1,
+        duration: 1,
       });
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            setHideHeader(true);
+          }else{
+            setHideHeader(false)
+          }
+        });
   }, []);
+
   return (
-    <header className={style.header} ref={HEADER}>
+    <header
+      className={`${style.header} ${hideHeader ? style.hide : ""}`}
+      ref={HEADER}
+    >
       <div className={style.container}>
         <nav className="navbar navbar-expand-lg">
           <a className="navbar-brand" href="#">

@@ -1,12 +1,24 @@
 .popup {
-    width: 480px;
-    height: 480px;
-    background-color: #474DD4;
-    position: fixed;
-    right: 30px;
-    bottom: 100px;
-    border-radius: 10px;
-    z-index: 9999;
-    transform: translateY(200%);
-    opacity: 0 ;
+  width: 480px;
+  height: 480px;
+  background-color: #474dd4;
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  border-radius: 10px;
+  z-index: 9999;
+  transform: translateY(200%);
+  opacity: 0;
+  .wrapper {
+    position: relative;
+    .close_button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+      font-size: 20px;
+    }
+  }
 }
