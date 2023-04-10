@@ -1,0 +1,12 @@
+.popup {
+    width: 480px;
+    height: 480px;
+    background-color: #474DD4;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    border-radius: 10px;
+    z-index: 9999;
+    transform: translateY(200%);
+    opacity: 0 ;
+}

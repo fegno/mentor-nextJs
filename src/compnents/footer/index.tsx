@@ -1,11 +1,24 @@
 import React from "react";
 import Link from "next/link";
+import logo from "../../assets/logo.png";
+import NewsletterForm from "../newsletter-form";
 const Footer: React.FC = () => {
   return (
-    <footer>
-      <div className="container">
+    <footer className="py-5">
+      <div className="container py-2">
         <div className="row">
-          <div className="col-3"></div>
+          <div className="col-3">
+            <div className="row">
+              <div className="col-12">
+                <a href="#">
+                  <img src={logo.src} alt="Mentor" />
+                </a>
+              </div>
+              <div className="col-12">
+                <NewsletterForm />
+              </div>
+            </div>
+          </div>
           <div className="col-3">
             <div className="d-block">Ettapilly</div>
             <div className="d-block">Mannathoor(PO)</div>
@@ -52,9 +65,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="row py-4">
-            <div className="col-12">
+          <div className="col-12">
             &copy; MENTOR COLLEGE OF ENGINEERING. ALL RIGHTS RESERVED
-            </div>
+          </div>
         </div>
       </div>
     </footer>

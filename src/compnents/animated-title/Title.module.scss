@@ -9,17 +9,85 @@
         position: relative;
         display: inline-block;
 
+        .title {
+            position: relative;
+            z-index: 2;
+        }
+
+        .wrapper {
+            width: 60px;
+            height: 60px;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            transition: all ease .2s;
+            transform: translateX(-20px);
+        }
+
         .icon {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             display: block;
             transform: skew(0deg, -50deg);
             position: absolute;
             top: 0;
             bottom: 0;
-            margin: auto 0;
-            left: -40px;
+            margin: aut00x;
             background-color: transparent;
+            box-shadow: 0 0 5px 0 #EB49C1;
+            transition: all ease .2s;
+            background-color: #1d1a2a;
+
+            &:nth-child(n+2) {
+                border: none !important;
+            }
+
+        }
+    }
+
+    &.pink {
+        .main .icon {
+            box-shadow: 0 0 5px 0 #EB49C1;
+            border: solid 1px #EB49C1;
+        }
+    }
+
+    &.blue {
+        .main .icon {
+            box-shadow: 0 0 5px 0 #008EF5;
+            border: solid 1px #008EF5;
+        }
+    }
+
+    &.green {
+        .main .icon {
+            box-shadow: 0 0 5px 0 #2B9064;
+            border: solid 1px #2B9064;
+        }
+    }
+
+    &:hover {
+        .main {
+            .wrapper {
+                transform: translateX(-20px) translateY(-25px);
+            }
+
+            .icon {
+                $distance : 10px;
+
+                &:nth-child(n+2) {
+                    opacity: 1;
+                }
+
+                @for $index from 1 through 10 {
+                    &:nth-child(#{$index}) {
+                        transform: skew(0deg, -50deg) translateY(#{$index*$distance});
+                        z-index: $index ;
+                    }
+                }
+            }
         }
     }
 }

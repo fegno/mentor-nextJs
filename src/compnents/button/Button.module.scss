@@ -1,0 +1,15 @@
+.button {
+    display: inline-block;
+    background: linear-gradient(180deg, #58B57A 0%, #0C7856 100%, #0C7856 100%), #000000;
+    box-shadow: 0px 0px 6px #228A60, inset 0px 0px 11px 2px #248B61;
+    border-radius: 20px;
+    color: #fff ;
+    font-weight: bold ;
+    height: 73px ;
+    font-size: 22px;
+    line-height: 73px ;
+    text-align: center ;
+    &.fullwidth{
+        width: 100% ;
+    }
+}

@@ -8,14 +8,16 @@ import Title from "@/compnents/title";
 import Banner from "@/compnents/banner";
 import Header from "@/compnents/header";
 import Footer from "@/compnents/footer";
+import ContactForm from "@/compnents/contact-form";
+import Button from "@/compnents/button";
 export default function Home() {
   return (
     <>
-    <Header />
-    <Banner />
+      <Header />
+      <Banner />
       <section>
         <div className="container py-5">
-          <div className="d-block card-glowing-blue p-5 rounded-20">
+          <div className="d-block card-glowing-blue p-5 rounded-20 animated-border-glow">
             <div className="row mb-4">
               <div className="col-8">
                 <Title align="left" title="Our Vision" />
@@ -39,18 +41,56 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="section-blue my-5" >
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-4">
-              <AnimatedTitle title="100%" subTitle="Placements" />
+              <AnimatedTitle title="100%" subTitle="Placements" color="pink" />
             </div>
             <div className="col-12 col-md-4">
-              <AnimatedTitle title="3-10" subTitle="Lakhs/Annum" />
+              <AnimatedTitle title="3-10" subTitle="Lakhs/Annum" color="blue" />
             </div>
             <div className="col-12 col-md-4">
-              <AnimatedTitle title="4 year" subTitle="Course duration" />
+              <AnimatedTitle title="4 year" subTitle="Course duration" color="green" />
             </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="row">
+          <div className="col-12 col-md-6">
+            <div className="card-violet animated-border-glow rounded-30 p-4">
+              <span className="d-block">TO TRAIN YOU</span>
+              <span className="d-block">TODAY FOR THE</span>
+              <span className="d-block">OPPORTUNITIES OF</span>
+              <span className="d-block">TOMORROW</span>
+            </div>
+          </div>
+          <div className="col-12 col-md-6">
+            <div className="card-black animated-border-glow rounded-30 p-4">
+              <div>
+                <p>
+                  At MADElT, we believe in differentiation and inclusivity. The
+                  education model focuses on project-based learning and
+                  teamwork, rather than theoretical education. As we integrate
+                  the latest educational innovations, our goal is to empower the
+                  next leading generation of IT talent.
+                </p>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    We have mentors and mentees instead of teachers and students
+                  </li>
+                  <li>Capstone ( project) -BASED PEDAGOGY</li>
+                  <li>PEER-TO-PEER LEARNING</li>
+                  <li>GAMIFICATION</li>
+                  <li>Chief technical officers as MENTORS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -120,27 +160,33 @@ export default function Home() {
             </div>
             <div className="col-12 col-md-5 p-4">
               <div className="row">
-                <div className="col-12 card-blue p-5 rounded-20">
+                <div className="col-12 card-blue p-5 rounded-20 mb-4">
                   <div className="d-block">
-                    <p>The Web`&apos;`s Largest Collection of DevOps Content</p>
+                    <p>The Web's Largest Collection of DevOps Content</p>
                   </div>
                   <div className="d-block">
                     <strong> Mentor College</strong> | 20-Jan-2023
                   </div>
                 </div>
-                <div className="col-12 card-ash p-5 rounded-20">
+                <div className="col-12 card-ash p-5 rounded-20 mb-4">
                   <div className="d-block">
-                    <p>The Web`&apos;`s Largest Collection of DevOps Content</p>
+                    <p>The Web's Largest Collection of DevOps Content</p>
                   </div>
                   <div className="d-block">
                     <strong> Mentor College</strong> | 20-Jan-2023
                   </div>
                 </div>
               </div>
+              <div className="row">
+                <div className="col-12 px-0">
+                  <Button width="fullwidth" href="/">View all news and blog</Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <ContactForm />
       <Footer />
     </>
   );
