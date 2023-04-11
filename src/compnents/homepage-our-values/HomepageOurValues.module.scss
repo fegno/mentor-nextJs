@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // background-image: radial-gradient((30% 30% at 0% 30%, #3391FF 0%, rgba(71, 77, 212, 0) 100%));
     .card_left {
       margin-right: -70px;
       position: relative;
@@ -49,6 +50,9 @@
     line-height: 36px;
     font-size: _rem(18px);
     position: relative;
+    .unordered_list{
+      list-style: url("../../assets/list-style.png")
+    }
     .card_header {
       position: absolute;
       max-width: 448px;

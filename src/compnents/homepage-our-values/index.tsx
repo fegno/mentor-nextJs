@@ -32,7 +32,7 @@ const HomepageOurValues: React.FC = () => {
             </p>
           </div>
           <div>
-            <ul>
+            <ul className={style.unordered_list}>
               <li>
                 We have mentors and mentees instead of teachers and students
               </li>

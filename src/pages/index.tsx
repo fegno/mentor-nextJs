@@ -16,11 +16,17 @@ import HomepageOurVision from "@/compnents/homepage-our-vision";
 import Container from "@/compnents/container";
 import HomepageOurValues from "@/compnents/homepage-our-values";
 import HomepageBenefits from "@/compnents/homepage-benefits";
+import HomePageClassroom from "@/compnents/class-room";
 export default function Home() {
   return (
     <>
       <Header />
       <Banner />
+      <section className="my-5">
+        <Container>
+          <HomePageClassroom />
+        </Container>
+      </section>
       <section className="my-5 py-5">
         <Container>
           <HomepageOurVision />

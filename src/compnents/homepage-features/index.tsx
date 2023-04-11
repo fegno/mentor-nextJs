@@ -1,19 +1,20 @@
 import React from "react";
 import style from "./HomepageFeatures.module.scss";
 import AnimatedTitle from "../animated-title";
+import Container from "../container";
 
 const HomepageFeatures: React.FC = () => {
   return (
     <div className={style.homepage_features}>
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-md-4">
+      <Container>
+        <div className={style.inner_wrapper}>
+          <div className={style.item}>
             <AnimatedTitle title="100%" subTitle="Placements" color="pink" />
           </div>
-          <div className="col-12 col-md-4">
+          <div className={style.item}>
             <AnimatedTitle title="3-10" subTitle="Lakhs/Annum" color="blue" />
           </div>
-          <div className="col-12 col-md-4">
+          <div className={style.item}>
             <AnimatedTitle
               title="4 year"
               subTitle="Course duration"
@@ -21,7 +22,7 @@ const HomepageFeatures: React.FC = () => {
             />
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
