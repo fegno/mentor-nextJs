@@ -15,6 +15,7 @@ import HomepageFeatures from "@/compnents/homepage-features";
 import HomepageOurVision from "@/compnents/homepage-our-vision";
 import Container from "@/compnents/container";
 import HomepageOurValues from "@/compnents/homepage-our-values";
+import HomepageBenefits from "@/compnents/homepage-benefits";
 export default function Home() {
   return (
     <>
@@ -30,31 +31,10 @@ export default function Home() {
           <HomepageOurValues />
         </Container>
       </section>
-      <section>
-        <div className="container py-5">
-          <div className="row">
-            <div className="col-12">
-              <Title title="Your Benefits" />
-            </div>
-          </div>
-          <div className="row py-5 justify-content-center">
-            <div className="col-12 col-md-4">
-              <BenefitsCard title="Not Just a job : A Career" />
-            </div>
-            <div className="col-12 col-md-4">
-              <BenefitsCard title="Capstone (project) - Based Pedagogy" />
-            </div>
-            <div className="col-12 col-md-4">
-              <BenefitsCard title="Peer to peer learning" />
-            </div>
-            <div className="col-12 col-md-4">
-              <BenefitsCard title="Gamification" />
-            </div>
-            <div className="col-12 col-md-4">
-              <BenefitsCard title="Chief technical officers as entors" />
-            </div>
-          </div>
-        </div>
+      <section className="py-5 my-5">
+        <Container>
+          <HomepageBenefits />
+        </Container>
       </section>
       <section className="my-5">
         <HomepageFeatures />

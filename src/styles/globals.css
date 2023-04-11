@@ -64,7 +64,7 @@ a {
     box-shadow: 0px 0px 6px #474dd4, inset 0px 0px 11px 2px #474dd4;
   }
   50% {
-    box-shadow: 0px 0px 15px #474dd4, inset 0px 0px 30px 2px #474dd4;
+    box-shadow: 0px 0px 15px #474dd4, inset 0px 0px 15px 2px #474dd4;
   }
   100% {
     box-shadow: 0px 0px 6px #474dd4, inset 0px 0px 11px 2px #474dd4;
