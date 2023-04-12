@@ -40,7 +40,7 @@ const BannerPopup: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
         <button className={style.close_button}>
           <MdClose />
         </button>
-        <img src={banner.src} alt="banner" />
+        <img src={banner.src} alt="banner" className={style.image}/>
       </div>
     </div>
   );

@@ -102,7 +102,7 @@ const Slider2: React.FC<any> = ({ caption, id }: any) => {
             </span>
           </div>
         </h1>
-        <div>
+        <div className={style.description}>
           <p id={getSelector(id, "desc")}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry`&apos`s standard dummy

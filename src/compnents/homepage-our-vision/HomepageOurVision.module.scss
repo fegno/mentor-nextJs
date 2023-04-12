@@ -1,0 +1,12 @@
+@import "../../styles/var";
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    @include phone{
+        .spinner_wrapper{
+            display: none;
+        }
+    }
+}
