@@ -15,7 +15,7 @@ const HomepageNewsAndBlog: React.FC = () => {
         <div className="row">
           <div className="col-12 col-md-7 p-4">
             <div className="row">
-              <div className="col-12 card-gray rounded-20 p-5">
+              <div className={`col-12 card-gray rounded-20 p-5 ${style.card}`}>
                 <div className="d-block">
                   <div className="d-block">
                     <h3>
@@ -44,7 +44,7 @@ const HomepageNewsAndBlog: React.FC = () => {
             </div>
           </div>
           <div className="col-12 col-md-5 p-4">
-            <div className="row">
+            <div className={`row ${style.trending_news}`}>
               <div className="col-12 card-blue p-5 rounded-20 mb-4">
                 <div className="d-block">
                   <p>The Web`&apos;`s Largest Collection of DevOps Content</p>

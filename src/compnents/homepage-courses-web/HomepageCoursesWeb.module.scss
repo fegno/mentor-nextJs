@@ -1,0 +1,155 @@
+@import "../../styles/var";
+
+.courses_wrapper {
+  position: relative;
+  font-family: "Be Vietnam Pro", sans-serif;
+  .course_icon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    img {
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: screen;
+    }
+    &.top_left {
+      top: 22%;
+      left: 27.5%;
+    }
+    &.top-right {
+      top: 17%;
+      left: 57.5%;
+    }
+    &.middle-left {
+      top: 47%;
+      left: 17%;
+    }
+    &.middle-right {
+      top: 36%;
+      left: 77.5%;
+    }
+    &.bottom-left {
+      top: 66%;
+      left: 37%;
+    }
+    &.bottom-right {
+      top: 62%;
+      left: 67%;
+    }
+  }
+  .course_title {
+    position: absolute;
+    width: 161px;
+    line-height: 24px;
+    color: #f0f0f0;
+    &.top_left {
+      top: 23%;
+      right: 77%;
+      text-align: right;
+    }
+    &.top-right {
+      top: 19%;
+      left: 67%;
+      text-align: left;
+    }
+    &.middle-left {
+      top: 50%;
+      right: 88%;
+      text-align: right;
+    }
+    &.middle-right {
+      top: 38%;
+      left: 88%;
+      text-align: left;
+    }
+    &.bottom-left {
+      top: 69%;
+      right: 68%;
+      text-align: right;
+    }
+    &.bottom-right {
+      top: 64%;
+      left: 77%;
+      text-align: left;
+    }
+  }
+  .particle_canvas {
+    // background-color: rgba(red, 0.2);
+    width: 10%;
+    height: 28%;
+    position: absolute;
+    left: -0.5%;
+    top: 0;
+    right: 0;
+    margin: auto;
+    bottom: 8%;
+    .inner_wrapper {
+      position: relative;
+      height: 100%;
+      .title {
+        font-weight: 700;
+        font-size: _rem(40px);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .particles {
+        // background-color: rgba(red, 0.5);
+        position: absolute;
+        inset: 0;
+      }
+    }
+  }
+
+  @include double-extra-large-screen {
+    .course_icon {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  @include extra-large-screen {
+    .course_icon {
+      width: 80px;
+      height: 80px;
+    }
+    .course_title {
+      font-size: _rem(14px);
+    }
+    .particle_canvas{
+        .inner_wrapper{
+            .title{
+                font-size: _rem(30px);
+            }
+        }
+    }
+  }
+  @include large-screen {
+    .course_icon {
+      width: 70px;
+      height: 70px;
+    }
+    .course_title {
+      font-size: _rem(12px);
+    }
+    .particle_canvas{
+        .inner_wrapper{
+            .title{
+                font-size: _rem(20px);
+            }
+        }
+    }
+  }
+  @media screen and (max-width: 100px) {
+    .course_icon {
+      width: 65px;
+      height: 65px;
+    }
+  }
+  @include small-screen {
+    .course_icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

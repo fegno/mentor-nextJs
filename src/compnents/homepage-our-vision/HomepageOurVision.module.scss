@@ -1,12 +1,29 @@
 @import "../../styles/var";
-
-.header{
+.our_vision {
+    padding: 50px 27px;
+  .header {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    @include phone{
-        .spinner_wrapper{
-            display: none;
-        }
+    @include phone {
+      .spinner_wrapper {
+        display: none;
+      }
     }
+  }
+  @include tab {
+    padding:26px 12px 30px 12px ;
+    h4 {
+      font-size: _rem(16px);
+      text-align: center;
+      line-height: 24.5px;
+      margin-bottom: 12px;
+    }
+    p{
+        color: #B5B5B5;
+        font-size: _rem(13px);
+        line-height: 20px;
+        text-align: center;
+    }
+  }
 }

@@ -5,10 +5,12 @@ import NewsletterForm from "../newsletter-form";
 import Container from "../container";
 import style from "./Footer.module.scss";
 import { CONST } from "./Const";
+import Whatsapp from "../whatsapp";
 
 const Footer: React.FC = () => {
   return (
     <footer className={`${style.footer}`}>
+      <Whatsapp />
       <Container>
         <div className="row">
           <div className="col-12 col-lg-6 col-xl-3 mb-4">

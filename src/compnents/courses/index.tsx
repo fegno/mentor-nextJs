@@ -5,19 +5,36 @@ import React, {
   useLayoutEffect,
   useState,
 } from "react";
-import brain from "../../assets/brain.png";
-import ReactDOM from "react-dom"
+import brain from "../../assets/gif/head.gif";
+import ReactDOM from "react-dom";
 import { gsap } from "gsap";
-import style from "./Courses.module.scss" ;
+import style from "./Courses.module.scss";
 import NoSSR from "react-no-ssr";
-const IconImage  = ( { left , top } : any )=>{
-  if( typeof document === 'undefined'){
-      return null ;
+
+const calculateLeft = (left: number, right: number) => {
+  let image_width = 100;
+  let diff = (right - left - image_width) / 2;
+  let _left = left + diff;
+  return _left;
+};
+const calculateTop = (top: number, bottom: number) => {
+  let image_height = 100;
+  let diff = (bottom - top - image_height) / 2;
+  let _top = top + diff;
+  return _top;
+};
+
+const IconImage = ({ left, top, right }: any) => {
+  if (typeof document === "undefined") {
+    return null;
   }
-  return ReactDOM.createPortal(<div style={{left,top}} className={style.image}>
-    <img src={brain.src}  />
-  </div>,document.getElementById("courses") as any );
-}
+  return ReactDOM.createPortal(
+    <div style={{ left, top }} className={style.image}>
+      <img src={brain.src} style={{ width: "100px", height: "100px" }} />
+    </div>,
+    document.getElementById("courses") as any
+  );
+};
 const Box: React.FC<any> = ({
   box,
   gradient,
@@ -34,23 +51,25 @@ const Box: React.FC<any> = ({
   const lightEle = useRef<any>(null);
   const [titleConfig, setConfig] = useState({});
   const timer = useRef<any>(null);
+
   useEffect(() => {
     if (lightEle.current) {
-      timer.current && clearTimeout( timer.current );
-      timer.current  = setTimeout(() => {
-        const { left, top } = lightEle.current.getBoundingClientRect();
-        console.log( left , top );
+      timer.current && clearTimeout(timer.current);
+      timer.current = setTimeout(() => {
+        const { left, top, right, bottom } =
+          lightEle.current.getBoundingClientRect();
+        calculateLeft(left, right);
         setConfig({
-           left,
-           top : top - offset.top ,
+          left: calculateLeft(left, right),
+          top: calculateTop(top, bottom)-offset.top,
         });
       });
     }
-  }, [ offset ]);
+  }, [offset]);
   return (
     <g>
       <NoSSR>
-      <IconImage {...titleConfig} />
+        <IconImage {...titleConfig} />
       </NoSSR>
       <linearGradient id={lightId} gradientUnits="userSpaceOnUse" {...light}>
         <stop offset="0" style={{ stopColor: "#474DD4" }}></stop>
@@ -89,7 +108,7 @@ const Box: React.FC<any> = ({
       <path
         fill={`url(#${radialGradient})`}
         stroke="#71B0CA"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d={d2}
       ></path>
       <path fill="#474DD4" d={d3}></path>
@@ -105,7 +124,7 @@ const Courses: React.FC = () => {
     }
   }, []);
   return (
-    <div ref={wrapper} className={style.wrapper} id="courses" >
+    <div ref={wrapper} className={style.wrapper} id="courses">
       <svg
         version="1.1"
         id="Layer_1"
@@ -113,14 +132,14 @@ const Courses: React.FC = () => {
         x="0px"
         y="0px"
         viewBox="0 0 1920 1080"
-        enable-background="new 0 0 1920 1080"
+        enableBackground="new 0 0 1920 1080"
       >
         <g>
           <g>
             <line
               fill="none"
               stroke="#71B0CA"
-              stroke-miterlimit="10"
+              strokeMiterlimit="10"
               x1="579.9"
               y1="405.3"
               x2="1334.4"
@@ -129,7 +148,7 @@ const Courses: React.FC = () => {
             <line
               fill="none"
               stroke="#71B0CA"
-              stroke-miterlimit="10"
+              strokeMiterlimit="10"
               x1="371.3"
               y1="675"
               x2="1536.3"
@@ -138,7 +157,7 @@ const Courses: React.FC = () => {
             <line
               fill="none"
               stroke="#71B0CA"
-              stroke-miterlimit="10"
+              strokeMiterlimit="10"
               x1="763.8"
               y1="888.2"
               x2="1154.5"
@@ -345,7 +364,7 @@ const Courses: React.FC = () => {
             <path
               fill="url(#SVGID_00000075874466280803105240000010510974538768836003_)"
               stroke="#71B0CA"
-              stroke-miterlimit="10"
+              strokeMiterlimit="10"
               d="      M1076.1,609c0,5.2-1.5,10.2-4.2,15c-14.1,24.4-61.6,42.4-118,42.4s-104-18-118-42.4c-2.7-4.8-4.2-9.8-4.2-15      c0-31.7,54.7-57.4,122.2-57.4S1076.1,577.3,1076.1,609z"
             ></path>
             <linearGradient
@@ -379,7 +398,7 @@ const Courses: React.FC = () => {
           <path
             fill="none"
             stroke="#71B0CA"
-            stroke-miterlimit="10"
+            strokeMiterlimit="10"
             d="M371,675.2"
           ></path>
           <g opacity="0.8">

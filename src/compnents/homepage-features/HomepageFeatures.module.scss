@@ -10,12 +10,17 @@
   .inner_wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 100px 0;     
-    @include small-screen {
-      display: block;
-      .item{
-        &:not(:last-child){
-            margin-bottom: 100px;
+    padding: 100px 0;
+  }
+  @include small-screen {
+    background: transparent;
+    .inner_wrapper {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .item {
+        &:not(:last-child) {
+          margin-bottom: 100px;
         }
       }
     }

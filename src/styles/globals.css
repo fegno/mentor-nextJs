@@ -61,17 +61,17 @@ a {
 }
 @keyframes glowing-blue {
   0% {
-    box-shadow: 0px 0px 6px #474dd4, inset 0px 0px 11px 2px #474dd4;
+    box-shadow: 0px 0px 3px #474dd4, inset 0px 0px 5px 2px #474dd4;
   }
   50% {
-    box-shadow: 0px 0px 15px #474dd4, inset 0px 0px 15px 2px #474dd4;
+    box-shadow: 0px 0px 8px #474dd4, inset 0px 0px 8px 2px #474dd4;
   }
   100% {
-    box-shadow: 0px 0px 6px #474dd4, inset 0px 0px 11px 2px #474dd4;
+    box-shadow: 0px 0px 3px #474dd4, inset 0px 0px 10px 2px #474dd4;
   }
 }
 .animated-border-glow {
-  box-shadow: 0px 0px 6px #474dd4, inset 0px 0px 11px 2px #474dd4;
+  box-shadow: 0px 0px 3px #4a51cc, inset 0px 0px 11px 2px #474dd4;
   animation: glowing-blue 4s infinite;
 }
 .card-glowing-blue {

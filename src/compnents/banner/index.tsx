@@ -2,12 +2,13 @@ import react, { useEffect, useRef, useState, useCallback } from "react";
 import style from "./Banner.module.scss";
 import Slider from "react-slick";
 import bg from "../../assets/bg.jpg";
+import bg_small from "../../assets/bg-small.png";
 import BannerPopup from "../banner-popup";
 import { gsap } from "gsap";
 const SETTINGS = {
   slidesToShow: 1,
   dots: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 3000,
 };
 const SETTINGS_2 = {
@@ -27,7 +28,7 @@ const Slide: React.FC<{ image: string; id: string }> = ({ image, id }) => {
     <div
       className={style.slide}
       style={{
-        backgroundImage: `url(${bg.src})`,
+        backgroundImage: `url(${bg_small.src})`,
       }}
     ></div>
   );
@@ -62,29 +63,18 @@ const CAPTIONS = [
     line1: "Your future",
     line2: "begins",
     highlight: "here!",
+    description:
+      "Experience the willingness of new changes in learning, something new to learn to be the movers and shakers for the making of anindefinite future.",
   },
   {
-    line1: "Your future",
-    line2: "begins",
-    highlight: "here!",
-  },
-  {
-    line1: "Your future",
-    line2: "begins",
-    highlight: "here!",
-  },
-  {
-    line1: "Your future",
-    line2: "begins",
-    highlight: "here!",
-  },
-  {
-    line1: "Your future",
-    line2: "begins",
-    highlight: "here!",
+    line1: "Stay ahead",
+    line2: "of the",
+    highlight: "Curve",
+    description:
+      "Stay ahead of the curve with our tech education that prepares you for the ever-evolving industry landscape. Our program empowers you with the latest skills and knowledge to excel in tomorrow's job market.",
   },
 ];
-const Slider2: React.FC<any> = ({ caption, id }: any) => {
+const Slider2: React.FC<any> = ({ caption, id ,description}: any) => {
   return (
     <div className={style.slide2}>
       <div className={style.inner}>
@@ -104,9 +94,7 @@ const Slider2: React.FC<any> = ({ caption, id }: any) => {
         </h1>
         <div className={style.description}>
           <p id={getSelector(id, "desc")}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry`&apos`s standard dummy
-            text ever since
+           {description}
           </p>
         </div>
       </div>
@@ -178,7 +166,7 @@ const Banner: React.FC = () => {
                 ref={slider1}
                 asNavFor={sliderContent as any}
               >
-                {"12345".split("").map((item) => {
+                {"12".split("").map((item) => {
                   return (
                     <Slide
                       key={item}
@@ -195,8 +183,8 @@ const Banner: React.FC = () => {
                   afterChange={onAfterChange}
                   beforeChange={beforeChange}
                 >
-                  {CAPTIONS.map((item, index) => {
-                    return <Slider2 key={item} caption={item} id={index} />;
+                  {CAPTIONS.map((item:any, index) => {
+                    return <Slider2 key={item} caption={item} id={index} description={item.description}/>;
                   })}
                 </Slider>
               </div>

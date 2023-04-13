@@ -1,0 +1,130 @@
+@import "../../styles/var";
+
+.courses_mobile_wrapper {
+  position: relative;
+  .large_hologram {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 220px;
+    .large_hologram_image {
+      max-width: 330px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      z-index: 1;
+      img {
+        width: 100%;
+      }
+      .title_wrapper {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .title {
+          font-size: _rem(28px);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .course {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 10px;
+    .hologram_wrapper {
+      position: relative;
+      .couse_vector {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 85px;
+        height: 85px;
+        margin: auto;
+        mix-blend-mode: screen;
+      }
+    }
+    .couse_title {
+      max-width: 300px;
+      width: 100%;
+      font-family: "Be Vietnam Pro", sans-serif;
+      line-height: 24px;
+    }
+    &.right {
+      text-align: right;
+      justify-content: flex-end;
+      .couse_title {
+        order: -1;
+      }
+    }
+  }
+  .line {
+    position: absolute;
+    background-color: #71b0ca;
+    &.large_top {
+      width: 100%;
+      height: 1.5px;
+      top: 15%;
+      left: 0;
+      right: 0;
+    }
+    &.right {
+      height: 69%;
+      width: 1.5px;
+      top: 15%;
+      left: 0;
+    }
+    &.left {
+      height: 83%;
+      width: 1.5px;
+      top: 15%;
+      right: 0;
+    }
+    &.first_left {
+      width: 25px;
+      height: 1.5px;
+      top: 28%;
+    }
+    &.first_right {
+      width: 25px;
+      height: 1.5px;
+      top: 42%;
+      right: 0;
+    }
+    &.second_left {
+      width: 25px;
+      height: 1.5px;
+      top: 56%;
+    }
+    &.second_right {
+      width: 25px;
+      height: 1.5px;
+      top: 70%;
+      right: 0;
+    }
+    &.third_left {
+      width: 25px;
+      height: 1.5px;
+      top: 84%;
+    }
+    &.third_right {
+      width: 25px;
+      height: 1.5px;
+      top: 98%;
+      right: 0;
+    }
+  }
+}

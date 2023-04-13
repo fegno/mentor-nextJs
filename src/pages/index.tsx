@@ -18,18 +18,23 @@ import Container from "@/compnents/container";
 import HomepageOurValues from "@/compnents/homepage-our-values";
 import HomepageBenefits from "@/compnents/homepage-benefits";
 import HomePageClassroom from "@/compnents/class-room";
+import NoSSR from "react-no-ssr";
+import HomepageCourses from "@/compnents/homepage-courses";
 export default function Home() {
   return (
     <>
       <Header />
       <Banner />
-      <section>
-        <Courses />
-      </section>
-      <section className="my-5">
+      <section className="mt-5">
         <Container>
           <HomePageClassroom />
         </Container>
+      </section>
+      {/* <section>
+          <Courses />
+      </section> */}
+      <section>
+        <HomepageCourses />
       </section>
       <section className="my-5 py-5">
         <Container>
@@ -52,7 +57,7 @@ export default function Home() {
       <section className="pt-5">
         <ContactForm />
       </section>
-      <section>
+      <section className="my-5">
         <HomepageNewsAndBlog />
       </section>
       <Footer />

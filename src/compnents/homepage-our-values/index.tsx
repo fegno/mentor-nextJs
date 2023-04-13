@@ -6,7 +6,7 @@ const HomepageOurValues: React.FC = () => {
     <div className={`row ${style.our_values}`}>
       <div className={`col-12 col-lg-5 ${style.card_left_wrapper}`}>
         <div
-          className={`card-violet animated-border-glow rounded-30 p-5 ${style.card_left}`}
+          className={`card-violet card-glowing-blue animated-border-glow rounded-30 p-5 ${style.card_left}`}
         >
           <div className={style.count_tag}>
             <span>01</span>
@@ -19,9 +19,9 @@ const HomepageOurValues: React.FC = () => {
       </div>
       <div className="col-12 col-lg-7">
         <div
-          className={`card-black animated-border-glow rounded-30 p-5 ${style.card_right}`}
+          className={`card-black animated-border-glow card-glowing-blue rounded-30 p-5 ${style.card_right}`}
         >
-            <div className={`card-violet animated-border-glow rounded-30 ${style.card_header}`}>Our Values</div>
+            <div className={`card-violet animated-border-glow card-glowing-blue rounded-30 ${style.card_header}`}>Our Values</div>
           <div>
             <p>
               At MADElT, we believe in differentiation and inclusivity. The

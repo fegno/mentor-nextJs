@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import style from "./Header.module.scss";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 import { gsap } from "gsap";
 const Header: React.FC = () => {
   const [hideHeader, setHideHeader] = useState(false);
