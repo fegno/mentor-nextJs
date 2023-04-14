@@ -23,7 +23,7 @@ const getSelector = (id: number, type: string) => {
   return `_item_${id}_${type}`;
 };
 const SPILTTED_CLASS_NAME = "splited-item";
-const Slide: React.FC<{ image: string; id: string }> = ({ image, id }) => {
+const Slide: React.FC<{ image: string; id: any }> = ({ image, id }) => {
   return (
     <div
       className={style.slide}
@@ -156,7 +156,7 @@ const Banner: React.FC = () => {
   }, []);
   return (
     <section>
-      <BannerPopup isOpen={isPopupOpen} onClose={onCloseHandle} />
+      {/* <BannerPopup isOpen={isPopupOpen} onClose={onCloseHandle} /> */}
       <div className="container-fluid" ref={wrapper}>
         <div className="row">
           <div className="col-12 p-0">
@@ -166,11 +166,11 @@ const Banner: React.FC = () => {
                 ref={slider1}
                 asNavFor={sliderContent as any}
               >
-                {"12".split("").map((item) => {
+                {CAPTIONS.map((item,index) => {
                   return (
                     <Slide
-                      key={item}
-                      id={item}
+                      key={index}
+                      id={index}
                       image={`https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.besthdwallpaper.com%2Fmusic%2Fle-sserafim-all-members-kpop-girls-group-dt_en-US-100024.html&psig=AOvVaw3dhXb_V_LIuDi8OlZo0Jvs&ust=1679924045431000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIDjr_fa-f0CFQAAAAAdAAAAABAE`}
                     />
                   );

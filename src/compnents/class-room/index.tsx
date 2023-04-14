@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "./ClassRoom.module.scss";
-import classroom from "../../assets/classroom.png";
+import classroom from "../../assets/traditional classroom.svg";
 import classroom_mobile from "../../assets/classroom-mobile-svg.svg";
 
 const HomePageClassroom: React.FC = () => {

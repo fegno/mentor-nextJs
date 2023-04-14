@@ -1,49 +1,76 @@
-import React from "react";
+import React, { useRef } from "react";
 import style from "./HomepageOurValues.module.scss";
+import OurValuesSlide from "../ou-values-slide";
+import Slider from "react-slick";
+import { VALUES } from "./const";
+import arrow from "../../assets/arrow.svg";
+
+const Arrow = () => {
+  return (
+    <button
+      className={`${style.arrow} ${style.prev}`}
+    >
+      <img src={arrow.src} />
+    </button>
+  );
+};
 
 const HomepageOurValues: React.FC = () => {
+  const sliderRef: any = useRef(null);
+
+  //Slider settings
+  const settings = {
+    dots: false,
+    infinite: true,
+    fade: true,
+    arrows: false,
+    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow:<Arrow />
+  };
+
+  const nextSlideHandle = () => {
+    sliderRef.current.slickNext();
+    console.log(sliderRef.current);
+  };
+
+  const previousSlidehandle = () => {
+    sliderRef.current.slickPrev();
+  };
+
   return (
-    <div className={`row ${style.our_values}`}>
-      <div className={`col-12 col-lg-5 ${style.card_left_wrapper}`}>
-        <div
-          className={`card-violet card-glowing-blue animated-border-glow rounded-30 p-5 ${style.card_left}`}
-        >
-          <div className={style.count_tag}>
-            <span>01</span>
-          </div>
-          <span className="d-block">TO TRAIN YOU</span>
-          <span className="d-block">TODAY FOR THE</span>
-          <span className="d-block">OPPORTUNITIES OF</span>
-          <span className="d-block">TOMORROW</span>
-        </div>
+    <div className={style.our_values}>
+      <div
+        className={`card-violet animated-border-glow card-glowing-blue rounded-30 ${style.card_header}`}
+      >
+        Our Values
       </div>
-      <div className="col-12 col-lg-7">
-        <div
-          className={`card-black animated-border-glow card-glowing-blue rounded-30 p-5 ${style.card_right}`}
-        >
-            <div className={`card-violet animated-border-glow card-glowing-blue rounded-30 ${style.card_header}`}>Our Values</div>
-          <div>
-            <p>
-              At MADElT, we believe in differentiation and inclusivity. The
-              education model focuses on project-based learning and teamwork,
-              rather than theoretical education. As we integrate the latest
-              educational innovations, our goal is to empower the next leading
-              generation of IT talent.
-            </p>
-          </div>
-          <div>
-            <ul className={style.unordered_list}>
-              <li>
-                We have mentors and mentees instead of teachers and students
-              </li>
-              <li>Capstone ( project) -BASED PEDAGOGY</li>
-              <li>PEER-TO-PEER LEARNING</li>
-              <li>GAMIFICATION</li>
-              <li>Chief technical officers as MENTORS</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+
+      <Slider {...settings} ref={sliderRef}>
+        {VALUES.map((slide: any, index: number) => {
+          return (
+            <div className={style.slide} key={index}>
+              <OurValuesSlide data={slide} index={index} />
+            </div>
+          );
+        })}
+      </Slider>
+
+      <button
+        className={`${style.arrow} ${style.prev}`}
+        onClick={previousSlidehandle}
+      >
+        <img src={arrow.src} />
+      </button>
+
+      <button
+        className={`${style.arrow} ${style.next}`}
+        onClick={nextSlideHandle}
+        disabled={false}
+      >
+        <img src={arrow.src} />
+      </button>
     </div>
   );
 };

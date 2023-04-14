@@ -21,6 +21,13 @@ import HomePageClassroom from "@/compnents/class-room";
 import NoSSR from "react-no-ssr";
 import HomepageCourses from "@/compnents/homepage-courses";
 export default function Home() {
+  <Head>
+    <link
+      rel="shortcut icon"
+      href="/public/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </Head>;
   return (
     <>
       <Header />
@@ -30,9 +37,6 @@ export default function Home() {
           <HomePageClassroom />
         </Container>
       </section>
-      {/* <section>
-          <Courses />
-      </section> */}
       <section>
         <HomepageCourses />
       </section>

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Contact.module.scss";
 import { INITIAL_VALUES, VALIDATION_SCHEMA } from "./schema";
 import { Formik, ErrorMessage } from "formik";
-import image from "../../assets/contact-vector.png";
-import arrow from "../../assets/arrow-right.png";
+import image from "../../assets/Form_vector.svg";
+import arrow from "../../assets/arrow-right.svg";
 import Container from "../container";
+import sgMail from "@sendgrid/mail";
 
 const FormErrorField: React.FC<{ name: string }> = ({ name }) => {
   return (
@@ -17,11 +18,33 @@ const FormErrorField: React.FC<{ name: string }> = ({ name }) => {
   );
 };
 const ContactForm: React.FC = () => {
-  const onSubmitHandler = () => {};
+  // sgMail.setApiKey(
+  //   "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"
+  // );
+
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const onSubmitHandler = async () => {
+    // const msg = {
+    //   to: "manoj@gmail.com",
+    //   from: "contact@mentoracademy.co.in",
+    //   subject: "Subject of the email",
+    //   text: "Body of the email",
+    // };
+    // await sgMail
+    //   .send(msg)
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    setIsSuccess(true)
+  };
   return (
     <Container>
       <div className={`${style.form}`}>
-        <div className="row">
+        <div className="row" style={{ alignItems: "center" }}>
           <div className="col-12 col-lg-5">
             <h1 className={style.title}>Apply</h1>
             <Formik
@@ -93,6 +116,9 @@ const ContactForm: React.FC = () => {
                         />
                         <FormErrorField name="course" />
                       </div>
+                      {isSuccess && <div className="col-12" style={{color:"green"}}>
+                       Application submitted
+                      </div>}
                       <div className="col-12">
                         <button type="submit" className={style.submit}>
                           Submit

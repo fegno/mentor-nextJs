@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Whatsapp.module.scss";
-import icon from "../../assets/whatsapp.png";
+import icon from "../../assets/whatsapp.svg";
 import Link from "next/link";
 
 const Whatsapp: React.FC = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import * as Yup from "yup";
 import { Formik } from "formik";
 import style from "./NewsletterForm.module.scss" ;
-import icon from "../../assets/arrow-right-blue.png";
+import icon from "../../assets/arrow-right-blue.svg";
 
 const SCHEMA = Yup.object().shape({
   email: Yup.string().email().required(),

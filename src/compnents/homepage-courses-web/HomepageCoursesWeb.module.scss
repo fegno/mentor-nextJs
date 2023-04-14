@@ -4,8 +4,8 @@
   position: relative;
   font-family: "Be Vietnam Pro", sans-serif;
   .course_icon {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     position: absolute;
     img {
       width: 100%;
@@ -13,28 +13,28 @@
       mix-blend-mode: screen;
     }
     &.top_left {
-      top: 22%;
-      left: 27.5%;
+      top: 23%;
+      left: 26.5%;
     }
     &.top-right {
-      top: 17%;
-      left: 57.5%;
+      top: 18%;
+      left: 57%;
     }
     &.middle-left {
       top: 47%;
-      left: 17%;
+      left: 16.5%;
     }
     &.middle-right {
-      top: 36%;
-      left: 77.5%;
+      top: 37%;
+      left: 77%;
     }
     &.bottom-left {
-      top: 66%;
-      left: 37%;
+      top: 67%;
+      left: 36.5%;
     }
     &.bottom-right {
-      top: 62%;
-      left: 67%;
+      top: 63%;
+      left: 66.5%;
     }
   }
   .course_title {

@@ -1,3 +1,8 @@
+import facebook from "../../assets/facebook.svg";
+import linkedin from "../../assets/linkedin.svg";
+import instagram from "../../assets/instagram.svg";
+import reddit from "../../assets/reddit.svg";
+
 export const CONST = {
     MENU:[
         {
@@ -17,5 +22,11 @@ export const CONST = {
         {title:"B.Tech CSE IOT",link:"/"},
         {title:"B.Tech CSE CYBER SECURITY",link:"/"},
         {title:"B.Tech CSE BLOCKCHAIN",link:"/"},
+    ],
+    SOCIAL_LINKS :[
+     {title:"Facebook",icon: facebook.src,link:"https://www.facebook.com/MADEITMENTOR/"},
+     {title:"LinkedIn",icon: linkedin.src,link:"https://www.instagram.com/__mentor_academy__/"},
+     {title:"Instagram",icon: instagram.src,link:"https://www.linkedin.com/company/mentor-engineering-college/"},
+     {title:"Reddit",icon: reddit.src,link:"https://www.reddit.com/user/Mentorow"},
     ]
 }
