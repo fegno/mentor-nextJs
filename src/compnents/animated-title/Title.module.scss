@@ -91,5 +91,16 @@
   }
   @include small-screen{
     margin: auto;
+    padding-left: 10px;
+    .main{
+      font-size: _rem(34px);
+      .icon{
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .sub{
+      font-size: _rem(14px);
+    }
   }
 }

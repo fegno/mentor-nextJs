@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import style from "./Header.module.scss";
 import logo from "../../assets/logo.svg";
 import { gsap } from "gsap";
+import Link from "next/link";
 const Header: React.FC = () => {
   const [hideHeader, setHideHeader] = useState(false);
   const HEADER = useRef<any>(null);
@@ -28,9 +29,9 @@ const Header: React.FC = () => {
     >
       <div className={style.container}>
         <nav className="navbar navbar-expand-lg">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" href="/">
             <img src={logo.src} alt="Mentor" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -46,24 +47,29 @@ const Header: React.FC = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" href="#">
                   Admisson
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" href="#">
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" href="/course-listing">
+                  Courses
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="#">
                   Blog
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" href="#">
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

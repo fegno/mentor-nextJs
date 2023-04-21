@@ -1,0 +1,12 @@
+@import "../../styles/var";
+
+.course_listing {
+  .card_wrapper {
+    margin-bottom: 70px;
+  }
+  @include small-screen {
+    .card_wrapper {
+      margin-bottom: 100px;
+    }
+  }
+}

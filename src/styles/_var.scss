@@ -1,13 +1,13 @@
-@use 'sass:math';
+@use "sass:math";
 @import "./mixin";
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Urbanist:wght@100;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Urbanist:wght@100;400&display=swap");
 
-
-$colors : (
-    "pink" : #EB82B8,
-    "blue" :#0066F0,
-    "green" : #0C7856
+$colors: (
+  "pink": #eb82b8,
+  "blue": #0066f0,
+  "green": #0c7856,
+  "secondary-text": #b5b5b5,
 );
 @function pxToRem($pxValue) {
-    @return math.div($pxValue, 16px) * 1rem; 
+  @return math.div($pxValue, 16px) * 1rem;
 }

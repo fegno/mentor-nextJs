@@ -18,9 +18,11 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
+      gap: 0 50px;
+      padding: 0;
       .item {
         &:not(:last-child) {
-          margin-bottom: 100px;
+          margin-bottom: 50px;
         }
       }
     }

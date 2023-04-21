@@ -1,0 +1,105 @@
+@import "../../styles/var";
+
+.course_card {
+  min-height: 580px;
+  margin-right: -18%;
+  &.left {
+    margin-left: -18%;
+    margin-right: auto;
+    .image_wrapper {
+      order: -1;
+    }
+    .data_wrapper {
+      justify-content: end;
+      .inner_wrapper {
+        padding-left: 40px;
+        padding-right: 0;
+      }
+    }
+  }
+  .data_wrapper {
+    display: flex;
+    align-items: center;
+    .inner_wrapper {
+      max-width: 796px;
+      padding-right: 40px;
+      padding-left: 0;
+      .title {
+        font-size: _rem(56px);
+        line-height: 66px;
+        margin-bottom: 12px;
+      }
+      .description {
+        font-size: _rem(18px);
+        line-height: 36px;
+        color: map-get($colors, "secondary-text");
+        margin-bottom: 26px;
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      .btn_wrapper {
+        button {
+          background: #000;
+          border: 2px solid map-get($colors, "green");
+          padding: 10px;
+          outline: none;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          .icon {
+            margin-left: 12px;
+            line-height: 0;
+          }
+        }
+      }
+    }
+  }
+  .image_wrapper {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+    }
+  }
+  @include small-screen {
+    margin-right: auto;
+    min-height: auto;
+    &.left {
+      margin-left: auto;
+      .data_wrapper {
+        justify-content: center;
+        .inner_wrapper {
+          padding: 0;
+        }
+      }
+    }
+    .data_wrapper {
+      justify-content: center;
+      text-align: center;
+      .inner_wrapper {
+        padding: 0;
+        .title {
+          font-size: _rem(26px);
+          line-height: 31px;
+          margin-bottom: 15px;
+        }
+        .description {
+          font-size: _rem(16px);
+          line-height: 30px;
+          margin-bottom: 20px;
+        }
+        .btn_wrapper {
+          button {
+            margin: auto;
+            font-size: _rem(12px);
+          }
+        }
+      }
+    }
+    .image_wrapper {
+      justify-content: center;
+      order: -1;
+    }
+  }
+}

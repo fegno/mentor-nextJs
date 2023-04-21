@@ -1,0 +1,35 @@
+@import "../../styles/var";
+
+.course_tab {
+  .title {
+    font-size: _rem(56px);
+    line-height: 66px;
+    margin-bottom: 20px;
+  }
+  .tabs_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    .tab {
+      min-width: 212px;
+      height: 60px;
+      background-color: transparent;
+      // border: none;
+      outline: none;
+      background: linear-gradient(
+          104.81deg,
+          rgba(68, 135, 235, 0.3) 3.66%,
+          rgba(14, 50, 176, 0.3) 101.42%
+        ),
+        #000000;
+      font-size: _rem(18px);
+      border-radius: 16px;
+      box-shadow: 0px 0px 6px #474dd4, inset 0px 0px 11px 2px #474dd4;
+      opacity: 0.6;
+      border: 2px solid rgba(#fff, 0.4);
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

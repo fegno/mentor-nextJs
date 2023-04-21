@@ -151,6 +151,42 @@
   background-clip: content-box;
 }
 
+/*home page style start*/
+
+.courses{
+  margin-bottom: 200px;
+}
+.our_vision{
+  margin-bottom: 250px;
+}
+.our_values{
+  margin-bottom: 200px;
+}
+.benefits{
+  margin-bottom: 200px;
+}
+.features{
+  margin-bottom: 200px;
+}
+@media screen and (max-width:991px){
+  .courses{
+    margin-bottom: 80px;
+  }
+  .our_vision{
+    margin-bottom: 60px;
+  }
+  .our_values{
+    margin-bottom: 60px;
+  }
+  .benefits{
+    margin-bottom: 0;
+  }
+  .features{
+    margin-bottom: 80px;
+  }
+}
+/*home page style end*/
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

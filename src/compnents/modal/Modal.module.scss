@@ -1,0 +1,27 @@
+.custom_modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  z-index: 99;
+  padding: 115px 150px 115px 90px;
+  transform: translateY(100%);
+  transition: all ease 0.7s;
+  &.open{
+   transform: translateY(0);
+  }
+  .inner_wrapper {
+    position: relative;
+    padding-right: 100px;
+    .btn_close {
+      background: transparent;
+      border: none;
+      outline: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
