@@ -13,13 +13,13 @@ const Header: React.FC = () => {
         opacity: 1,
         duration: 1,
       });
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 300) {
-            setHideHeader(true);
-          }else{
-            setHideHeader(false)
-          }
-        });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        setHideHeader(true);
+      } else {
+        setHideHeader(false);
+      }
+    });
   }, []);
 
   return (
@@ -46,24 +46,29 @@ const Header: React.FC = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
+              <li className="nav-item">
                 <Link className="nav-link" href="#">
-                  Admisson
+                  Introduction
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" href="#">
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="/course-listing">
-                  Courses
+                  Curriculum
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" href="#">
-                  Blog
+                  Campus
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="#">
+                  Events
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="#">
+                  News and blog
                 </Link>
               </li>
               <li className="nav-item">
