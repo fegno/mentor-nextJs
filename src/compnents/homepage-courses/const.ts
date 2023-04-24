@@ -6,10 +6,10 @@ import iot from "../../assets/gif/iot.gif"
 import blockchain from "../../assets/gif/blockchain.gif"
 export const COURSES = [
     {
-      title: "Btech in Artificial Intelligence and Machine Learning",
+      title: "B.Tech in Artificial Intelligence and Machine Learning",
       gif: intellegence.src,
       clasname: "top_left",
-      text: "Btech in Artificial Intelligence and Machine Learning",
+      text: "B.Tech in Artificial Intelligence and Machine Learning",
       details:[
         {title:"Skills"},
         {title:"Market Growth"},
@@ -17,33 +17,33 @@ export const COURSES = [
       ]
     },
     {
-      title: "Btech in Artificial Intelligence and Data Science",
+      title: "B.Tech in Artificial Intelligence and Data Science",
       gif: data_science.src,
       clasname: "top-right",
-      text: "Btech in Artificial Intelligence and Data Science",
+      text: "B.Tech in Artificial Intelligence and Data Science",
     },
     {
-      title: "Btech in Cloud Computing",
+      title: "B.Tech in Cloud Computing",
       gif: cloud.src,
       clasname: "middle-left",
-      text: "Btech in Cloud Computing",
+      text: "B.Tech in Cloud Computing",
     },
     {
-      title: "Btech in Cyber Security",
+      title: "B.Tech in Cyber Security",
       gif: cyber_security.src,
       clasname: "middle-right",
-      text: "Btech in Cyber Security",
+      text: "B.Tech in Cyber Security",
     },
     {
-      title: "Btech in Internet of Things",
+      title: "B.Tech in Internet of Things",
       gif: iot.src,
       clasname: "bottom-left",
-      text: "Btech in Internet of Things",
+      text: "B.Tech in Internet of Things",
     },
     {
-      title: "Btech in Blockchain",
+      title: "B.Tech in Blockchain",
       gif: blockchain.src,
       clasname: "bottom-right",
-      text: "Btech in Blockchain",
+      text: "B.Tech in Blockchain",
     },
   ];

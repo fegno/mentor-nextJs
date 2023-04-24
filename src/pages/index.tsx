@@ -10,7 +10,7 @@ import HomepageOurValues from "@/compnents/homepage-our-values";
 import HomepageBenefits from "@/compnents/homepage-benefits";
 import HomePageClassroom from "@/compnents/class-room";
 
-import HomepageCourses from "@/compnents/homepage-courses";
+import HomepageCourses from "../compnents/homepage-courses";
 
 
 export default function Home() {

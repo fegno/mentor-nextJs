@@ -27,7 +27,7 @@ const HomepageCoursesMobile: React.FC<coursesMobileProps> = ({
         <div className={style.large_hologram_image}>
           <img src={large_holog.src} alt="holo" />
           <div className={style.title_wrapper}>
-            <div className={style.title}>BTech CSE</div>
+            <div className={style.title}>B.Tech CSE</div>
             <div className={style.sub_title}>Courses</div>
           </div>
         </div>
