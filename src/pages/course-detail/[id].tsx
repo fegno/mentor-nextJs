@@ -26,20 +26,22 @@ const CourseDetail: React.FC = () => {
 
   return (
     <div className={style.course_detail}>
-      <Container>
-        <>
-          <section>
-            <CourseListingCard data={DETAILS.section1} />
-          </section>
-          {/* <section>
+      <div className={style.bg_group}>
+        <Container>
+          <>
+            <section>
+              <CourseListingCard data={DETAILS.section1} />
+            </section>
+            {/* <section>
             <CourseDetailVideoSection data={DETAILS.video_section} />
         </section> */}
-          <section>
-            <CourseDetailFeatures />
-          </section>
-        </>
-      </Container>
-      <div className={style.bg_group}>
+            <section>
+              <CourseDetailFeatures />
+            </section>
+          </>
+        </Container>
+      </div>
+      <div>
         <Container>
           <section className={` ${style.fit} ${style.center}`}>
             <CourseDetailAbout />
@@ -49,14 +51,16 @@ const CourseDetail: React.FC = () => {
           </section>
         </Container>
       </div>
-      <Container>
-        <section className={style.mentors}>
-          <Mentors />
-        </section>
-        <section>
-          <CourseDetailOtherCourses />
-        </section>
-      </Container>
+      <div className={style.bg_group}>
+        <Container>
+          <section className={style.mentors}>
+            <Mentors />
+          </section>
+          <section>
+            <CourseDetailOtherCourses />
+          </section>
+        </Container>
+      </div>
     </div>
   );
 };
