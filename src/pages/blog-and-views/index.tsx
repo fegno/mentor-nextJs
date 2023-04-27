@@ -8,6 +8,7 @@ import UI from '../../assets/ultra_intelligence.png';
 import Connectivity from '../../assets/5g_connectivity.png';
 import CC from '../../assets/cloud_computing.png';
 import AI from '../../assets/artificial_intelligence.png';
+import Link from "next/link";
 
 const Blogs : React.FC = () => {
     const ITEMS=[
@@ -56,7 +57,9 @@ const Blogs : React.FC = () => {
                     {ITEMS.map((blog : any ,index : number)=>{
                         return(
                             <div className={`${style.blog_card_wrapper}`} key={index}>
+                                <Link href="/event-detail/1">
                                 <BlogCard data={blog} />
+                                </Link>
                             </div>
                         )
                     })}

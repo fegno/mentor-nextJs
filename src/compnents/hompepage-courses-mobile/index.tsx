@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./HomepageCoursesMobile.module.scss";
 import large_holog from "../../assets/big_hologram.svg";
 import small_holog from "../../assets/small_hologram.svg";
+import CustomModal from "../modal";
+import CoursesTab from "../courses-tab";
 
 type coursesMobileProps = {
   courses: any;
@@ -10,8 +12,24 @@ type coursesMobileProps = {
 const HomepageCoursesMobile: React.FC<coursesMobileProps> = ({
   courses,
 }: any) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState(0);
+
+  const handleCourseClick = (index: number) => {
+    setIsModalOpen(true);
+    setSelectedCourse(index);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+  let course = courses[selectedCourse];
   return (
     <div className={style.courses_mobile_wrapper}>
+      <CustomModal isOpen={isModalOpen} close={handleCloseModal}>
+        <CoursesTab data={course} />
+      </CustomModal>
+
       {/* lines start */}
       <div className={`${style.line} ${style.large_top}`}></div>
       <div className={`${style.line} ${style.right}`}></div>
@@ -41,6 +59,7 @@ const HomepageCoursesMobile: React.FC<coursesMobileProps> = ({
                 index % 2 == 0 ? style.left : style.right
               }`}
               key={index}
+              onClick={()=>{handleCourseClick(index)}}
             >
               <div className={style.hologram_wrapper}>
                 <img

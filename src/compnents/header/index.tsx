@@ -22,6 +22,14 @@ const Header: React.FC = () => {
     });
   }, []);
 
+  const MENUS = [
+    { title: "Introduction", link: "#" },
+    { title: "Curriculum", link: "/course-listing" },
+    { title: "Campus", link: "#" },
+    { title: "Events", link: "/events" },
+    { title: "News and blog", link: "/blog-and-views" },
+    { title: "Contact Us", link: "#" },
+  ];
   return (
     <header
       className={`${style.header} ${hideHeader ? style.hide : ""}`}
@@ -46,36 +54,15 @@ const Header: React.FC = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Introduction
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Curriculum
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Campus
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Events
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  News and blog
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Contact Us
-                </Link>
-              </li>
+              {MENUS.map((menu: any, index: number) => {
+                return (
+                  <li className="nav-item" key={`menu-${index}`}>
+                    <Link className="nav-link" href={menu.link}>
+                      {menu.title}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </nav>

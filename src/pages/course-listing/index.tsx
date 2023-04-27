@@ -2,9 +2,11 @@ import React from "react";
 import style from "./CourseListing.module.scss";
 import CourseListingCard from "@/compnents/course-listing-card";
 import Container from "@/compnents/container";
-import ml from "../../assets/course-listing/ml-ai.svg";
+import ml from "../../assets/course-listing/machine-learning-examples-applications 1.png";
+import artificial from "../../assets/course-listing/cio_ai_intelligence_idea copy.png";
+import cloud from "../../assets/course-listing/cloud-storage-background-business-network-design 1.png";
+import cyber from "../../assets/course-listing/Frame 93.png";
 const CourseListing: React.FC = () => {
-
   const COURSES = [
     {
       title: "Machine Learning and AI",
@@ -18,21 +20,21 @@ const CourseListing: React.FC = () => {
       description:
         "Machine learning is a branch of AI that gives computer systems the ability to automatically learn and improve from experience, rather than being explicitly programmed. In machine learning.",
       slug: "",
-      image: ml.src,
+      image: artificial.src,
     },
     {
       title: "Cloud Computing",
       description:
         "Machine learning is a branch of AI that gives computer systems the ability to automatically learn and improve from experience, rather than being explicitly programmed. In machine learning.",
       slug: "",
-      image: ml.src,
+      image: cloud.src,
     },
     {
       title: "Cyber Security",
       description:
         "Machine learning is a branch of AI that gives computer systems the ability to automatically learn and improve from experience, rather than being explicitly programmed. In machine learning.",
       slug: "",
-      image: ml.src,
+      image: cyber.src,
     },
     {
       title: "Btech in Internet of Things",
@@ -55,7 +57,12 @@ const CourseListing: React.FC = () => {
         {COURSES.map((course: any, index: number) => {
           return (
             <div className={style.card_wrapper} key={index}>
-              <CourseListingCard imageLeft={index % 2 !== 0} data={course}/>
+              <CourseListingCard
+                imageLeft={index % 2 !== 0}
+                marginRight={index % 2 == 0}
+                data={course}
+                showDetailButton
+              />
             </div>
           );
         })}

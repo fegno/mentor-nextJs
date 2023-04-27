@@ -1,0 +1,155 @@
+@import "../../styles/var";
+
+.card {
+  .profile_pic {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .data_wrapper {
+    display: flex;
+    align-items: center;
+    font-family: "Be Vietnam Pro", sans-serif;
+    .inner_wrapper {
+      .head {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+        margin-bottom: 3px;
+        width: 100%;
+        .name {
+          font-size: _rem(24px);
+          color: #f3f3f3;
+          line-height: 36px;
+          font-weight: 700;
+        }
+        .linkedin_logo {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .qualification {
+        font-size: _rem(18px);
+        line-height: 22px;
+        color: #c1c1c1;
+        margin-bottom: 15px;
+      }
+      .border {
+        width: 324px;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          rgba(86, 179, 121, 0) 9.38%,
+          #3fa16e 22.92%,
+          #0d7856 53.65%,
+          rgba(86, 179, 121, 0) 100%
+        );
+        border-radius: 3px;
+      }
+      .experiences {
+        margin-top: 36px;
+        .title {
+          font-size: _rem(18px);
+          color: #474dd4;
+          line-height: 22px;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+        .experience {
+          display: flex;
+          gap: 0 5px;
+          font-size: _rem(18px);
+          line-height: 30px;
+          .position {
+            color: #848484;
+          }
+          .company {
+            color: #f4f4f4;
+            font-weight: 500;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  &.align_right {
+    .data_wrapper {
+      order: -1;
+      justify-content: flex-end;
+      .inner_wrapper {
+        text-align: right;
+        .head {
+          justify-content: end;
+          .name {
+            order: 1;
+          }
+        }
+        .experiences {
+          .experience {
+            justify-content: end;
+          }
+        }
+      }
+    }
+  }
+  @include tab {
+    .image_wrapper {
+      text-align: center;
+      .profile_pic {
+        max-width: 300px;
+        margin: auto;
+      }
+    }
+    .data_wrapper {
+      order: 0;
+      justify-content: center;
+      .inner_wrapper {
+        text-align: center;
+        .head {
+          justify-content: center;
+          .name {
+            order: 0;
+            font-size: _rem(20px);
+          }
+        }
+        .qualification {
+          font-size: _rem(14px);
+          line-height: 20px;
+          margin-bottom: 20px;
+        }
+        .experiences {
+          margin-top: 22px;
+          .title {
+            font-size: _rem(16px);
+          }
+          .experience {
+            justify-content: center;
+            font-size: _rem(13px);
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    &.align_right {
+      .data_wrapper {
+        order: 0;
+        justify-content: center;
+        .inner_wrapper {
+          text-align: center;
+          .head {
+            justify-content: center;
+            margin-bottom: 13px;
+            .name {
+              order: 0;
+            }
+          }
+          .experiences {
+            .experience {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

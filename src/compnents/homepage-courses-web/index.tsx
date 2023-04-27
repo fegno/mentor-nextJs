@@ -23,9 +23,9 @@ const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses }: any) => {
   let course = courses[selectedCourse];
   return (
     <div className={style.courses_wrapper}>
-      {/* <CustomModal isOpen={isModalOpen} close={handleCloseModal}>
+      <CustomModal isOpen={isModalOpen} close={handleCloseModal}>
         <CoursesTab data={course}/>
-      </CustomModal> */}
+      </CustomModal>
       <img src={baase_image.src} alt="courses" />
       {courses.map((course: any, index: number) => {
         return (

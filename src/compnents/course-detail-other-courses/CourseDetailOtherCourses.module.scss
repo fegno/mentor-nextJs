@@ -1,0 +1,16 @@
+@import "../../styles/var";
+.other_courses {
+  .title {
+    font-size: _rem(42px);
+    line-height: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .description {
+    color: #dbdbdb;
+    font-size: _rem(18px);
+    line-height: 36px;
+    max-width: 977px;
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+}
