@@ -1,0 +1,26 @@
+.form_container{
+    Form{
+        max-width: 670px;
+    }
+    input{
+        width: 100%;
+        padding: 14px 0;
+        margin: 10px 0;
+        border: none;
+        background-color: #000000;
+        border-bottom: 1px solid #686868;
+    }
+    input:focus{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #686868 ;
+    }
+    button{
+        border: 1px solid #646464;
+        background-color: #000000;
+        margin-top: 50px;
+        width: 100%;
+        padding: 20px;
+        color: #F4F4F4;
+    }
+}

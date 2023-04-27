@@ -1,0 +1,108 @@
+@import "../../styles/var";
+
+.event_detail_container{
+    .event_banner_img {
+        img{
+        width: 100%;
+        border-radius: 19px;
+        }
+    }
+    .event_detail_head{
+        font-size: _rem(42px);
+        line-height: 49px;
+        color: #DFDFDF;
+        margin: 60px 0 26px;
+    }
+    .event_details{
+        font-family: "Be Vietnam Pro", sans-serif;
+        font-weight: 600;
+        font-size: _rem(22px);
+        line-height: 18px;
+        margin-bottom: 60px;
+        .eve_type{
+            color: #474DD4;
+            margin: 26px 0;
+        }
+        .eve_value{
+            color: #AEAEAE;
+        }
+    }
+    .eve_dec{
+        p{
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-weight: 400;
+            font-size: _rem(18px);
+            line-height: 36px;
+            margin: 40px 0;
+            color: #AEAEAE;
+        }
+    }
+    .event_sponsors{
+        margin-top: 60px;
+        .sponsor_heading{
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-weight: 600;
+            font-size: _rem(22px);
+            line-height: 18px;
+            color: #474DD4;
+            margin-bottom: 38px;
+        }
+        .sponsors_img{
+            display: flex;
+            justify-content: space-between;
+            gap: 0 10px;
+            img{
+                border-radius: 18px;
+                width: 100%;
+                max-width: 260px;
+                max-height: 170px;
+                min-width: 120px;
+                min-height: 120;
+            }
+        }
+    }
+    @include phone{
+        .event_banner_img{
+            img{
+                border-radius: 8px;
+            }
+        }
+        .event_detail_head{
+            font-size: _rem(26px) ;
+            line-height: 30px;
+            color: #fff;
+            margin:25px 0 24px;
+        }
+        .event_details{
+            font-size: _rem(16px);
+            line-height: 18px;
+            margin-bottom: 35px;
+        }
+        .eve_dec{
+            p{
+                font-size:_rem(16px);
+                line-height: 30px;
+                color: #b5b5b5;
+            }
+        }
+        .event_sponsors{
+            margin-top: 40px;
+            .sponsor_heading{
+                font-size:_rem(16px);
+                line-height: 18px;
+                margin-bottom: 20px;
+            } 
+            .sponsors_img{
+                flex-wrap: wrap;
+                justify-content: start;
+                gap: 10px;
+                img{
+                    min-width: 70px;
+                    min-height: 49px;
+                    border-radius: 0;
+                    max-width: 76px;
+                }
+            }
+        }
+    }
+}

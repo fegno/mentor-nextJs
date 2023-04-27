@@ -1,0 +1,27 @@
+@import "../../styles/var";
+.event_container{
+    .event_name{
+        width: 100%;
+        max-width: 260px;
+    }
+    .event_count{
+        font-weight: 400;
+        font-size: _rem(18px);
+        line-height: 36px;
+        color: #737373;
+        float: right;
+        font-family:" Be Vietnam Pro", sans-serif;
+    }
+
+    @media only screen and (max-width:600px){
+        .event_count{
+            float:left;
+            margin-top: 24px;
+            font-size: _rem(14px);
+        }
+        .event_name{
+            width: 100%;
+            max-width:360px !important;
+        }
+    }
+}
