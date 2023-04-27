@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./CourseListingCard.module.scss";
 import { BsArrowRightCircle } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 type cardProps = {
   imageLeft?: boolean;
@@ -15,6 +16,9 @@ const CourseListingCard: React.FC<cardProps> = ({
   marginRight,
   showDetailButton,
 }) => {
+
+const router = useRouter();
+
   return (
     <div
       className={`row ${style.course_card} ${imageLeft ? style.left : ""} ${
@@ -27,7 +31,7 @@ const CourseListingCard: React.FC<cardProps> = ({
           <div className={style.description}>{data?.description}</div>
           {showDetailButton && (
             <div className={style.btn_wrapper}>
-              <button>
+              <button onClick={()=>{router.push('/course-detail/1')}}>
                 View details{" "}
                 <span className={style.icon}>
                   <BsArrowRightCircle />

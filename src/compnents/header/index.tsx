@@ -26,8 +26,8 @@ const Header: React.FC = () => {
     { title: "Introduction", link: "#" },
     { title: "Curriculum", link: "/course-listing" },
     { title: "Campus", link: "#" },
-    { title: "Events", link: "#" },
-    { title: "News and blog", link: "#" },
+    { title: "Events", link: "/events" },
+    { title: "News and blog", link: "/blog-and-views" },
     { title: "Contact Us", link: "#" },
   ];
   return (

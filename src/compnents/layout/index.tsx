@@ -9,6 +9,7 @@ type layoutProps = {
 };
 const Layout: React.FC<layoutProps> = ({ children }) => {
     const router = useRouter();
+    
   return (
     <div className={style.layout}>
       <Header />
