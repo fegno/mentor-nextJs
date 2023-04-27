@@ -1,6 +1,7 @@
 @import "../../styles/var";
 
 .course_tab {
+  color: #fff;
   .title {
     font-size: _rem(56px);
     line-height: 66px;
@@ -14,21 +15,56 @@
       min-width: 212px;
       height: 60px;
       background-color: transparent;
-      // border: none;
       outline: none;
       background: linear-gradient(
           104.81deg,
-          rgba(68, 135, 235, 0.3) 3.66%,
-          rgba(14, 50, 176, 0.3) 101.42%
+          rgba(99, 150, 226, 0.3) 3.66%,
+          rgba(83, 109, 201, 0.3) 101.42%
         ),
         #000000;
       font-size: _rem(18px);
       border-radius: 16px;
       box-shadow: 0px 0px 6px #474dd4, inset 0px 0px 11px 2px #474dd4;
-      opacity: 0.6;
       border: 2px solid rgba(#fff, 0.4);
+      opacity: 0.8;
       &.active {
+        border: 2px solid #474dd4;
+        background: linear-gradient(
+            104.81deg,
+            rgba(68, 135, 235, 0.3) 3.66%,
+            rgba(14, 50, 176, 0.3) 101.42%
+          ),
+          #000000;
         opacity: 1;
+      }
+    }
+  }
+  .data_wrapper {
+    padding-top: 50px;
+    min-height: 60vh;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    .web,
+    .market ,.jobs{
+      width: 100%;
+    }
+  }
+  @include small-screen{
+    .title{
+      font-size: _rem(26px);
+      line-height: 30px;
+      padding-right: 50px;
+    }
+    .tabs_wrapper {
+      gap: 0 10px;
+      flex-wrap: nowrap;
+      .tab {
+        min-width: 106px;
+        height: auto;
+        padding: 10px 20px;
+        font-size: _rem(14px);
+        border-radius: 16px;
       }
     }
   }

@@ -1,0 +1,92 @@
+@import "../../styles/var";
+
+.features {
+  .inner_wrapper {
+    min-height: 750px;
+    .tab_wrapper {
+      border-right: 1px solid #303030;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .tabs {
+        text-align: center;
+        .tab {
+          font-size: _rem(38px);
+          line-height: 45px;
+          color: #2d2d2d;
+          position: relative;
+          cursor: pointer;
+          &:not(:first-child) {
+            .border {
+              height: 70px;
+              border-left: 1px dashed #333333;
+              margin: auto;
+              width: 1px;
+              transition: all ease 0.5s;
+              &.active {
+                border-color: #474dd4;
+              }
+            }
+          }
+          &.active {
+            color: #f3f3f3;
+            transition: all ease 0.5s;
+          }
+        }
+      }
+    }
+  }
+  .data_wrapper {
+    .data_inner_wrapper {
+      max-width: 880px;
+      margin-left: auto;
+      height: 100%;
+      .skills_wrapper {
+        height: 100%;
+        .inner_title {
+          text-align: center;
+          font-size: _rem(24px);
+          font-family: "Be Vietnam Pro", sans-serif;
+          line-height: 36px;
+          font-weight: 500;
+          // padding-bottom: 60px;
+        }
+        .cards_wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          padding: 40px 0;
+        }
+      }
+    }
+  }
+  @include small-screen {
+    .inner_wrapper {
+      min-height: auto;
+      .tab_wrapper {
+        border: none;
+        justify-content: flex-start;
+        .tabs {
+          display: flex;
+          gap: 0 10px;
+          margin-bottom: 50px;
+          justify-content: space-between;
+          width: 100%;
+          .border {
+            display: none;
+          }
+          .tab {
+            font-size: _rem(15px);
+            line-height: 35px;
+            color: #2d2d2d;
+            position: relative;
+            &.active {
+             border-bottom: 2px solid #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.course_detail {
+  section {
+    padding: 100px 0;
+    &.fit {
+      min-height: 100vh;
+    }
+    &.center {
+      display: flex;
+      align-items: center;
+    }
+    &.mentors {
+      margin-bottom: 200px;
+    }
+  }
+  .bg_group {
+    background-color: #1a1a1a;
+    // background: linear-gradient(180deg, #000000 91.82%, rgba(0, 0, 0, 0) 100%);
+    // transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+}

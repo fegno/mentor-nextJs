@@ -1,0 +1,30 @@
+@import "../../styles/var";
+
+.skills_card {
+  display: flex;
+  //   align-items: center;
+  .icon_wrapper {
+    margin-right: 10px;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .border {
+    max-width: 107px;
+    width: 100%;
+    border-top: 2px solid #474dd4;
+    margin-right: 50px;
+    margin-top: 10px;
+  }
+  .data {
+    font-family: "Be Vietnam Pro", sans-serif;
+    line-height: 24px;
+    color: #919191;
+    span {
+      font-size: _rem(18px);
+      font-weight: 500;
+      color: #f4f4f4;
+    }
+  }
+}

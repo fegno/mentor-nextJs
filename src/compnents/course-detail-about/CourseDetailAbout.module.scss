@@ -1,0 +1,35 @@
+@import "../../styles/var";
+.course_detail_about {
+  .title {
+    font-size: _rem(42px);
+    color: #f3f3f3;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  .description {
+    color: #919191;
+    font-size: _rem(18px);
+    line-height: 36px;
+    max-width: 977px;
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+  .card_wrapper {
+    margin: 70px 0;
+  }
+  @include small-screen {
+    .title {
+      text-align: center;
+      font-size: _rem(26px);
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+    .description {
+      font-size: _rem(16px);
+      line-height: 30px;
+    }
+    .card_wrapper {
+      margin: 40px 0;
+
+    }
+  }
+}

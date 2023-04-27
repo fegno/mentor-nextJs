@@ -15,12 +15,10 @@ const FormErrorField: React.FC<{ name: string }> = ({ name }) => {
         return <span className={style.error}>{msg}</span>;
       }}
     />
-  );
+  );                                                                                                                                                                                                                                                                                                                                                                                                    
 };
 const ContactForm: React.FC = () => {
-  // sgMail.setApiKey(
-  //   "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"
-  // );
+
 
   const [isSuccess, setIsSuccess] = useState(false);
 

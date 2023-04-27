@@ -1,0 +1,20 @@
+@import "../../styles/var";
+
+.list_expand {
+  .title {
+    font-size: _rem(42px);
+    font-weight: 500;
+    line-height: 50px;
+    margin-bottom: 24px;
+  }
+  .lists_wrapper {
+    border: 1px solid #747474;
+    border-left: 0;
+    border-right: 0;
+    .list_item {
+      &:not(:last-child) {
+        border-bottom: 1px solid #747474;
+      }
+    }
+  }
+}

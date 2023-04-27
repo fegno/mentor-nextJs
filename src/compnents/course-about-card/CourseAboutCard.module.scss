@@ -1,0 +1,57 @@
+@import "../../styles/var";
+.card {
+  padding: 30px 46px;
+  .head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    justify-content: space-between;
+    .inner_wrapper {
+      display: flex;
+      gap: 0 20px;
+      align-items: center;
+      .icon {
+        width: 65px;
+        height: 65px;
+      }
+      .title {
+        font-size: _rem(24px);
+        font-family: "Be Vietnam Pro", sans-serif;
+        line-height: 36px;
+        font-weight: 500;
+        margin: 0;
+        text-align: left;
+      }
+    }
+    .arrow {
+      display: none;
+    }
+  }
+  .description {
+    color: #dbdbdb;
+  }
+  @include small-screen {
+    padding: 16px;
+    .head {
+      margin: 0;
+      .inner_wrapper {
+        gap: 0 10px;
+        .icon {
+          width: 32px;
+          height: 32px;
+        }
+        .title {
+          font-size: _rem(18px);
+          line-height: 20px;
+        }
+      }
+      .arrow {
+        display: inline-block;
+      }
+    }
+    .description {
+      margin-top: 20px;
+      // display: none;
+    }
+  }
+}

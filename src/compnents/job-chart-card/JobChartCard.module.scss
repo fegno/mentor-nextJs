@@ -1,0 +1,32 @@
+@import "../../styles/var";
+
+.job_opp {
+  .title {
+    max-width: 354px;
+    text-align: center;
+    margin: auto;
+    font-size: _rem(24px);
+    line-height: 33px;
+    color: #ebebeb;
+    font-family: "Be Vietnam Pro", sans-serif;
+    margin-bottom: 10px;
+  }
+  .chart {
+    width: 100%;
+  }
+  &.small {
+    .title{
+      max-width: 100%;
+      text-align: left;
+    }
+    .chart {
+      max-width: 500px;
+    }
+  }
+  @include large-screen {
+    .title {
+      font-size: _rem(18px);
+      line-height: 25px;
+    }
+  }
+}
