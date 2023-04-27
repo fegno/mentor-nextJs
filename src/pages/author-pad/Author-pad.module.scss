@@ -9,5 +9,24 @@
     .author_detail_wrapper{
         display: flex;
         align-items: center;
+        font-family:" Be Vietnam Pro", sans-serif;
+        .author_name{
+            font-weight: 700;
+            font-size: _rem(24px);
+            line-height: 36px;
+            color: #F3F3F3;
+        }
+        .author_designation{
+            font-weight: 400;
+            font-size: _rem(18px);
+            line-height: 22px;
+            color: #C1C1C1;
+        }
+        .author_dec{
+            font-weight: 400;
+            font-size: _rem(18px);
+            line-height: 26px;
+            color: #CECECE;
+        }
     }
 }
