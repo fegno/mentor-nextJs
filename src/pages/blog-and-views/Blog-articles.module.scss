@@ -1,0 +1,27 @@
+@import "../../styles/var";
+.blog_container{
+    .blog_name{
+        width: 100%;
+        max-width: 390px;
+    }
+    .blog_count{
+        font-weight: 400;
+        font-size: _rem(18px);
+        line-height: 36px;
+        color: #737373;
+        float: right;
+        font-family:" Be Vietnam Pro", sans-serif;
+    }
+
+    @media only screen and (max-width:600px){
+        .blog_count{
+            float:left;
+            margin-top: 24px;
+            font-size: _rem(14px);
+        }
+        .blog_name{
+            width: 100%;
+            max-width: auto !important;
+        }
+    }
+}

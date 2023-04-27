@@ -1,0 +1,72 @@
+@import "../../styles/var";
+
+.contact_section{
+    .con_head{
+        font-size: _rem(104px);
+        line-height: 122px;
+        margin-bottom: 10px;
+        color: #D6D6D6;
+    }
+    .con_sub_head{
+        font-size: _rem(24px);
+        line-height: 28px;
+        color: #D6D6D6;
+    }
+    .form_section{
+        margin-top: 96px;
+    }
+    .addr_section{
+        margin-top: 96px;
+    }
+    .loc_sec {
+        display: flex;
+        margin-bottom: 40px;
+        .addr_detail{
+            font-weight: 400;
+            font-size: _rem(20px);
+            line-height: 40px;
+            color: #C1C1C1;
+            display: flex;
+            align-items: center;
+            font-family: 'Be Vietnam';
+        }
+      }
+    
+      .addr_icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 76.6px;
+        height: 76.6px;
+        color: #000;
+        border-radius: 50%;
+        background-color: #474DD4;
+        font-size: _rem(30px);
+        margin-right: 35px;
+      }
+}
+@media only screen and (max-width:600px){
+     .con_head{
+        font-size: _rem(46px) !important;
+        line-height: 54px !important;
+    }
+    .con_sub_head{
+        font-size: _rem(16px) !important;
+        line-height: 18.75px !important;
+    }
+    .form_section{
+        margin-top: 58px !important;
+    }
+    .addr_section{
+        margin-top: 58px !important;
+    }
+    .addr_detail{
+        font-size: _rem(16px) !important;
+        line-height: 28px !important;
+    }
+    .addr_icons{
+        width:59.57px !important;
+        height: 59.57px !important;
+        
+    }
+}
