@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./abou.module.scss";
 import Container from "@/compnents/container";
-import Author from "../author-pad";
 import Mentors from "@/compnents/mentors";
+import Author from "../../compnents/author-pad";
 
 const About: React.FC = () => {
   return (
