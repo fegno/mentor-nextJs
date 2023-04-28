@@ -1,76 +1,87 @@
 @import "../../styles/var";
 
-.author_pad_container{
-    .author_img{
-        img{
+.author_pad_container {
+    .author_img {
+        text-align: center;
+        img {
             width: 100%;
+            max-width: 500px;
+            margin: auto;
         }
     }
-    .author_detail_wrapper{
+    .author_detail_wrapper {
         display: flex;
         align-items: center;
-        font-family:" Be Vietnam Pro", sans-serif;
-        .author_social{
-            display: none;    
+        font-family: " Be Vietnam Pro", sans-serif;
+        .author_social {
+            display: none;
         }
-        .author_name{
+        .author_name {
             font-weight: 700;
             font-size: _rem(24px);
             line-height: 36px;
-            color: #F3F3F3;
+            color: #f3f3f3;
         }
-        .author_designation{
+        .author_designation {
             font-weight: 400;
             font-size: _rem(18px);
             line-height: 22px;
-            color: #C1C1C1;
+            color: #c1c1c1;
+            margin-bottom: 10px;
         }
-        .author_dec{
+        .border {
+            max-width: 320px;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(86, 179, 121, 0) 9.38%, #3FA16E 22.92%, #0D7856 53.65%, rgba(86, 179, 121, 0) 100%);
+            height: 3px;
+            border-radius: 3px;
+        }
+        .author_dec {
             margin-top: 37px;
             font-weight: 400;
             font-size: _rem(18px);
             line-height: 26px;
-            color: #CECECE;
+            color: #cecece;
         }
-        .auth_social_icon{
-            img{
+        .auth_social_icon {
+            img {
                 width: 100%;
                 max-width: 30px;
                 margin: 4px 0 0;
             }
         }
     }
-    @include phone{
-        .author_head_wrapper{
+    @include small-screen {
+        .author_head_wrapper {
             display: flex;
             justify-content: center;
             margin-bottom: 22px;
-            .author_social{
-                img{
-                    width: 100%;    
+            .author_social {
+                img {
+                    width: 100%;
                     max-width: 30px;
                     margin: 4px 0 0;
                 }
             }
-            .author_name{
+            .author_name {
                 text-align: center;
-                color: #F3F3F3;
+                color: #f3f3f3;
                 font-size: _rem(20px);
                 margin-right: 12px;
             }
         }
-        .auth_social_icon{
+        .auth_social_icon {
             display: none;
         }
-        .author_designation{
+        .author_designation {
             text-align: center;
             font-size: _rem(14px);
             line-height: 20px;
             color: #c1c1c1;
         }
-        .author_dec{
+        .author_dec {
             font-size: _rem(16px);
-            color: #B5B5B5;
+            color: #b5b5b5;
             line-height: 30px;
         }
     }

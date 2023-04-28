@@ -14,7 +14,7 @@ const Gallery: React.FC = () =>{
             content:"Cloud computing has become increasingly popular in recent years as a way for businesses and individuals to access and store data and applications online. There are many benefits to cloud computing, but there are also some risks that should be considered. One of the main benefits of cloud"
         },
         {   image:fest2.src,
-            title:"Techtonic 2k22",
+            title:"Cultural and Ethnic Fest ",
             name :"Technological fest",
             content:"Cloud computing has become increasingly popular in recent years as a way for businesses and individuals to access and store data and applications online. There are many benefits to cloud computing, but there are also some risks that should be considered. One of the main benefits of cloud"
         },
@@ -24,7 +24,7 @@ const Gallery: React.FC = () =>{
             content:"Cloud computing has become increasingly popular in recent years as a way for businesses and individuals to access and store data and applications online. There are many benefits to cloud computing, but there are also some risks that should be considered. One of the main benefits of cloud"
         },
         {   image:fest2.src,
-            title:"Techtonic 2k22",
+            title:"Cultural and Ethnic Fest ",
             name :"Technological fest",
             content:"Cloud computing has become increasingly popular in recent years as a way for businesses and individuals to access and store data and applications online. There are many benefits to cloud computing, but there are also some risks that should be considered. One of the main benefits of cloud"
         }   

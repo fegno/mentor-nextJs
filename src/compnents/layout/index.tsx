@@ -8,15 +8,15 @@ type layoutProps = {
   children: ReactNode;
 };
 const Layout: React.FC<layoutProps> = ({ children }) => {
-    const router = useRouter();
-    
+  const router = useRouter();
+
   return (
     <div className={style.layout}>
       <Header />
-      <div className={`${style.content} ${router.route !== "/" ? style.paddingtop:""}`}>
-      {children}
-    </div> 
-    <Footer />
+      <div className={`${style.content} ${router.route !== ("/about" || "/") ? style.paddingtop : ""}`}>
+        {children}
+      </div>
+      <Footer />
     </div>
   );
 };
