@@ -1,8 +1,9 @@
 import React from "react";
 import style from "./abou.module.scss";
 import Container from "@/compnents/container";
+import Author from "@/compnents/author-pad";
 import Mentors from "@/compnents/mentors";
-import Author from "../../compnents/author-pad";
+import DirectorBio from "@/compnents/director-bio";
 import AboutBanner from "@/compnents/about-banner";
 import AboutAchievements from "@/compnents/about-achievements";
 
@@ -15,6 +16,9 @@ const About: React.FC = () => {
       <Container>
         <section className={style.about_container}>
           <Author />
+        </section>
+        <section className={style.director_block}>
+          <DirectorBio />
         </section>
         <section className={style.mentors}>
           <Mentors />

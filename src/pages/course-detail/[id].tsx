@@ -32,9 +32,9 @@ const CourseDetail: React.FC = () => {
             <section>
               <CourseListingCard data={DETAILS.section1} />
             </section>
-            {/* <section>
+            <section>
             <CourseDetailVideoSection data={DETAILS.video_section} />
-        </section> */}
+        </section>
             <section>
               <CourseDetailFeatures />
             </section>
