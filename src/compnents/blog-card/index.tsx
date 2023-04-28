@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './blog-card.module.scss';
+import style from './BlogCard.module.scss';
 type BlogProps = {
    data:any;
   };
