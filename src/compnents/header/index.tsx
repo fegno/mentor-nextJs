@@ -23,12 +23,12 @@ const Header: React.FC = () => {
   }, []);
 
   const MENUS = [
-    { title: "Introduction", link: "#" },
+    { title: "Introduction", link: "/about" },
     { title: "Curriculum", link: "/course-listing" },
     { title: "Campus", link: "#" },
     { title: "Events", link: "/events" },
     { title: "News and blog", link: "/blog-and-views" },
-    { title: "Contact Us", link: "#" },
+    { title: "Contact Us", link: "/contact" },
   ];
   return (
     <header
