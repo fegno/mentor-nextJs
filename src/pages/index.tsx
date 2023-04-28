@@ -9,7 +9,6 @@ import Container from "@/compnents/container";
 import HomepageOurValues from "@/compnents/homepage-our-values";
 import HomepageBenefits from "@/compnents/homepage-benefits";
 import HomePageClassroom from "@/compnents/class-room";
-
 import HomepageCourses from "../compnents/homepage-courses";
 
 
@@ -22,7 +21,7 @@ export default function Home() {
     />
   </Head>;
   return (
-    <div style={{background:"#1A1A1A"}}>
+    <div >
       <Banner />
       <section className="mt-5">
         <Container>

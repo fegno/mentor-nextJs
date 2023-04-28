@@ -8,10 +8,10 @@ type BlogProps = {
     return(
         <div className={style.blog_card}>
             <div className={`row ${style.blog_row}`}>
-                <div className={`col-4 col-sm-3 ${style.blog_img}`}>
+                <div className={`col-4 col-sm-2 ${style.blog_img}`}>
                     <img src={data.image} alt="img" />
                 </div>
-                <div className={`col-8 col-sm-9 ${style.blog_data_wrapper}`}>
+                <div className={`col-8 col-sm-10 ${style.blog_data_wrapper}`}>
                     <div className={`${style.blog_title}`}>
                         {data.title}
                     </div>

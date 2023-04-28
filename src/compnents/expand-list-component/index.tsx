@@ -5,13 +5,19 @@ import style from "./ExpandListComponent.module.scss";
 type expandListProps = {
   data: any;
   showMenu?: boolean;
+  index: number
 };
 
-const ExpandListComponent: React.FC<expandListProps> = ({ data }) => {
+const ExpandListComponent: React.FC<expandListProps> = ({ data, index }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const listRef = useRef(null);
 
+  useEffect(() => {
+    if (index == 0) {
+      setShowMenu(true)
+    }
+  }, [])
 
   const handleListShow = () => {
     setShowMenu(!showMenu);

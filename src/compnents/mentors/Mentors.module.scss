@@ -10,9 +10,10 @@
   }
   @include tab {
     .card_wrapper {
+      margin: 0;
       .card {
         &:not(:last-child) {
-          margin-bottom: 150px;
+          margin-bottom: 30px;
         }
       }
     }

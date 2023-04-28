@@ -49,11 +49,12 @@
         background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 41%, rgba(0, 0, 0, 0) 70%);
     }
     @include small-screen {
+        min-height: 100vh;
         .inner_wrapper {
             background: none;
             .content_wrapper {
                 // padding-top: 100%;
-                padding-bottom: 50px;
+                padding-bottom: 120px;
                 justify-content: flex-end;
 
                 .title {
@@ -63,7 +64,7 @@
                 .description {
                     font-size: _rem(16px);
                     line-height: 25px;
-                    -webkit-line-clamp: 3;
+                    // -webkit-line-clamp: 3;
                 }
             }
         }

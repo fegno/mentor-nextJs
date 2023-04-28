@@ -3,6 +3,7 @@ import style from "./Header.module.scss";
 import logo from "../../assets/logo.svg";
 import { gsap } from "gsap";
 import Link from "next/link";
+import MobileMenu from "../mobile-menu";
 const Header: React.FC = () => {
   const [hideHeader, setHideHeader] = useState(false);
   const HEADER = useRef<any>(null);
@@ -14,7 +15,7 @@ const Header: React.FC = () => {
         duration: 1,
       });
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 50) {
         setHideHeader(true);
       } else {
         setHideHeader(false);
@@ -24,8 +25,8 @@ const Header: React.FC = () => {
 
   const MENUS = [
     { title: "Introduction", link: "/about" },
-    { title: "Curriculum", link: "/course-listing" },
-    { title: "Campus", link: "#" },
+    { title: "Programs", link: "/course-listing" },
+    // { title: "Campus", link: "#" },
     { title: "Events", link: "/events" },
     { title: "News and blog", link: "/blog-and-views" },
     { title: "Contact Us", link: "/contact" },
@@ -35,6 +36,7 @@ const Header: React.FC = () => {
       className={`${style.header} ${hideHeader ? style.hide : ""}`}
       ref={HEADER}
     >
+      {/* <MobileMenu /> */}
       <div className={style.container}>
         <nav className="navbar navbar-expand-lg">
           <Link className="navbar-brand" href="/">

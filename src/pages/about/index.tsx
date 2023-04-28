@@ -6,6 +6,7 @@ import Mentors from "@/compnents/mentors";
 import DirectorBio from "@/compnents/director-bio";
 import AboutBanner from "@/compnents/about-banner";
 import AboutAchievements from "@/compnents/about-achievements";
+import AboutBioWrapper from "@/compnents/about-bio-wrapper";
 
 const About: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const About: React.FC = () => {
           <Author />
         </section>
         <section className={style.director_block}>
-          <DirectorBio />
+          <AboutBioWrapper />
         </section>
         <section className={style.mentors}>
           <Mentors />

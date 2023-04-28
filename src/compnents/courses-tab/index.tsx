@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import style from "./CoursesTab.module.scss";
 import SkillsWeb from "../skills-web";
 import MarketGrowth from "../market-growth";
 import JobOppurtinities from "../job-oppurtunities";
+import SkillsMobile from "../skills-mobile";
 
 type CoursesTabProps = {
   data: any;
@@ -10,10 +11,17 @@ type CoursesTabProps = {
 
 const CoursesTab: React.FC<CoursesTabProps> = ({ data }) => {
   const [selectedTab, setSelectedTab] = useState(0);
-
+  const[isResponsive,setIsResponsive] = useState(false);
   const handleTabClick = (index: number) => {
     setSelectedTab(index);
   };
+useEffect(()=>{
+if(window.innerWidth>991){
+  setIsResponsive(false)
+}else{
+  setIsResponsive(true)
+}
+},[])
   return (
     <div className={style.course_tab}>
       <div className={style.title}>{data.title}</div>
@@ -36,8 +44,11 @@ const CoursesTab: React.FC<CoursesTabProps> = ({ data }) => {
       </div>
       <div className={style.data_wrapper}>
         {selectedTab == 0 && (
-          <div className={style.web}>
+          !isResponsive?<div className={style.web}>
             <SkillsWeb data={data} />
+          </div>:
+          <div>
+            <SkillsMobile />
           </div>
         )}
         {selectedTab == 1 && (

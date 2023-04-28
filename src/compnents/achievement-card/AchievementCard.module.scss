@@ -75,6 +75,7 @@
                     font-size: _rem(26px);
                     line-height: 36px;
                     margin-bottom: 15px;
+                    text-align: center;
                 }
                 .desc {
                     font-size: _rem(18px);
@@ -110,20 +111,20 @@
                 padding: 0;
                 margin-top: 15px;
                 .title {
-                    font-size: _rem(16px);
+                    font-size: _rem(20px);
                     line-height: 25px;
                     margin-bottom: 15px;
                 }
                 .desc {
-                    font-size: _rem(13px);
-                    line-height: 20px;
+                    font-size: _rem(16px);
+                    line-height: 25px;
                     -webkit-line-clamp: 7;
                     text-align: justify;
                 }
                 .btn_wrapper {
                     margin: auto;
                     button {
-                       font-size: _rem(12px);
+                       font-size: _rem(16px);
                     }
                 }
             }

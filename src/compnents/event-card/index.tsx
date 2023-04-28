@@ -8,10 +8,10 @@ type EventProps = {
     return(
         <div className={style.event_card}>
             <div className={`row ${style.event_row}`}>
-                <div className={`col-4 col-sm-3 ${style.event_img}`}>
+                <div className={`col-4 col-sm-2 ${style.event_img}`}>
                     <img src={data.image} alt="img" />
                 </div>
-                <div className={`col-8 col-sm-9 ${style.event_data_wrapper}`}>
+                <div className={`col-8 col-sm-10 ${style.event_data_wrapper}`}>
                     <div className={`${style.event_head}`}>
                         <span className={`${style.event_title}`}>
                             {data.title}

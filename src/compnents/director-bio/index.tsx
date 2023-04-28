@@ -6,14 +6,18 @@ import amazon from '../../assets/Amazon_logo.png';
 import microsoft from '../../assets/Microsoft_logo.png';
 import linkedin from '../../assets/Linkedin-logo.png';
 
-const DirectorBio : React.FC = () => {
-    return(
-        <div className={style.bio_container}>
+type directorBioProps = {
+    isLeft?: boolean
+}
+
+const DirectorBio: React.FC<directorBioProps> = ({ isLeft }) => {
+    return (
+        <div className={`${style.bio_container} ${isLeft ? style.left : ""}`}>
             <div className={"row"}>
-                <div className={`col-12 col-sm-4 ${style.director_mob_img}`}>
+                <div className={`col-12 col-md-4 ${style.director_mob_img}`}>
                     <img src={director.src} alt="director" />
                 </div>
-                <div className={`col-12 col-sm-8 ${style.director_bio}`}>
+                <div className={`col-12 col-md-8 ${style.director_bio}`}>
                     <div className={style.director_bio_wrapper}>
                         <div className={style.bio_head_wrapper}>
                             <div className={style.bio_head}>
@@ -34,13 +38,13 @@ const DirectorBio : React.FC = () => {
                                 </span>
                             </div>
                             <div className={style.dir_dec}>
-                                Senior Systems Engineer - 
+                                Senior Systems Engineer -
                                 <span className={style.dir_data}>
                                     Microsoft
                                 </span>
                             </div>
                             <div className={style.dir_dec}>
-                                System Architect - 
+                                System Architect -
                                 <span className={style.dir_data}>
                                     Azure
                                 </span>

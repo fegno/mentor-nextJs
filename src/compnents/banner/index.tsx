@@ -5,6 +5,9 @@ import bg from "../../assets/bg.jpg";
 import bg_small from "../../assets/bg-small.png";
 import BannerPopup from "../banner-popup";
 import { gsap } from "gsap";
+import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
+import { useRouter } from "next/router";
 const SETTINGS = {
   slidesToShow: 1,
   dots: true,
@@ -74,7 +77,8 @@ const CAPTIONS = [
       "Stay ahead of the curve with our tech education that prepares you for the ever-evolving industry landscape. Our program empowers you with the latest skills and knowledge to excel in tomorrow's job market.",
   },
 ];
-const Slider2: React.FC<any> = ({ caption, id ,description}: any) => {
+const Slider2: React.FC<any> = ({ caption, id, description }: any) => {
+  const router = useRouter();
   return (
     <div className={style.slide2}>
       <div className={style.inner}>
@@ -94,9 +98,14 @@ const Slider2: React.FC<any> = ({ caption, id ,description}: any) => {
         </h1>
         <div className={style.description}>
           <p id={getSelector(id, "desc")}>
-           {description}
+            {description}
           </p>
         </div>
+        {/* <div className={`mt-5 ${style.view_link}`} onClick={()=>{router.push('/course-listing')}}>
+          <Link href="/course-listing">
+            View all programs <BsArrowRight />
+          </Link>
+        </div> */}
       </div>
     </div>
   );
@@ -166,7 +175,7 @@ const Banner: React.FC = () => {
                 ref={slider1}
                 asNavFor={sliderContent as any}
               >
-                {CAPTIONS.map((item,index) => {
+                {CAPTIONS.map((item, index) => {
                   return (
                     <Slide
                       key={index}
@@ -183,8 +192,8 @@ const Banner: React.FC = () => {
                   afterChange={onAfterChange}
                   beforeChange={beforeChange}
                 >
-                  {CAPTIONS.map((item:any, index) => {
-                    return <Slider2 key={item} caption={item} id={index} description={item.description}/>;
+                  {CAPTIONS.map((item: any, index) => {
+                    return <Slider2 key={item} caption={item} id={index} description={item.description} />;
                   })}
                 </Slider>
               </div>

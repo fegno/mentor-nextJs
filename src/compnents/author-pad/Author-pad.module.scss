@@ -30,10 +30,10 @@
             margin-bottom: 10px;
         }
         .border {
-            max-width: 320px;
-            width: 100%;
-            background: linear-gradient(90deg, rgba(86, 179, 121, 0) 9.38%, #3FA16E 22.92%, #0D7856 53.65%, rgba(86, 179, 121, 0) 100%);
-            height: 3px;
+            width: 250px;
+            height: 2px;
+            background: linear-gradient(90deg, #3fa16e 22.92%, #0d7856 53.65%);
+            box-shadow: 0 0 10px 1px #3fa16e, inset 0 0 0 #0d7856;
             border-radius: 3px;
         }
         .author_dec {

@@ -3,6 +3,7 @@
     .event_name{
         width: 100%;
         max-width: 260px;
+        margin: auto;
     }
     .event_count{
         font-weight: 400;
@@ -12,11 +13,15 @@
         float: right;
         font-family:" Be Vietnam Pro", sans-serif;
     }
-
+.event_card_container{
+    a{
+        display: inline-block;
+    }
+}
     @media only screen and (max-width:600px){
         .event_count{
-            float:left;
-            margin-top: 24px;
+            // float:left;
+            // margin-top: 24px;
             font-size: _rem(14px);
         }
         .event_name{

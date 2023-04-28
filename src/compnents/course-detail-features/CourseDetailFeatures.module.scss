@@ -6,16 +6,17 @@
     .tab_wrapper {
       border-right: 1px solid #303030;
       display: flex;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
       .tabs {
         text-align: center;
         .tab {
           font-size: _rem(38px);
           line-height: 45px;
-          color: #2d2d2d;
+          color: #9E9999;
           position: relative;
           cursor: pointer;
+          font-family: 'Gilroy',sans-serif;
           &:not(:first-child) {
             .border {
               height: 70px;
@@ -38,7 +39,7 @@
   }
   .data_wrapper {
     .data_inner_wrapper {
-      max-width: 880px;
+      max-width: 950px;
       margin-left: auto;
       height: 100%;
       .skills_wrapper {
@@ -79,7 +80,6 @@
           .tab {
             font-size: _rem(15px);
             line-height: 35px;
-            color: #2d2d2d;
             position: relative;
             &.active {
              border-bottom: 2px solid #fff;

@@ -1,5 +1,6 @@
+@import "../../styles/var";
+
 .course_detail {
-  // background-color: #1a1a1a;
   section {
     padding: 100px 0;
     &.fit {
@@ -10,10 +11,12 @@
       align-items: center;
     }
     &.mentors {
-      margin-bottom: 200px;
+      margin-bottom: 0px;
     }
   }
-  .bg_group {
-    // background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #000000 21.88%, #000000 91.82%, rgba(0, 0, 0, 0) 100%);
+  @include small-screen {
+    section{
+      padding: 50px 0;
+    }
   }
 }

@@ -6,6 +6,7 @@
         align-items: center;
         float: right;
         justify-content: right;
+        padding-right: 100px;
         .director_bio_wrapper{
             display: inline-block;
             text-align: left;
@@ -64,11 +65,20 @@
     .director_mob_img{
         display: none;
     }
-    @include phone{
+    &.left{
+        .director_bio{
+            order: 1;
+            justify-content: left;
+            padding-right: 0;
+            padding-left: 100px;
+        }
+    }
+    @include tab{
         .director_bio{
             margin-top: 27px;
             float: left;
             justify-content: left;
+            padding: 0;
             .bio_head_wrapper{
                 .bio_head{
                     font-size: _rem(26px);
@@ -88,7 +98,7 @@
             }
             .dir_exp{
                gap: 0 20px;
-               margin-bottom: 120px;
+               margin-bottom: 30px;
               
             }
         }
@@ -100,6 +110,11 @@
         }
         .director_img{
             display: none;
+        }
+        &.left{
+            .director_bio{
+                padding: 0;
+            }
         }
        
     }

@@ -43,10 +43,10 @@ const CourseDetail: React.FC = () => {
       </div>
       <div>
         <Container>
-          <section className={` ${style.fit} ${style.center}`}>
+          <section className={` ${style.center}`}>
             <CourseDetailAbout />
           </section>
-          <section className={style.fit}>
+          <section>
             <ListExpand />
           </section>
         </Container>

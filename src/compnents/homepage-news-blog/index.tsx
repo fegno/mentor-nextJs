@@ -25,7 +25,7 @@ const HomepageNewsAndBlog: React.FC = () => {
                   <div className="d-block">
                     <p>
                       The training at MADEIT Will not only grant you a career,
-                      ob, it will launch you for the opportunities of tomorrow.
+                      but it will launch you for the opportunities of tomorrow.
                       At MENTOR you learn to learn so you keep growing
                       professionally. Rather than offering a series of short
                       training courses about specific technologies and languages
@@ -43,11 +43,11 @@ const HomepageNewsAndBlog: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-5 p-4">
+          <div className="col-12 col-md-5 px-4">
             <div className={`row ${style.trending_news}`}>
               <div className="col-12 card-blue p-5 rounded-20 mb-4">
                 <div className="d-block">
-                  <p>The Web`&apos;`s Largest Collection of DevOps Content</p>
+                  <p>The Web &apos; s Largest Collection of DevOps Content</p>
                 </div>
                 <div className="d-block">
                   <strong> Mentor College</strong> | 20-Jan-2023
@@ -55,7 +55,7 @@ const HomepageNewsAndBlog: React.FC = () => {
               </div>
               <div className="col-12 card-ash p-5 rounded-20 mb-4">
                 <div className="d-block">
-                  <p>The Web`&apos;`s Largest Collection of DevOps Content</p>
+                  <p>The Web&apos;s Largest Collection of DevOps Content</p>
                 </div>
                 <div className="d-block">
                   <strong> Mentor College</strong> | 20-Jan-2023

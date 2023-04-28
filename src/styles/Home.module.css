@@ -6,7 +6,9 @@
   padding: 6rem;
   min-height: 100vh;
 }
-
+.features{
+  margin-top: 50px;
+}
 .description {
   display: inherit;
   justify-content: inherit;
@@ -163,7 +165,7 @@
   margin-bottom: 200px;
 }
 .benefits{
-  margin-bottom: 200px;
+  margin-bottom: 160px;
 }
 .features{
   margin-bottom: 200px;

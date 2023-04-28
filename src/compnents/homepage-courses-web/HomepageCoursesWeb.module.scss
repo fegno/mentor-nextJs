@@ -4,8 +4,8 @@
   position: relative;
   font-family: "Be Vietnam Pro", sans-serif;
   .course_icon {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     position: absolute;
     img {
       width: 100%;
@@ -13,35 +13,36 @@
       mix-blend-mode: screen;
     }
     &.top_left {
-      top: 23%;
-      left: 26.5%;
+      top: 22%;
+      left: 26%;
     }
     &.top-right {
-      top: 18%;
-      left: 57%;
+      top: 17%;
+      left: 56%;
     }
     &.middle-left {
-      top: 47%;
-      left: 16.5%;
+      top: 46%;
+      left: 15.5%;
     }
     &.middle-right {
-      top: 37%;
-      left: 77%;
+      top: 36%;
+      left: 76.2%;
     }
     &.bottom-left {
-      top: 67%;
-      left: 36.5%;
+      top: 66%;
+      left: 35.5%;
     }
     &.bottom-right {
-      top: 63%;
-      left: 66.5%;
+      top: 61.5%;
+      left: 65.3%;
     }
   }
   .course_title {
     position: absolute;
-    width: 161px;
+    width: 180px;
     line-height: 24px;
     color: #f0f0f0;
+    font-size: _rem(18px);
     &.top_left {
       top: 23%;
       right: 77%;
@@ -104,14 +105,14 @@
 
   @include double-extra-large-screen {
     .course_icon {
-      width: 90px;
-      height: 90px;
+      width: 125px;
+      height: 125px;
     }
   }
   @include extra-large-screen {
     .course_icon {
-      width: 80px;
-      height: 80px;
+      width: 105px;
+      height: 105px;
     }
     .course_title {
       font-size: _rem(14px);
@@ -126,8 +127,8 @@
   }
   @include large-screen {
     .course_icon {
-      width: 70px;
-      height: 70px;
+      width: 90px;
+      height: 90px;
     }
     .course_title {
       font-size: _rem(12px);

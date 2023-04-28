@@ -12,7 +12,7 @@ export const COURSES = [
     title: "B.Tech in Artificial Intelligence and Machine Learning",
     gif: intellegence.src,
     clasname: "top_left",
-    text: "B.Tech in Artificial Intelligence and Machine Learning",
+    text: "AI and ML",
     details: [
       {
         title: "Skills",
@@ -68,7 +68,7 @@ export const COURSES = [
     title: "B.Tech in Artificial Intelligence and Data Science",
     gif: data_science.src,
     clasname: "top-right",
-    text: "B.Tech in Artificial Intelligence and Data Science",
+    text: "AI and Data Science",
     details: [
       {
         title: "Skills",
@@ -124,7 +124,7 @@ export const COURSES = [
     title: "B.Tech in Cloud Computing",
     gif: cloud.src,
     clasname: "middle-left",
-    text: "B.Tech in Cloud Computing",
+    text: "Cloud Computing",
     details: [
       {
         title: "Skills",
@@ -180,7 +180,7 @@ export const COURSES = [
     title: "B.Tech in Cyber Security",
     gif: cyber_security.src,
     clasname: "middle-right",
-    text: "B.Tech in Cyber Security",
+    text: "Cyber Security",
     details: [
       {
         title: "Skills",
@@ -236,7 +236,7 @@ export const COURSES = [
     title: "B.Tech in Internet of Things",
     gif: iot.src,
     clasname: "bottom-left",
-    text: "B.Tech in Internet of Things",
+    text: "Internet of Things",
     details: [
       {
         title: "Skills",
@@ -292,7 +292,7 @@ export const COURSES = [
     title: "B.Tech in Blockchain",
     gif: blockchain.src,
     clasname: "bottom-right",
-    text: "B.Tech in Blockchain",
+    text: "Blockchain",
     details: [
       {
         title: "Skills",

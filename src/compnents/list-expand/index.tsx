@@ -35,7 +35,7 @@ const ListExpand: React.FC = () => {
         {DATA.lists.map((list: any, index: number) => {
           return (
             <div className={style.list_item} key={`list${index}`} >
-              <ExpandListComponent data={list} />
+              <ExpandListComponent data={list} index={index}/>
             </div>
           );
         })}

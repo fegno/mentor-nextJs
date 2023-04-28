@@ -1,7 +1,16 @@
-.layout{
-    .content{
-        &.paddingtop{
+@import "../../styles/var";
+
+.layout {
+    .content {
+        &.paddingtop {
             margin-top: 130px;
         }
-    } 
+    }
+    @include small-screen {
+        .content {
+            &.paddingtop {
+                margin-top: 90px;
+            }
+        }
+    }
 }

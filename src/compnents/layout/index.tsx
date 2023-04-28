@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode ,useState,useEffect } from "react";
 import Header from "../header";
 import Footer from "../footer";
 import style from "./Layout.module.scss";
@@ -8,12 +8,22 @@ type layoutProps = {
   children: ReactNode;
 };
 const Layout: React.FC<layoutProps> = ({ children }) => {
+  const[hasPadding,setHasPadding] = useState(false)
   const router = useRouter();
-
+useEffect(()=>{
+if(router.route=='/about'){
+  setHasPadding(false)
+}else if(router.route=='/'){
+  setHasPadding(false)
+}
+else{
+  setHasPadding(true)
+}
+},[router.route])
   return (
     <div className={style.layout}>
       <Header />
-      <div className={`${style.content} ${router.route !== ("/about" || "/") ? style.paddingtop : ""}`}>
+      <div className={`${style.content} ${hasPadding ? style.paddingtop : ""}`}>
         {children}
       </div>
       <Footer />

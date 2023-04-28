@@ -1,29 +1,54 @@
 @import "../../styles/var";
 .our_vision {
-    padding: 50px 27px;
+  padding: 50px 27px;
+  font-family: " Be Vietnam Pro", sans-serif;
+  .title,
+  p,
+  h4 {
+    padding-left: 70px;
+  }
+  h4 {
+    font-weight: 500;
+  }
+  p {
+    color: #b5b5b5;
+    font-size: _rem(16px);
+    line-height: 36px;
+  }
   .header {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    margin-bottom: 38px;
+    .spinner_wrapper {
+      padding-right: 10px;
+    }
     @include phone {
+      justify-content: center;
+      margin-bottom: 20px;
       .spinner_wrapper {
         display: none;
       }
     }
   }
   @include tab {
-    padding:26px 12px 30px 12px ;
+    padding: 26px 12px 30px 12px;
+    .title,
+    p,
+    h4 {
+      padding-left: 0;
+    }
     h4 {
       font-size: _rem(16px);
       text-align: center;
       line-height: 24.5px;
       margin-bottom: 12px;
     }
-    p{
-        color: #B5B5B5;
-        font-size: _rem(13px);
-        line-height: 20px;
-        text-align: center;
+    p {
+      color: #b5b5b5;
+      font-size: _rem(16px);
+      line-height: 26px;
+      text-align: center;
     }
   }
 }

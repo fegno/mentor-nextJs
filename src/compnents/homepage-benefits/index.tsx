@@ -20,11 +20,11 @@ const HomepageBenefits: React.FC = () => {
   return (
     <div className={style.benefits}>
       <div className="row">
-        <div className="col-12">
+        <div className={`col-12 ${style.title}`}>
           <Title title="Your Benefits" />
         </div>
       </div>
-      <div className="row py-5 justify-content-center">
+      <div className="row justify-content-center">
         {BENEFITS.map((benefit: any, index: number) => {
           return (
             <div className="col-12 col-md-6 col-lg-4" key={index}>

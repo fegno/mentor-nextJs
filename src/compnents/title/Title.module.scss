@@ -3,31 +3,45 @@
 .title {
   position: relative;
   padding: 10px 0;
-  &:after,
-  &:before {
+  font-family: "Gilroy-bold", sans-serif;
+  display: inline-block;
+  &::after {
     content: "";
-    display: block;
-    height: 3px;
-    width: 75%;
-    margin: 0 auto;
+    width: 100%;
+    height: 2px;
     background: linear-gradient(
       90deg,
-      rgba(235, 130, 184, 0) 0%,
       #eb82b8 22.92%,
       #cc32b3 53.65%,
-      rgba(204, 50, 179, 0) 100%
     );
-    border-radius: 3px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    transition: all ease 0.2s;
+    box-shadow: 0 0 9px 2px #cc32b3, inset 0 0 0 #eb82b8;
+    display: inline-block;
   }
-  &:after {
-    width: 50%;
-    box-shadow: 0px 0px 10px 0px rgba(235, 130, 184, 0.4);
-  }
+  // &:after,
+  // &:before {
+  //   content: "";
+  //   display: block;
+  //   height: 3px;
+  //   width: 75%;
+  //   margin: 0 auto;
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba(235, 130, 184, 0) 0%,
+  //     #eb82b8 22.92%,
+  //     #cc32b3 53.65%,
+  //     rgba(204, 50, 179, 0) 100%
+  //   );
+  //   border-radius: 3px;
+  //   position: absolute;
+  //   right: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   transition: all ease 0.2s;
+  // }
+  // &:after {
+  //   width: 50%;
+  //   box-shadow: 0px 0px 10px 0px rgba(235, 130, 184, 0.4);
+  // }
 
   h2 {
     font-size: pxToRem(56px);
@@ -46,15 +60,15 @@
   &.right {
     text-align: right;
   }
-  &:hover,
-  &:focus,
-  &:active {
-    &:before {
-      width: 100%;
-    }
-  }
+  // &:hover,
+  // &:focus,
+  // &:active {
+  //   &:before {
+  //     width: 100%;
+  //   }
+  // }
   @include tab {
-    width: 100%;
+    // width: 100%;
     text-align: center;
     &.left {
       &:after,

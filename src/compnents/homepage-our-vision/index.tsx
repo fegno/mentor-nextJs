@@ -6,9 +6,11 @@ import Spinner from "../spinner";
 const HomepageOurVision: React.FC = () => {
   return (
     <div className={`d-block card-glowing-blue rounded-20 animated-border-glow ${style.our_vision}`}>
-      <div className="mb-4">
+      <div>
         <div className={style.header}>
-          <Title align="left" title="Our Vision" />
+          <div className={style.title}>
+            <Title align="left" title="Our Vision" />
+          </div>
           <div className={style.spinner_wrapper}>
             <Spinner />
           </div>

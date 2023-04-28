@@ -1,0 +1,12 @@
+@import "../../styles/var";
+
+.benefits{
+    .title{
+        margin-bottom: 50px;
+    }
+    @include phone{
+        .title{
+            margin-bottom: 30px;
+        }
+    }
+}

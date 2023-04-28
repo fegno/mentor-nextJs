@@ -55,11 +55,10 @@ const HomepageCoursesMobile: React.FC<coursesMobileProps> = ({
         courses.map((course: any, index: number) => {
           return (
             <div
-              className={`${style.course} ${
-                index % 2 == 0 ? style.left : style.right
-              }`}
+              className={`${style.course} ${index % 2 == 0 ? style.left : style.right
+                }`}
               key={index}
-              onClick={()=>{handleCourseClick(index)}}
+              onClick={() => { handleCourseClick(index) }}
             >
               <div className={style.hologram_wrapper}>
                 <img
@@ -73,7 +72,7 @@ const HomepageCoursesMobile: React.FC<coursesMobileProps> = ({
                   className={style.couse_vector}
                 />
               </div>
-              <div className={style.couse_title}>{course.text}</div>
+              <div className={style.couse_title}><div>B.Tech in </div>{course.text}</div>
             </div>
           );
         })}

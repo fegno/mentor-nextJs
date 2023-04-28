@@ -1,7 +1,21 @@
+
 :root {
   --bg: #000;
 }
-
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Light.otf') format('truetype');
+  /* Change the path and format as necessary depending on your font file */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy-bold';
+  src: url('../assets/fonts/Gilroy-Bold.woff') format('truetype');
+  /* Change the path and format as necessary depending on your font file */
+  font-weight: normal;
+  font-style: normal;
+}
 @media (prefers-color-scheme: dark) {
   :root {
   }

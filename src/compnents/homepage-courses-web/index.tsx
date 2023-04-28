@@ -40,6 +40,7 @@ const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses }: any) => {
               <img src={course.gif} />
             </div>
             <div className={`${style.course_title} ${style[course.clasname]}`}>
+              <div>B.Tech in</div>
               {course.text}
             </div>
           </div>

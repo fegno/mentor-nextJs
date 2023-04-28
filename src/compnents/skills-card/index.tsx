@@ -13,7 +13,7 @@ const SkillsCard: React.FC<skillsCardProps> = ({ data }) => {
       </div>
       <div className={style.border}></div>
       <div className={style.data}>
-        <span>{data.title}:</span>
+        <span>{data.title}: </span>
         {data.description}
       </div>
     </div>
