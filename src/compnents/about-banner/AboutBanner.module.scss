@@ -1,0 +1,81 @@
+@import "../../styles/var";
+
+.banner {
+    min-height: 80vh;
+    position: relative;
+    background-image: url("../../assets/about-cover.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    .inner_wrapper {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, #000000 54.98%, rgba(0, 0, 0, 0) 86.8%);
+        .content_wrapper {
+            padding-top: 100px;
+            max-width: 696px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .title {
+                font-size: _rem(98px);
+                font-weight: 500;
+                line-height: 115px;
+            }
+            .description {
+                font-size: _rem(18px);
+                line-height: 26px;
+                font-family: " Be Vietnam Pro", sans-serif;
+                color: #cecece;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+                overflow: hidden;
+            }
+        }
+    }
+    .gradient {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+        background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 41%, rgba(0, 0, 0, 0) 70%);
+    }
+    @include small-screen {
+        .inner_wrapper {
+            background: none;
+            .content_wrapper {
+                // padding-top: 100%;
+                padding-bottom: 50px;
+                justify-content: flex-end;
+
+                .title {
+                    font-size: _rem(56px);
+                    line-height: 65px;
+                }
+                .description {
+                    font-size: _rem(16px);
+                    line-height: 25px;
+                    -webkit-line-clamp: 3;
+                }
+            }
+        }
+        .gradient {
+            background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 27%, rgba(0, 0, 0, 0) 100%);
+            background: -webkit-linear-gradient(
+                bottom,
+                rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 1) 27%,
+                rgba(0, 0, 0, 0) 100%
+            );
+            background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 27%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
+}

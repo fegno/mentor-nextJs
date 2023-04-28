@@ -1,0 +1,132 @@
+@import "../../styles/var";
+
+.achievement_card {
+    .image_wrapper {
+        position: relative;
+        padding-top: 55%;
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .content_wrapper {
+        .content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 692px;
+            width: 100%;
+            padding: 0 100px 0 20px;
+            font-family: " Be Vietnam Pro", sans-serif;
+            .title {
+                font-size: _rem(34px);
+                line-height: 36px;
+                font-weight: 500;
+                color: #f2f2f2;
+            }
+            .desc {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+                overflow: hidden;
+                color: #cecece;
+                font-size: _rem(18px);
+                line-height: 30px;
+            }
+            .btn_wrapper {
+                button {
+                    background: transparent;
+                    border: 2px solid map-get($colors, "green");
+                    padding: 10px;
+                    outline: none;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    color: #fff;
+                    .icon {
+                        margin-left: 12px;
+                        line-height: 0;
+                    }
+                }
+            }
+        }
+    }
+    @include small-screen {
+        background: linear-gradient(180deg, #343434 0%, #2c2c2c 100%);
+        border-radius: 12px;
+        padding: 10px;
+        .image_wrapper {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .content_wrapper {
+            .content {
+                padding: 0;
+                margin-top: 15px;
+                .title {
+                    font-size: _rem(26px);
+                    line-height: 36px;
+                    margin-bottom: 15px;
+                }
+                .desc {
+                    font-size: _rem(18px);
+                    line-height: 25px;
+                    -webkit-line-clamp: 7;
+                    text-align: justify;
+                }
+                .btn_wrapper {
+                    margin: auto;
+                    button {
+                        background: transparent;
+                        border:none;
+                        padding: 10px;
+                        outline: none;
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        color: #fff;
+                        font-size: _rem(18px);
+                        .icon {
+                            margin-left: 12px;
+                            line-height: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include phone{
+        .content_wrapper {
+            .content {
+                padding: 0;
+                margin-top: 15px;
+                .title {
+                    font-size: _rem(16px);
+                    line-height: 25px;
+                    margin-bottom: 15px;
+                }
+                .desc {
+                    font-size: _rem(13px);
+                    line-height: 20px;
+                    -webkit-line-clamp: 7;
+                    text-align: justify;
+                }
+                .btn_wrapper {
+                    margin: auto;
+                    button {
+                       font-size: _rem(12px);
+                    }
+                }
+            }
+        }
+    }
+}
