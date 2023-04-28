@@ -37,4 +37,22 @@
             margin-top: 15px;
        }
     }
+    @include tab{
+        margin-bottom: 30px;
+        .gallery_data_wrapper{
+            .gallery_card_title{
+                font-weight: 300;
+                font-size: _rem(16px);
+                line-height: 140%;
+            }
+            .gallery_card_name{
+                font-weight: 300;
+                font-size: _rem(13px);
+                line-height: 36px;
+            }
+            .gallery_card_content{
+                display: none;
+            }
+        }
+    }
 }
