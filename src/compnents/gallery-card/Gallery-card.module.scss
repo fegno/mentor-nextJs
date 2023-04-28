@@ -1,0 +1,40 @@
+@import "../../styles/var";
+
+.gallery_card_container{
+    margin-bottom: 87px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    .gallery_img_wrapper{
+        img{
+            width: 100%;
+        }
+    }
+    .gallery_data_wrapper{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       .gallery_card_title{
+            font-weight: 300;
+            font-size: _rem(32px);
+            line-height: 140%;
+            color: #CDCDCD;
+       }
+       .gallery_card_name{
+            font-weight: 400;
+            font-size: _rem(18px);
+            line-height: 36px;
+            color: #474DD4;
+       }
+       .gallery_card_content{
+            font-weight: 400;
+            font-size: _rem(18px);
+            line-height: 36px;
+            color: #757575;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+            margin-top: 15px;
+       }
+    }
+}

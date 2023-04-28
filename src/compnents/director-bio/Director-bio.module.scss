@@ -1,0 +1,116 @@
+@import "../../styles/var";
+
+.bio_container{
+    .director_bio{
+        display: flex;
+        align-items: center;
+        float: right;
+        justify-content: right;
+        .director_bio_wrapper{
+            display: inline-block;
+            text-align: left;
+        }
+        .bio_head_wrapper{
+            display: inline-flex;
+            align-items: center;
+            .bio_head{
+                font-size: _rem(56px);
+                line-height: 66px;
+                color: #FFFFFF;
+                margin-right: 10px;
+            }
+            .dir_social{
+                img{
+                    width: 100%;
+                    max-width: 30px;
+                }
+            }
+        }
+        .dir_position{
+            font-weight: 400;
+            font-size: _rem(28px);
+            line-height: 36px;
+            color: #474DD4;
+            font-family:" Be Vietnam Pro", sans-serif;
+            margin-bottom: 60px;
+        }
+        .bio_deatil{
+                font-weight: 300;
+                font-size: _rem(18px);
+                line-height: 30px;
+                margin-bottom: 60px;
+                font-family:" Be Vietnam Pro", sans-serif;
+            .dir_dec{
+                color: #848484;
+                .dir_data{
+                    color: #F4F4F4;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .dir_exp{
+            display: inline-flex;
+            gap: 0 45px;
+            img{
+                 width: auto;
+            }
+        }
+    }
+    .director_img{
+        img{
+            width: 100%;
+        }
+    }
+    .director_mob_img{
+        display: none;
+    }
+    @include phone{
+        .director_bio{
+            margin-top: 27px;
+            float: left;
+            justify-content: left;
+            .bio_head_wrapper{
+                .bio_head{
+                    font-size: _rem(26px);
+                    line-height: 30px;
+                }
+            }
+            .dir_position{
+                font-size: _rem(16px);
+                line-height: 36px;
+                margin-bottom: 28px;
+            } 
+            .bio_deatil{
+                font-size: _rem(13px);
+                color: #848484;
+                list-style: 24px;
+                margin-bottom: 24px;
+            }
+            .dir_exp{
+               gap: 0 20px;
+               margin-bottom: 120px;
+              
+            }
+        }
+        .director_mob_img{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+        .director_img{
+            display: none;
+        }
+       
+    }
+   @include small-screen{
+    .director_bio{
+        .dir_position{
+            margin-bottom: 28px;
+        }
+        .bio_deatil{
+            margin-bottom: 24px;
+        }
+    }
+   }
+}
