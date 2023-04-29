@@ -3,13 +3,20 @@
 .layout {
     .content {
         &.paddingtop {
-            margin-top: 130px;
+            margin-top: 90px;
         }
     }
     @include small-screen {
         .content {
             &.paddingtop {
-                margin-top: 90px;
+                margin-top: 76px;
+            }
+        }
+    }
+    @include tab{
+        .content {
+            &.paddingtop {
+                margin-top: 60px;
             }
         }
     }
