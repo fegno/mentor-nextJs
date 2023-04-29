@@ -31,7 +31,6 @@ const CustomHeader: React.FC = () => {
   const MENUS = [
     { title: "Introduction", link: "/about" },
     { title: "Programs", link: "/course-listing" },
-    // { title: "Campus", link: "#" },
     { title: "Events", link: "/events" },
     { title: "News and blog", link: "/blog-and-views" },
     { title: "Contact Us", link: "/contact" },
