@@ -13,7 +13,7 @@ const CourseDetailOtherCourses: React.FC = () => {
         fields. given below are some of the other courses that you may be
         interested in ;
       </div>
-      <HomepageCourses />
+      <HomepageCourses hasContainer/>
     </div>
   );
 };

@@ -1,0 +1,12 @@
+@import "../../styles/var";
+
+.button {
+    border: none;
+    outline: none;
+    border: 2px solid map-get($colors , "green" );
+    background: #000;
+    color: #fff;
+    padding:5px 10px;
+    border-radius: 8px;
+    font-size: _rem(14px);
+}

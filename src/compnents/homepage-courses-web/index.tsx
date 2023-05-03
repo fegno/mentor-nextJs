@@ -3,12 +3,15 @@ import style from "./HomepageCoursesWeb.module.scss";
 import baase_image from "../../assets/courses-base.svg";
 import CustomModal from "../modal";
 import CoursesTab from "../courses-tab";
+import Button from "../button";
+import CustomButton from "../custom-button";
 
 type coursesProps = {
   courses: any;
+  hasContainer?:boolean
 };
 
-const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses }: any) => {
+const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses,hasContainer }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(0);
 
@@ -22,7 +25,7 @@ const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses }: any) => {
   };
   let course = courses[selectedCourse];
   return (
-    <div className={style.courses_wrapper}>
+    <div className={`${style.courses_wrapper} ${hasContainer?style.small:""}`}>
       <CustomModal isOpen={isModalOpen} close={handleCloseModal}>
         <CoursesTab data={course}/>
       </CustomModal>
@@ -42,6 +45,11 @@ const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses }: any) => {
             <div className={`${style.course_title} ${style[course.clasname]}`}>
               <div>B.Tech in</div>
               {course.text}
+              <div className={style.view_btn}>
+                <CustomButton>
+                  View details
+                </CustomButton>
+              </div>
             </div>
           </div>
         );
