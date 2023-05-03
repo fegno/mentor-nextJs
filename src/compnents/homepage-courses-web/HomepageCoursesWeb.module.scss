@@ -13,6 +13,7 @@
             border: 2px solid map-get($colors, "green");
             background: transparent;
             color: #fff;
+            transition: all ease 0.3s;
             &::before {
               content: "";
               width: 0%;
