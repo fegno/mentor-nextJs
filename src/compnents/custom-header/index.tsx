@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import style from "./CustomHeader.module.scss";
 import MobileMenu from "../mobile-menu";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/mentor-logo.svg";
 import Link from "next/link";
 import { RiMenu4Line } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 const CustomHeader: React.FC = () => {
   const [hideHeader, setHideHeader] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
+
+  const router = useRouter();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -29,6 +32,7 @@ const CustomHeader: React.FC = () => {
   }, []);
 
   const MENUS = [
+    {title:"Home",link:"/"},
     { title: "Introduction", link: "/about" },
     { title: "Programs", link: "/course-listing" },
     { title: "Events", link: "/events" },
@@ -54,7 +58,7 @@ const CustomHeader: React.FC = () => {
           <ul className={style.menus}>
             {MENUS.map((menu: any, index: number) => {
               return (
-                <div className={style.menu} key={index}>
+                <div className={`${style.menu} ${router.route== menu.link ?style.active:""}`} key={index}>
                   <Link href={menu.link}>{menu.title}</Link>
                 </div>
               );

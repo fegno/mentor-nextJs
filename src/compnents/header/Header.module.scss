@@ -28,7 +28,6 @@
   :global {
     .navbar-nav {
       margin-left: auto;
-
       li {
         &:not(:last-child) {
           margin: 0 15px;
@@ -42,7 +41,7 @@
     padding: 5px 0;
     button{
       color: #fff;
-      // display: none;
+      display: none;
     }
   }
 }

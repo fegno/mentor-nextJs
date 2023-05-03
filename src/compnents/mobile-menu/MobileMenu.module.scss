@@ -25,6 +25,9 @@
       .menu {
         font-size: _rem(18px);
         line-height: 26px;
+        &.active{
+          color: #b5b5b5;
+        }
         &:not(:last-child) {
           margin-bottom: 40px;
         }

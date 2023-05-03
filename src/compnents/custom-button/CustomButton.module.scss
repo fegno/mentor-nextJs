@@ -1,12 +1,16 @@
 @import "../../styles/var";
 
 .button {
-    border: none;
     outline: none;
-    border: 2px solid map-get($colors , "green" );
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: _rem(12px);
+    display: inline-flex;
+    align-items: center;
+    gap: 0 10px;
+    color: #58b57a;
+    font-weight: 500;
+    border: 2px solid map-get($colors, "green");
     background: #000;
     color: #fff;
-    padding:5px 10px;
-    border-radius: 8px;
-    font-size: _rem(14px);
 }

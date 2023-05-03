@@ -4,6 +4,8 @@ import large_holog from "../../assets/big_hologram.svg";
 import small_holog from "../../assets/small_hologram.svg";
 import CustomModal from "../modal";
 import CoursesTab from "../courses-tab";
+import CustomButton from "../custom-button";
+import { BsArrowRightCircle } from "react-icons/bs";
 
 type coursesMobileProps = {
   courses: any;
@@ -72,7 +74,13 @@ const HomepageCoursesMobile: React.FC<coursesMobileProps> = ({
                   className={style.couse_vector}
                 />
               </div>
-              <div className={style.couse_title}><div>B.Tech in </div>{course.text}</div>
+              <div className={style.couse_title}><div>B.Tech in </div>{course.text}
+              <div className={style.btn}>
+                <CustomButton>
+                  View details <BsArrowRightCircle />
+                </CustomButton>
+              </div>
+              </div>
             </div>
           );
         })}

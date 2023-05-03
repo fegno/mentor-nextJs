@@ -5,13 +5,14 @@ import CustomModal from "../modal";
 import CoursesTab from "../courses-tab";
 import Button from "../button";
 import CustomButton from "../custom-button";
+import { BsArrowRightCircle } from "react-icons/bs";
 
 type coursesProps = {
   courses: any;
-  hasContainer?:boolean
+  hasContainer?: boolean
 };
 
-const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses,hasContainer }) => {
+const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses, hasContainer }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(0);
 
@@ -25,9 +26,9 @@ const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses,hasContainer }) =>
   };
   let course = courses[selectedCourse];
   return (
-    <div className={`${style.courses_wrapper} ${hasContainer?style.small:""}`}>
+    <div className={`${style.courses_wrapper} ${hasContainer ? style.small : ""}`}>
       <CustomModal isOpen={isModalOpen} close={handleCloseModal}>
-        <CoursesTab data={course}/>
+        <CoursesTab data={course} />
       </CustomModal>
       <img src={baase_image.src} alt="courses" />
       {courses.map((course: any, index: number) => {
@@ -44,11 +45,11 @@ const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses,hasContainer }) =>
             </div>
             <div className={`${style.course_title} ${style[course.clasname]}`}>
               <div>B.Tech in</div>
-              {course.text}
+              <div>{course.text}</div>
               <div className={style.view_btn}>
-                <CustomButton>
-                  View details
-                </CustomButton>
+                <button >
+                  View details <BsArrowRightCircle />
+                </button>
               </div>
             </div>
           </div>

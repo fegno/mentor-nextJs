@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/mentor-logo-full.svg";
 import NewsletterForm from "../newsletter-form";
 import Container from "../container";
 import style from "./Footer.module.scss";
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               <div className="row">
                 <div className="col-12 mb-5">
                   <a href="#">
-                    <img src={logo.src} alt="Mentor" />
+                    <img src={logo.src} alt="Mentor" className={style.logo}/>
                   </a>
                 </div>
                 <div className={`col-12 ${style.menus_mobile}`}>
