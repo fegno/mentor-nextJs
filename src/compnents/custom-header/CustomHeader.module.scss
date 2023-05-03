@@ -1,0 +1,74 @@
+@import "../../styles/var";
+
+.custom_header {
+  transition: all ease 0.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  .wrapper {
+    transition: all ease 0.5s;
+    .inner_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all ease 0.5s;
+      gap: 0 50px;
+      padding: 21px 0;
+      .menus {
+        list-style: none;
+        display: flex;
+        gap: 0 10px;
+        max-width: 700px;
+        width: 100%;
+        justify-content: space-between;
+        font-family: "Heebo", sans-serif;
+      }
+      .icons {
+        display: none;
+      }
+    }
+  }
+  &.hide {
+    .wrapper {
+      transform: translateY(-200%);
+    }
+  }
+  @include small-screen {
+    .wrapper {
+      background: rgba(217, 217, 217, 0.05);
+      backdrop-filter: blur(11.5px);
+      .inner_wrapper {
+        padding: 15px;
+        .menus {
+          display: none;
+        }
+        .icons {
+          display: inline-block;
+          font-size: _rem(20px);
+          color: #737373;
+          button {
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #737373;
+          }
+        }
+      }
+    }
+  }
+  @include tab {
+    .wrapper {
+      .inner_wrapper {
+        .logo {
+          width: 123px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
