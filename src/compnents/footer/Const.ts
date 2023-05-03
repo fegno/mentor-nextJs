@@ -25,8 +25,8 @@ export const CONST = {
     ],
     SOCIAL_LINKS :[
      {title:"Facebook",icon: facebook.src,link:"https://www.facebook.com/MADEITMENTOR/"},
-     {title:"LinkedIn",icon: linkedin.src,link:"https://www.instagram.com/__mentor_academy__/"},
-     {title:"Instagram",icon: instagram.src,link:"https://www.linkedin.com/company/mentor-engineering-college/"},
+     {title:"LinkedIn",icon: linkedin.src,link:"https://www.linkedin.com/company/mentor-engineering-college/"},
+     {title:"Instagram",icon: instagram.src,link:"https://www.instagram.com/__mentor_academy__/"},
      {title:"Reddit",icon: reddit.src,link:"https://www.reddit.com/user/Mentorow"},
     ]
 }

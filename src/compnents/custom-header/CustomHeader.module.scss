@@ -32,9 +32,10 @@ $active_color : #b5b5b5;
         justify-content: space-between;
         font-family: "Heebo", sans-serif;
         .menu {
+          color: $active_color;
           &.active {
             a {
-              color: $active_color;
+              color: #fff;
             }
           }
         }
