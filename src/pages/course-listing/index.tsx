@@ -25,8 +25,8 @@ const CourseListing: React.FC = () => {
       image: artificial.src,
     },
     {
-      title: "Cloud Computing",
-      description:"B.Tech in Cloud Computing is designed to provide students with the skills and knowledge necessary to manage and deploy cloud-based applications and services. Graduates of this program can pursue careers as cloud architects, cloud engineers, and cloud developers in industries that rely on cloud computing technology.",
+      title: "Computer Science",
+      description:"B.Tech in Computer Science is designed to provide students with the skills and knowledge necessary to manage and deploy cloud-based applications and services. Graduates of this program can pursue careers as cloud architects, cloud engineers, and cloud developers in industries that rely on Computer Science technology.",
       slug: "",
       image: cloud.src,
     },

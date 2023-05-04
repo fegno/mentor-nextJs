@@ -121,10 +121,10 @@ export const COURSES = [
     ],
   },
   {
-    title: "B.Tech in Cloud Computing",
+    title: "B.Tech in Computer Science",
     gif: cloud.src,
     clasname: "middle-left",
-    text: "Cloud Computing",
+    text: "Computer Science",
     details: [
       {
         title: "Skills",

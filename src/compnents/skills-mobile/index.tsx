@@ -24,7 +24,7 @@ const SkillsMobile: React.FC = () => {
                         </div>
                     </div>
                     <div className={`col-8 ${style.content_wrapper}`}>
-                        <span className={style.title}>{item.title}:</span>
+                        <span className={style.title}>{item.title} {" "}:{" "}</span>
                         {item.description}
                     </div>
                 </div>

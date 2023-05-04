@@ -15,7 +15,7 @@ const SkillsWeb: React.FC<skillswebProps> = ({ data }) => {
           {skills?.slice(0, 2).map((skill: any, index: number) => {
             return (
               <div className={style.skill_wrapper} key={index}>
-                <span>{skill.title}:</span>
+                <span>{skill.title}{" "}:{" "}</span>
                 {skill.description}
               </div>
             );
@@ -28,7 +28,7 @@ const SkillsWeb: React.FC<skillswebProps> = ({ data }) => {
           {skills?.slice(2, 4).map((skill: any, index: number) => {
             return (
               <div className={style.skill_wrapper} key={index}>
-                <span>{skill.title}:</span>
+                <span>{skill.title}{" "}:{" "}</span>
                 {skill.description}
               </div>
             );
