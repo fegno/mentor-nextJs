@@ -170,6 +170,9 @@
 .features{
   margin-bottom: 200px;
 }
+.comparison_table{
+  margin-bottom: 200px;
+}
 @media screen and (max-width:991px){
   .courses{
     margin-bottom: 80px;
@@ -184,6 +187,9 @@
     margin-bottom: 0;
   }
   .features{
+    margin-bottom: 80px;
+  }
+  .comparison_table{
     margin-bottom: 80px;
   }
 }

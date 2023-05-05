@@ -10,6 +10,7 @@ import HomepageOurValues from "@/compnents/homepage-our-values";
 import HomepageBenefits from "@/compnents/homepage-benefits";
 import HomePageClassroom from "@/compnents/class-room";
 import HomepageCourses from "../compnents/homepage-courses";
+import ComparisonTable from "@/compnents/comparison-table";
 
 
 export default function Home() {
@@ -44,6 +45,11 @@ export default function Home() {
       <section className={styles.benefits}>
         <Container>
           <HomepageBenefits />
+        </Container>
+      </section>
+      <section className={styles.comparison_table}>
+        <Container>
+          <ComparisonTable />
         </Container>
       </section>
       <section className={styles.features}>
