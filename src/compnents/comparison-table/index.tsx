@@ -90,7 +90,7 @@ const ComparisonTable: React.FC = () => {
           })}
         </tbody>
       </table>
-      <div className={style.mobile_view}>
+      <div className={`d-block card-glowing-blue rounded-20 animated-border-glow ${style.mobile_view}`}>
         <div className={style.title}>Comparison</div>
         {TABLE_CONTENT.map((row: any, index: number) => {
           return (
