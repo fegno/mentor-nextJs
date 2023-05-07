@@ -2,7 +2,7 @@
 
 .comparison_table {
   .mobile_view {
-    display: none;
+    display: none !important;
   }
   table {
     table-layout: fixed;
@@ -72,7 +72,7 @@
       display: none;
     }
     .mobile_view {
-      display: block;
+      display: block !important;
       border-radius: 12px;
       background: #0A0A0A;
       .row {
