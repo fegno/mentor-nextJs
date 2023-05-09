@@ -65,7 +65,7 @@ const ComparisonTable: React.FC = () => {
       <table className={style.web_view}>
         <thead>
           <tr>
-            <th>Criteria &apos; s</th>
+            <th></th>
             <th>Mentor Approach</th>
             <th>Traditional Education</th>
           </tr>
