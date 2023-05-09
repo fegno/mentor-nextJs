@@ -6,7 +6,7 @@ const ComparisonTable: React.FC = () => {
     {
       cell1: "Curriculum",
       cell2:
-        "Industry vetted curriculum.redesigning with our R& D team consisting of industry experts who have more than 10yrs experience.",
+        "Industry vetted curriculum .Redesigning with our R& D team consisting of industry experts who have more than 10yrs experience.",
       cell3: "Outdated",
     },
     {
