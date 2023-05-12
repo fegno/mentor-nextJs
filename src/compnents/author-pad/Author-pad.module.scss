@@ -69,6 +69,23 @@
         }
     }
     @include small-screen {
+        text-align: center;
+        .author_detail_wrapper {
+            .border {
+                margin: auto;
+            }
+        }
+        &.right {
+            text-align: center;
+            .author_img {
+                order: -1;
+            }
+            .author_detail_wrapper {
+                .border {
+                    margin: auto;
+                }
+            }
+        }
         .author_head_wrapper {
             display: flex;
             justify-content: center;
