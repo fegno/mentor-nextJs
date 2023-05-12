@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./HomepageCoursesMobile.module.scss";
-import large_holog from "../../assets/big_hologram.svg";
-import small_holog from "../../assets/small_hologram.svg";
+import large_holog from "../../assets/gif_glow_Large.svg";
+import small_holog from "../../assets/gif_glow_small.svg";
 import CustomModal from "../modal";
 import CoursesTab from "../courses-tab";
 import HologramButton from "../hologram-button";

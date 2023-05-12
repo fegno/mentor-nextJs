@@ -45,13 +45,14 @@
           z-index: 99;
         }
         .particle {
-          width: 100%;
+          width: 70%;
           height: 80%;
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
+          margin: auto;
         }
       }
     }
@@ -68,9 +69,9 @@
         left: 0;
         right: 0;
         top: 0;
-        bottom: 0;
-        width: 85px;
-        height: 85px;
+        bottom: 16px;
+        width: 100px;
+        height: 100px;
         margin: auto;
         mix-blend-mode: screen;
       }
