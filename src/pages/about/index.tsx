@@ -7,6 +7,7 @@ import AboutBanner from "@/compnents/about-banner";
 import AboutAchievements from "@/compnents/about-achievements";
 import DirectorBio from "@/compnents/director-bio";
 import AboutBioWrapper from "@/compnents/about-bio-wrapper";
+import AboutAuthorSection from "@/compnents/about-author-section";
 
 const About: React.FC = () => {
   return (
@@ -16,11 +17,11 @@ const About: React.FC = () => {
       </div>
       <Container>
         <section className={style.about_container}>
-          <Author />
+          <AboutAuthorSection />
         </section>
-        <section className={style.director_block}>
+        {/* <section className={style.director_block}>
           <AboutBioWrapper />
-        </section>
+        </section> */}
         <section className={style.mentors}>
           <Mentors />
         </section>

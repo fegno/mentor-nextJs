@@ -22,11 +22,18 @@ if(window.innerWidth>991){
   setIsResponsive(true)
 }
 },[])
+
+const TABS=[
+  {title:"Skills"},
+  {title:"Market Growth"},
+  {title:"Job Oppurtunities"},
+]
+
   return (
     <div className={style.course_tab}>
-      <div className={style.title}>{data.title}</div>
+      <div className={style.title}>{data?.attributes?.title}</div>
       <div className={style.tabs_wrapper}>
-        {data?.details?.map((tab: any, index: number) => {
+        {TABS?.map((tab: any, index: number) => {
           return (
             <button
               key={index}
@@ -45,19 +52,19 @@ if(window.innerWidth>991){
       <div className={style.data_wrapper}>
         {selectedTab == 0 && (
           !isResponsive?<div className={style.web}>
-            <SkillsWeb data={data} />
+            <SkillsWeb data={data?.attributes} />
           </div>:
           <div>
-            <SkillsMobile />
+            <SkillsMobile data={data?.attributes}/>
           </div>
         )}
         {selectedTab == 1 && (
           <div className={style.market}>
-            <MarketGrowth data={data.details[1].data}/>
+            <MarketGrowth data={data?.attributes.market}/>
           </div>
         )}
         {selectedTab == 2 && <div className={style.jobs}>
-          <JobOppurtinities data={data.details[2].data}/>
+          <JobOppurtinities data={data?.attributes.job}/>
           </div>}
       </div>
     </div>

@@ -6,6 +6,16 @@
   color: #c1c1c1;
   line-height: 36px;
   font-family: "Be Vietnam Pro", sans-serif;
+  .floating{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+  }
   .inner_wrapper {
     max-width: 501px;
     .logo{
@@ -26,6 +36,21 @@
       display: none;
     }
   }
+  .achievement_wrapper{
+    padding-top: 60%;
+    position: relative;
+    max-width: 200px;
+    .achievement_icon{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
   .social_links {
     .link {
       a {
@@ -35,9 +60,47 @@
       }
     }
   }
+  .bottom_title{
+    font-size: _rem(18px);
+    color: #C1C1C1;
+    margin-bottom: 10px;
+  }
+  .awards_wrapper{
+    display: flex;
+    width: 100%;
+    gap: 0 20px;
+    .award{
+      .title{
+        margin-left: 10px;
+        font-size: _rem(14px);
+      }
+    }
+  }
+  @include large-screen{
+    .bottom_title{
+      text-align: center;
+      font-size: _rem(14px);
+    }
+    .awards_wrapper{
+      display: block;
+      text-align: center;
+      .award{
+        .title{
+          font-size: _rem(12px);
+        }
+      }
+    }
+    .copy_right{
+      font-size: _rem(12px);
+    }
+  }
   @include small-screen {
     padding-top: 50px;
     font-size: _rem(14px);
+    .floating{
+      right: 20px;
+      bottom: 20px;
+    }
     .inner_wrapper {
       .title {
         font-size: _rem(18px);

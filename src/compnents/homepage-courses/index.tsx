@@ -4,6 +4,7 @@ import HomepageCoursesWeb from "../homepage-courses-web";
 import HomepageCoursesMobile from "../hompepage-courses-mobile";
 import Container from "../container";
 import { COURSES } from "./const";
+import { http } from "@/axios/http";
 
 type coursesProps={
   hasContainer?:boolean
@@ -11,7 +12,7 @@ type coursesProps={
 
 const HomepageCourses: React.FC<coursesProps> = ({hasContainer}) => {
   const [isResponsive, setIsResponsive] = useState(false);
-
+  const [data,setData] = useState([]);
   useEffect(() => {
     const updateScreenType = () => {
       if (window.innerWidth < 991) {
@@ -24,16 +25,19 @@ const HomepageCourses: React.FC<coursesProps> = ({hasContainer}) => {
     window.addEventListener("resize", () => {
       updateScreenType();
     });
+    http.get('courses?populate=deep').then((res)=>{
+      setData(res.data.data)
+    })
   }, []); 
 
   return (
     <div className={style.courses}>
       {isResponsive ? (
         <Container>
-          <HomepageCoursesMobile courses={COURSES} />
+          <HomepageCoursesMobile courses={data} />
         </Container>
       ) : (
-        <HomepageCoursesWeb courses={COURSES} hasContainer={hasContainer} />
+        <HomepageCoursesWeb courses={data} hasContainer={hasContainer} />
       )}
     </div>
   );

@@ -1,17 +1,16 @@
-
 :root {
   --bg: #000;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../assets/fonts/Gilroy-Light.otf') format('truetype');
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Light.otf") format("truetype");
   /* Change the path and format as necessary depending on your font file */
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy-bold';
-  src: url('../assets/fonts/Gilroy-Bold.woff') format('truetype');
+  font-family: "Gilroy-bold";
+  src: url("../assets/fonts/Gilroy-Bold.woff") format("truetype");
   /* Change the path and format as necessary depending on your font file */
   font-weight: normal;
   font-style: normal;
@@ -35,8 +34,8 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
+  scroll-behavior: smooth !important;
 }
-
 body {
 }
 
@@ -106,15 +105,14 @@ a {
     #000000;
 }
 .card-black {
-  background:#000000;
- 
+  background: #000000;
 }
 .pink {
   color: #d446b4;
 }
-.rounded-30{
+.rounded-30 {
   border-radius: 30px;
 }
-.section-blue{
-  background:  #1d1a2a;
+.section-blue {
+  background: #1d1a2a;
 }

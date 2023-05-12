@@ -45,7 +45,10 @@
       }
     }
   }
-
+  .sub {
+    position: relative;
+    z-index: 1;
+  }
   &.pink {
     .main .icon {
       box-shadow: 0 0 5px 0 #eb49c1;
@@ -89,17 +92,17 @@
       }
     }
   }
-  @include small-screen{
+  @include small-screen {
     margin: auto;
     padding-left: 10px;
-    .main{
+    .main {
       font-size: _rem(34px);
-      .icon{
+      .icon {
         width: 40px;
         height: 40px;
       }
     }
-    .sub{
+    .sub {
       font-size: _rem(14px);
     }
   }

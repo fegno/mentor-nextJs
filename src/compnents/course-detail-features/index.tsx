@@ -10,7 +10,11 @@ import SkillsCard from "../skills-card";
 import JobOppurtinities from "../job-oppurtunities";
 import MarketGrowth from "../market-growth";
 
-const CourseDetailFeatures: React.FC = () => {
+type featuresProps = {
+  data: any
+}
+
+const CourseDetailFeatures: React.FC<featuresProps> = ({ data }) => {
   const [selectedTab, setSelectedTab] = useState(0);
   const FEATURES = [
     {
@@ -76,7 +80,7 @@ const CourseDetailFeatures: React.FC = () => {
   const handleTabClick = (index: number) => {
     setSelectedTab(index);
   };
-  const data: any = FEATURES[selectedTab];
+
   return (
     <div className={style.features}>
       <div className={`row ${style.inner_wrapper}`}>
@@ -85,18 +89,16 @@ const CourseDetailFeatures: React.FC = () => {
             {FEATURES.map((tab: any, index: number) => {
               return (
                 <div
-                  className={`${style.tab} ${
-                    index == selectedTab ? style.active : ""
-                  }`}
+                  className={`${style.tab} ${index == selectedTab ? style.active : ""
+                    }`}
                   key={index}
                   onClick={() => {
                     handleTabClick(index);
                   }}
                 >
                   <div
-                    className={`${style.border} ${
-                      selectedTab >= index ? style.active : ""
-                    }`}
+                    className={`${style.border} ${selectedTab >= index ? style.active : ""
+                      }`}
                   ></div>
                   {tab.title}
                 </div>
@@ -111,9 +113,9 @@ const CourseDetailFeatures: React.FC = () => {
 
             {selectedTab == 0 && (
               <div className={style.skills_wrapper}>
-                <div className={style.inner_title}>{data.page_title}</div>
+                <div className={style.inner_title}>{`Top ${data?.title} Skills`}</div>
                 <div className={style.cards_wrapper}>
-                  {data.data.map((skill: any, index: number) => {
+                  {data?.skills[0]?.skills?.map((skill: any, index: number) => {
                     return (
                       <div className={style.card} key={index}>
                         <SkillsCard data={skill} />
@@ -126,14 +128,14 @@ const CourseDetailFeatures: React.FC = () => {
 
             {/* if second tab is selected */}
 
-            {selectedTab ==1 &&<div>
-              <MarketGrowth data={data.data} fullWidth/>
-              </div>}
+            {selectedTab == 1 && <div>
+              <MarketGrowth data={data?.market} fullWidth />
+            </div>}
 
             {/* if third tab selected */}
-            
-            {selectedTab ==2 && <div className={style.jobs_wrapper}>
-            <JobOppurtinities data={data.data} fullWidth/>  
+
+            {selectedTab == 2 && <div className={style.jobs_wrapper}>
+              <JobOppurtinities data={data?.job} fullWidth />
             </div>}
           </div>
         </div>

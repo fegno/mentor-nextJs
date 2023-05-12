@@ -4,7 +4,11 @@ import Slider from 'react-slick';
 import AchievementCard from '../achievement-card';
 import style from "./AchievementsSlider.module.scss";
 
-const AchievementsSlider: React.FC = () => {
+type achievementSliderProps={
+    data:any
+}
+
+const AchievementsSlider: React.FC<achievementSliderProps> = ({data}) => {
     const sliderRef :any= useRef(null)
     console.log(sliderRef.current)
     const settings = {
@@ -24,16 +28,15 @@ const AchievementsSlider: React.FC = () => {
             },
         ]
     }
-    const Slides = [1,2,3,4,5]
     return (
         <div className={style.achievements_slider}>
             <Slider {...settings} ref={sliderRef}>
-                {Slides.map((slide: any, index: number) => {
+                {data.map((slide: any, index: number) => {
                     return <div className={style.card} key={index}>
                         <div className={style.slides_count}>
-                            <span className={style.active}>{index+1}</span>/<span className={style.total_count}>{Slides.length}</span>
+                            <span className={style.active}>{index+1}</span>/<span className={style.total_count}>{data.length}</span>
                         </div>
-                        <AchievementCard />
+                        <AchievementCard data={slide}/>
                     </div>
                 })}
             </Slider>

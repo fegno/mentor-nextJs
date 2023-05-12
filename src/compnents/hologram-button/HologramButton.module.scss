@@ -1,0 +1,46 @@
+@import "../../styles/var";
+
+.hologram_button {
+    display: inline-block;
+    line-height: 25px;
+    font-size: _rem(14px);
+    position: relative;
+    padding: 6px 4px;
+    .text {
+        position: relative;
+        z-index: 9;
+        padding:10px;
+        background-color: #000;
+    }
+    &::after,
+    &::before {
+        content: "";
+        width: 5px;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: 1.6px solid #00c2ff;
+        background-color: #00313c;
+    }
+    &::before {
+        left: 0;
+        border-right: 0;
+    }
+    &::after{
+        border-left: 0;
+    }
+    &:hover {
+        transition: all ease 0.5s;
+        transform: scale(1.2);
+        background-color: #00313c;
+        .text {
+            background-color: #00313c;
+        }
+    }
+    @include phone{
+        font-size: _rem(12px);
+    }
+}

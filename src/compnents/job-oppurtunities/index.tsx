@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./JobOpportunity.module.scss";
 import JobChartModule from "../job-chart-card";
+import { CONFIG } from "@/config/config";
 
 type jobOppertunityProps = {
   data: any;
@@ -20,7 +21,7 @@ const JobOppurtinities: React.FC<jobOppertunityProps> = ({
               className={`col-12 ${fullWidth ? "" : "col-lg-4"}`}
               key={index}
             >
-              <JobChartModule title={job.title} image={job.chart} imageSmall={fullWidth}/>
+              <JobChartModule title={job.title} image={`${CONFIG.baseUrl}${job?.graph?.data?.attributes?.url}`} imageSmall={fullWidth}/>
             </div>
           );
         })}

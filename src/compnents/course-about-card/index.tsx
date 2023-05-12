@@ -4,9 +4,11 @@ import arrow from "../../assets/arrow-down.png";
 
 type cardProps = {
   data: any;
+  title:string;
+  icon:string
 };
 
-const CourseAboutCard: React.FC<cardProps> = ({ data }) => {
+const CourseAboutCard: React.FC<cardProps> = ({ data ,title ,icon}) => {
   const [showDescription, setShowDescription] = useState(false);
 
   const handleToggleClick = () => {
@@ -34,8 +36,8 @@ const CourseAboutCard: React.FC<cardProps> = ({ data }) => {
     >
       <div className={style.head}>
         <div className={style.inner_wrapper}>
-          <img src={data.icon} alt="icon" className={style.icon} />
-          <div className={style.title}>{data.title}</div>
+          <img src={icon} alt="icon" className={style.icon} />
+          <div className={style.title}>{title}</div>
         </div>
         <img
           src={arrow.src}
@@ -45,7 +47,7 @@ const CourseAboutCard: React.FC<cardProps> = ({ data }) => {
         />
       </div>
       {showDescription && (
-        <div className={style.description}>{data.description}</div>
+        <div className={style.description}>{data}</div>
       )}
     </div>
   );

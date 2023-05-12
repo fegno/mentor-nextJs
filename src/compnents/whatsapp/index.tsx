@@ -2,6 +2,7 @@ import React from "react";
 import style from "./Whatsapp.module.scss";
 import icon from "../../assets/whatsapp.svg";
 import Link from "next/link";
+import ApplyNow from "../apply-now";
 
 const Whatsapp: React.FC = () => {
   return (

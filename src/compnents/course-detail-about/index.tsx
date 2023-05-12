@@ -4,7 +4,11 @@ import icon_who from "../../assets/course-about-who.png";
 import icon_what from "../../assets/course-about-what.png";
 import CourseAboutCard from "../course-about-card";
 
-const CourseDetailAbout: React.FC = () => {
+type aboutProps = {
+  data: any
+}
+
+const CourseDetailAbout: React.FC<aboutProps> = ({ data }) => {
   const CARDS = [
     {
       title: "Who this course is for",
@@ -26,21 +30,17 @@ const CourseDetailAbout: React.FC = () => {
     <div className={style.course_detail_about}>
       <div className={style.title}>About this degree</div>
       <div className={style.description}>
-        As a student on the Machine Learning MSc, you will develop an
-        understanding of the principles underlying the development and
-        application of new techniques in this area, alongside an awareness of,
-        and ability to analyse the range and scope of algorithms and approaches
-        available, and design, develop and evaluate appropriate algorithms and
-        methods for new problems and applications.
+        {data?.about_this_degree}
       </div>
       <div className={`row ${style.card_wrapper}`}>
-        {CARDS.map((card: any, index: number) => {
-          return (
-            <div className="col-12 col-lg-6 mb-4" key={index}>
-             <CourseAboutCard data={card}/>
-            </div>
-          );
-        })}
+
+        <div className="col-12 col-lg-6 mb-4" >
+          <CourseAboutCard data={data?.who_this_course_is_for} title="Who this course is for" icon={icon_who.src}/>
+        </div>
+        <div className="col-12 col-lg-6 mb-4" >
+          <CourseAboutCard data={data?.what_this_course_will_give} title="What this course will give you" icon={icon_what.src}/>
+        </div>
+
       </div>
     </div>
   );

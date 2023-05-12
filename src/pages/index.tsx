@@ -30,7 +30,9 @@ export default function Home() {
         </Container>
       </section>
       <section className={styles.courses}>
-        <HomepageCourses />
+       <Container>
+       <HomepageCourses hasContainer/>
+       </Container>
       </section>
       <section className={styles.our_vision}>
         <Container>
@@ -55,7 +57,7 @@ export default function Home() {
       <section className={styles.features}>
         <HomepageFeatures />
       </section>
-      <section>
+      <section id="apply_now">
         <ContactForm />
       </section>
       <section>

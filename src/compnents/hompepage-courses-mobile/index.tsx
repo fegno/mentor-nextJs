@@ -4,8 +4,9 @@ import large_holog from "../../assets/big_hologram.svg";
 import small_holog from "../../assets/small_hologram.svg";
 import CustomModal from "../modal";
 import CoursesTab from "../courses-tab";
-import CustomButton from "../custom-button";
-import { BsArrowRightCircle } from "react-icons/bs";
+import HologramButton from "../hologram-button";
+import particle from "../../assets/particle.gif";
+import { CONFIG } from "@/config/config";
 
 type coursesMobileProps = {
   courses: any;
@@ -45,10 +46,13 @@ const HomepageCoursesMobile: React.FC<coursesMobileProps> = ({
       {/* lines end */}
       <div className={style.large_hologram}>
         <div className={style.large_hologram_image}>
-          <img src={large_holog.src} alt="holo" />
+          <img src={large_holog.src} alt="holo" className={style.large_holog}/>
           <div className={style.title_wrapper}>
+            <div className={style.text_wrapper}>
             <div className={style.title}>B.Tech CSE</div>
             <div className={style.sub_title}>Courses</div>
+            </div>
+            <img src={particle.src} className={style.particle}/>
           </div>
         </div>
       </div>
@@ -69,16 +73,14 @@ const HomepageCoursesMobile: React.FC<coursesMobileProps> = ({
                   className={style.hologram_small}
                 />
                 <img
-                  src={course.gif}
+                  src={`${CONFIG.baseUrl}${course?.attributes?.gif_icon?.data?.attributes?.url}`}
                   alt="course"
                   className={style.couse_vector}
                 />
               </div>
-              <div className={style.couse_title}><div>B.Tech in </div>{course.text}
+              <div className={style.couse_title}><div>B.Tech in </div>{course?.attributes?.title_short}
               <div className={style.btn}>
-                <CustomButton>
-                  View details <BsArrowRightCircle />
-                </CustomButton>
+                <HologramButton />
               </div>
               </div>
             </div>

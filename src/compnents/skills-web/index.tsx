@@ -1,13 +1,14 @@
 import React from "react";
 import style from "./SkillsWeb.module.scss";
 import skils from "../../assets/blockchain skills.png";
+import { CONFIG } from "@/config/config";
 
 type skillswebProps = {
   data: any;
 };
 
 const SkillsWeb: React.FC<skillswebProps> = ({ data }) => {
-  const skills = data.details[0].data;
+  const skills = data?.skills[0]?.skills;
   return (
     <div className={style.skills_web}>
       <div className="row" style={{ width: "100%" }}>
@@ -22,7 +23,7 @@ const SkillsWeb: React.FC<skillswebProps> = ({ data }) => {
           })}
         </div>
         <div className="col-4">
-          <img src={skils.src} alt="skills" className={style.skill_img} />
+          <img src={`${CONFIG.baseUrl}${data?.skills[0]?.icon_large?.data?.attributes?.url}`} alt="skills" className={style.skill_img} />
         </div>
         <div className="col-4" style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"space-between"}}>
           {skills?.slice(2, 4).map((skill: any, index: number) => {

@@ -4,17 +4,18 @@ import style from "./ExpandListComponent.module.scss";
 
 type expandListProps = {
   data: any;
-  showMenu?: boolean;
-  index: number
+  title:string
+  expanded?: boolean
 };
 
-const ExpandListComponent: React.FC<expandListProps> = ({ data, index }) => {
+const ExpandListComponent: React.FC<expandListProps> = ({ data, expanded ,title}) => {
+  console.log(data)
   const [showMenu, setShowMenu] = useState(false);
 
   const listRef = useRef(null);
 
   useEffect(() => {
-    if (index == 0) {
+    if (expanded) {
       setShowMenu(true)
     }
   }, [])
@@ -26,14 +27,14 @@ const ExpandListComponent: React.FC<expandListProps> = ({ data, index }) => {
   return (
     <div className={style.expand_list_component} ref={listRef}>
       <div className={style.title} onClick={handleListShow}>
-        {data.title}
+        {title}
       </div>
       {showMenu && (
         <ul className={style.lists}>
-          {data.children.map((list: string, index: number) => {
+          {data?.map((list: any, index: number) => {
             return (
               <li className={style.list} key={`list${index}`}>
-                {list}
+                {list.jobs?list.jobs:list.courses}
               </li>
             );
           })}

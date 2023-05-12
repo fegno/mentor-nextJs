@@ -3,6 +3,12 @@
 .author_pad_container {
     .author_img {
         text-align: center;
+        position: relative;
+        .gradiant {
+            inset: 0;
+            position: absolute;
+            background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%);
+        }
         img {
             width: 100%;
             max-width: 500px;
@@ -48,6 +54,17 @@
                 width: 100%;
                 max-width: 30px;
                 margin: 4px 0 0;
+            }
+        }
+    }
+    &.right {
+        text-align: right;
+        .author_img {
+            order: 1;
+        }
+        .author_detail_wrapper {
+            .border {
+                margin-left: auto;
             }
         }
     }

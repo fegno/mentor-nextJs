@@ -1,0 +1,43 @@
+@import "../../styles/_var.scss";
+
+.apply_now {
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        padding: 6px 20px;
+        border-radius: 27px;
+        // border: 1.6px solid #999999;
+        color: #F4F4F4;
+        font-size: 18px;
+        line-height: 36px;
+        box-shadow: 0px 0px 6px #474DD4, inset 0px 0px 2px 2px #474DD4;
+        font-family: 'Be vietnam',sans-serif;
+        .icon{
+            font-size: 20px;
+            margin-right: 14px;
+        }
+    }
+    &:hover{
+        transition: all ease 0.5s;
+        a{
+            background: linear-gradient(94.05deg, #0C216A 6.61%, #255886 93.39%);
+            text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.81);
+            .text{
+                transform: scale(1.05);
+            }
+        }
+    }
+    @include small-screen{
+        a{
+            font-size: 13px;
+            padding: 3px 10px;
+            line-height: 25px;
+            .icon{
+                font-size: 16px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

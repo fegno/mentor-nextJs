@@ -5,12 +5,11 @@ import style from "./AboutBioWrapper.module.scss";
 const AboutBioWrapper: React.FC = () => {
     return (
         <div className={style.about_bio_wrapper}>
-            {[1, 2, 4].map((bio: any, index: number) => {
-                return <div className={style.card} key={index}>
-                    <DirectorBio isLeft={index%2!=0}/>
+            
+               <div className={style.card}>
+                    <DirectorBio />
                 </div>
-            })}
-        </div>
+     </div>
     )
 }
 

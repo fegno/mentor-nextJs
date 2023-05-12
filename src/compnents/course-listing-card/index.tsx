@@ -2,12 +2,13 @@ import React from "react";
 import style from "./CourseListingCard.module.scss";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { useRouter } from "next/router";
-
+import { CONFIG } from "@/config/config";
 type cardProps = {
   imageLeft?: boolean;
   data: any;
   marginRight?: boolean;
   showDetailButton?: boolean;
+  id?:number
 };
 
 const CourseListingCard: React.FC<cardProps> = ({
@@ -15,6 +16,7 @@ const CourseListingCard: React.FC<cardProps> = ({
   imageLeft,
   marginRight,
   showDetailButton,
+  id
 }) => {
 
   const router = useRouter();
@@ -28,12 +30,12 @@ const CourseListingCard: React.FC<cardProps> = ({
         <div className={style.inner_wrapper}>
           <div className={style.title}>{data?.title}</div>
           <div className={`col-12 col-lg-5 ${style.image_wrapper} ${style.mobile}`}>
-            <img src={data.image} alt="course-image" height="500px" />
+            <img src={`${CONFIG.baseUrl}${data?.cover_image?.data?.attributes?.url}`} alt="course-image" height="500px" />
           </div>
           <div className={style.description}>{data?.description}</div>
           {showDetailButton && (
             <div className={style.btn_wrapper}>
-              <button onClick={() => { router.push('/course-detail/1') }}>
+              <button onClick={() => { router.push(`/course-detail/${id}`) }}>
                 View details{" "}
                 <span className={style.icon}>
                   <BsArrowRightCircle />
@@ -44,7 +46,7 @@ const CourseListingCard: React.FC<cardProps> = ({
         </div>
       </div>
       <div className={`col-12 col-lg-5 ${style.image_wrapper}`}>
-        <img src={data.image} alt="course-image" height="500px" />
+        <img src={`${CONFIG.baseUrl}${data?.cover_image?.data?.attributes.url}`} alt="course-image" height="500px" />
       </div>
     </div>
   );

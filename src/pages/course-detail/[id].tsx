@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "./CourseDetail.module.scss";
 import ml_image from "../../assets/course-listing/machine-learning-examples-applications 1.png";
 import Container from "@/compnents/container";
@@ -9,13 +9,31 @@ import CourseDetailAbout from "@/compnents/course-detail-about";
 import CourseDetailFeatures from "@/compnents/course-detail-features";
 import Mentors from "@/compnents/mentors";
 import ListExpand from "@/compnents/list-expand";
+import { http } from "@/axios/http";
+import { useRouter } from "next/router";
 const CourseDetail: React.FC = () => {
+  const [data, setData] :any= useState([]);
+  const router = useRouter();
+  const { id }: any = router.query;
+  useEffect(() => {
+    const fetchData = async () => {
+      let response = await http.get(`/courses/${id}?populate=deep`);
+      if (response.data.data) {
+        console.log(response.data.data)
+        setData(response.data.data)
+      }
+    }
+    if (id) {
+      fetchData()
+    }
+  }, [id])
+
   const DETAILS = {
     section1: {
       title: "Machine Learning and AI",
       description:
         "Machine learning is a branch of AI that gives computer systems the ability to automatically learn and improve from experience, rather than being explicitly programmed. In machine learning, computers use massive sets of data and apply algorithms to train on and make predictions",
-      image: ml_image.src,
+      image: "",
     },
     video_section: {
       title: "What is Machine Learning and AI?",
@@ -30,13 +48,13 @@ const CourseDetail: React.FC = () => {
         <Container>
           <>
             <section>
-              <CourseListingCard data={DETAILS.section1} />
+              <CourseListingCard data={data.attributes} />
             </section>
             <section>
-            <CourseDetailVideoSection data={DETAILS.video_section} />
-        </section>
+              <CourseDetailVideoSection data={data.attributes} />
+            </section>
             <section>
-              <CourseDetailFeatures />
+              <CourseDetailFeatures data={data?.attributes}/>
             </section>
           </>
         </Container>
@@ -44,10 +62,10 @@ const CourseDetail: React.FC = () => {
       <div>
         <Container>
           <section className={` ${style.center}`}>
-            <CourseDetailAbout />
+            <CourseDetailAbout data={data?.attributes}/>
           </section>
           <section>
-            <ListExpand />
+            <ListExpand jobs={data?.attributes?.jobs} courses={data?.attributes?.courses}/>
           </section>
         </Container>
       </div>

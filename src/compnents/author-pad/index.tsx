@@ -1,33 +1,53 @@
 import React from "react";
 import style from './Author-pad.module.scss';
-import author from '../../assets/author.png';
+import author from '../../assets/about/founder.jpg';
 import authsocial from '../../assets/Linkedin-logo.png'
-const Author : React.FC = () => {
-    return(
-        <div className={style.author_pad_container}>
+import Link from "next/link";
+
+type authorProps = {
+    data: {
+        name: string;
+        designation:string;
+        photo: string;
+        description: string;
+        description2?: string;
+        linked_in_profile:string;
+    }
+    isRight:boolean;
+}
+
+const Author: React.FC<authorProps> = ({ data ,isRight}) => {
+    return (
+        <div className={`${style.author_pad_container} ${isRight?style.right:""}`}>
             <div className="row">
                 <div className={`col-12 col-lg-4 ${style.author_img}`}>
-                    <img src={author.src} />
+                    <div className={style.gradiant}></div>
+                    <img src={data.photo} />
                 </div>
                 <div className={`col-12 col-lg-8 ${style.author_detail_wrapper}`}>
                     <div className={style.author_bio}>
                         <div className={style.author_head_wrapper}>
                             <div className={style.author_name}>
-                                Shilpan Vaishnani
+                               {data.name}
                             </div>
-                           <div className={style.author_social}>
+                            <div className={style.author_social}>
                                 <img src={authsocial.src} alt="img" />
-                           </div>
+                            </div>
                         </div>
                         <div className={style.author_designation}>
-                            Principal, Mentor Academy for Design Entrepreneurship Innovation and Technology 
+                           {data.designation}
                         </div>
                         <div className={style.border}></div>
                         <div className={style.author_dec}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            {data.description}
+                            <p>
+                                {data.description2}
+                            </p>
                         </div>
                         <div className={style.auth_social_icon}>
-                            <img src={authsocial.src} alt="linkedIn" />
+                            <Link href={data.linked_in_profile} target="_blank">
+                                <img src={authsocial.src} alt="linkedIn" />
+                            </Link>
                         </div>
                     </div>
                 </div>
