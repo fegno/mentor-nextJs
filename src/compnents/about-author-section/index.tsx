@@ -22,4 +22,4 @@ const AboutAuthorSection: React.FC = () => {
     )
 }
 
-export default AboutAuthorSection
+export default AboutAuthorSection;
