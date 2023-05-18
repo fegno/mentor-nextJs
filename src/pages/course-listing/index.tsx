@@ -10,7 +10,6 @@ const CourseListing: React.FC = () => {
 
   useEffect(() => {
     http.get('courses?populate=deep').then((res) => { setData(res.data.data) }).catch((err) => {
-      console.log(err)
     })
   }, [])
 

@@ -10,7 +10,6 @@ type achievementSliderProps={
 
 const AchievementsSlider: React.FC<achievementSliderProps> = ({data}) => {
     const sliderRef :any= useRef(null)
-    console.log(sliderRef.current)
     const settings = {
         fade: true,
         slidesToShow: 1,

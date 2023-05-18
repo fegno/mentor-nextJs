@@ -9,7 +9,6 @@ type expandListProps = {
 };
 
 const ExpandListComponent: React.FC<expandListProps> = ({ data, expanded ,title}) => {
-  console.log(data)
   const [showMenu, setShowMenu] = useState(false);
 
   const listRef = useRef(null);

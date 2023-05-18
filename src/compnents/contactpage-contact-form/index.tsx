@@ -28,14 +28,6 @@ const ContactForm : React.FC = () =>{
     })
 
     const handleSubmit = (values:any, {resetForm}:any ) =>{
-        // const info = {
-        //     name:values.name , 
-        //     mobile:values.mob , 
-        //     fieldofstudy:values.fos , 
-        //     email:values.email , 
-        //     state:values.state
-        // };
-        console.log('Form submitted:', values);
         resetForm({});
     }
     return(

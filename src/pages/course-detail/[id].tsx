@@ -19,7 +19,6 @@ const CourseDetail: React.FC = () => {
     const fetchData = async () => {
       let response = await http.get(`/courses/${id}?populate=deep`);
       if (response.data.data) {
-        console.log(response.data.data)
         setData(response.data.data)
       }
     }

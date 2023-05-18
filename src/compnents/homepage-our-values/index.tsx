@@ -32,7 +32,6 @@ const HomepageOurValues: React.FC = () => {
 
   const nextSlideHandle = () => {
     sliderRef.current.slickNext();
-    console.log(sliderRef.current);
   };
 
   const previousSlidehandle = () => {

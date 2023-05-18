@@ -23,20 +23,6 @@ const ContactForm: React.FC = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const onSubmitHandler = async () => {
-    // const msg = {
-    //   to: "manoj@gmail.com",
-    //   from: "contact@mentoracademy.co.in",
-    //   subject: "Subject of the email",
-    //   text: "Body of the email",
-    // };
-    // await sgMail
-    //   .send(msg)
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
     setIsSuccess(true)
   };
   return (
