@@ -22,11 +22,12 @@
     height: 100%;
     .menus {
       font-family: "Heebo", sans-serif;
+      color: #b5b5b5;
       .menu {
         font-size: _rem(18px);
         line-height: 26px;
         &.active{
-          color: #b5b5b5;
+          color: #fff;
         }
         &:not(:last-child) {
           margin-bottom: 40px;
