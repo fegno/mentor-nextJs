@@ -3,18 +3,29 @@ import style from "./CourseListing.module.scss";
 import CourseListingCard from "@/compnents/course-listing-card";
 import Container from "@/compnents/container";
 import { http } from "@/axios/http";
+import Loading from "@/compnents/loading";
 
 const CourseListing: React.FC = () => {
-  
+  const [loading, setLoading] = useState(false);
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    http.get('courses?populate=deep').then((res) => { setData(res.data.data) }).catch((err) => {
-    })
-  }, [])
+    setLoading(true);
+    http
+      .get("courses?populate=deep")
+      .then((res) => {
+        setData(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <div className={style.course_listing}>
+      {loading && <Loading />}
       <Container>
         {data.map((course: any, index: number) => {
           return (

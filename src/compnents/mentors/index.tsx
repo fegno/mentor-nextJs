@@ -6,18 +6,28 @@ import brinta from "../../assets/mentors/brinda.png";
 import shreyas from "../../assets/mentors/shreyas.png";
 import MentorCard from "../mentor-card";
 import { http } from "@/axios/http";
+import Loading from "../loading";
 
 const Mentors: React.FC = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-http.get('mentors?populate=deep').then((res)=>{
-  setData(res.data.data)
-})
-  }, [])
+    setLoading(true);
+    http
+      .get("mentors?populate=deep")
+      .then((res) => {
+        setData(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <div className={style.mentors}>
+      {loading && <Loading />}
       <div className={style.title}>
         <Title title="Mentors" />
       </div>
@@ -25,7 +35,10 @@ http.get('mentors?populate=deep').then((res)=>{
         {data?.map((mentor: any, index: number) => {
           return (
             <div className={style.card} key={index}>
-              <MentorCard data={mentor?.attributes} alignRight={index%2!=0}/>
+              <MentorCard
+                data={mentor?.attributes}
+                alignRight={index % 2 != 0}
+              />
             </div>
           );
         })}

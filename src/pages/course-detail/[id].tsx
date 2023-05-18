@@ -11,21 +11,28 @@ import Mentors from "@/compnents/mentors";
 import ListExpand from "@/compnents/list-expand";
 import { http } from "@/axios/http";
 import { useRouter } from "next/router";
+import Loading from "@/compnents/loading";
 const CourseDetail: React.FC = () => {
-  const [data, setData] :any= useState([]);
+  const [data, setData]: any = useState([]);
+  const [loading, setLoading] = useState(false);
+
   const router = useRouter();
   const { id }: any = router.query;
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       let response = await http.get(`/courses/${id}?populate=deep`);
       if (response.data.data) {
-        setData(response.data.data)
+        setData(response.data.data);
+        setLoading(false);
+      } else {
+        setLoading(false);
       }
-    }
+    };
     if (id) {
-      fetchData()
+      fetchData();
     }
-  }, [id])
+  }, [id]);
 
   const DETAILS = {
     section1: {
@@ -43,6 +50,7 @@ const CourseDetail: React.FC = () => {
 
   return (
     <div className={style.course_detail}>
+      {loading && <Loading />}
       <div className={style.bg_group}>
         <Container>
           <>
@@ -53,7 +61,7 @@ const CourseDetail: React.FC = () => {
               <CourseDetailVideoSection data={data.attributes} />
             </section>
             <section>
-              <CourseDetailFeatures data={data?.attributes}/>
+              <CourseDetailFeatures data={data?.attributes} />
             </section>
           </>
         </Container>
@@ -61,10 +69,13 @@ const CourseDetail: React.FC = () => {
       <div>
         <Container>
           <section className={` ${style.center}`}>
-            <CourseDetailAbout data={data?.attributes}/>
+            <CourseDetailAbout data={data?.attributes} />
           </section>
           <section>
-            <ListExpand jobs={data?.attributes?.jobs} courses={data?.attributes?.courses}/>
+            <ListExpand
+              jobs={data?.attributes?.jobs}
+              courses={data?.attributes?.courses}
+            />
           </section>
         </Container>
       </div>
