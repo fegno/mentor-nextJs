@@ -28,7 +28,11 @@ const Author: React.FC<authorProps> = ({ data ,isRight}) => {
                     <div className={style.author_bio}>
                         <div className={style.author_head_wrapper}>
                             <div className={style.author_name}>
-                               {data.name}
+                               {data.name}<div className={style.auth_social_icon}>
+                            <Link href={data.linked_in_profile} target="_blank">
+                                <img src={authsocial.src} alt="linkedIn" />
+                            </Link>
+                        </div>
                             </div>
                             <div className={style.author_social}>
                                 <img src={authsocial.src} alt="img" />

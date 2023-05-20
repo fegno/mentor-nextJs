@@ -20,7 +20,7 @@ const MentorCard: React.FC<mentorCardProps> = ({ data, alignRight }) => {
           <div className={style.inner_wrapper}>
             <div className={style.head}>
               <div className={style.name}>{data.name}</div>
-              <Link href="/">
+              <Link href={data.linkedIn_profile_link} target="_blank">
                 <img src={linkedIn.src} className={style.linkedin_logo} />
               </Link>
             </div>

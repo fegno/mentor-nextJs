@@ -1,0 +1,68 @@
+@import "../../styles/var";
+
+.gallery_banner {
+  height: 100vh;
+  background-image: url("../../assets/gallery_cover.jpg");
+  background-size: cover;
+  background-position: center;
+  .inner_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .data_wrapper{
+      display: flex;
+      width: 100%;
+      max-height: 40vh;
+      height: 100%;
+      .title{
+        flex: 2;
+        max-height: 40vh;
+        height: 100%;
+        border-right: 1px solid #FFFFFF;
+        font-family: "Gilroy-bold",sans-serif;
+        font-size: _rem(98px);
+        line-height: 115px;
+      }
+      .desc{
+        flex: 1;
+        padding: 0 60px;
+        margin-top: auto;
+        font-family: "Be Vietnam" ,sans-serif;
+        line-height: 40px;
+        font-size: _rem(28px);
+      }
+    }
+  }
+  @include extra-large-screen{
+    .inner_wrapper{
+      .data_wrapper{
+       .title{
+        
+       }
+       .desc{
+        font-size: _rem(20px);
+        line-height: 30px;
+       }
+      }
+    }
+  }
+  @include small-screen{
+    .inner_wrapper{
+      .data_wrapper{
+        display: block;
+       .title{
+        border: none;
+        font-size: _rem(45px);
+        line-height: 52px;
+       }
+       .desc{
+        font-size: _rem(16px);
+        line-height: 30px;
+        padding: 0;
+       }
+      }
+    }
+  }
+}

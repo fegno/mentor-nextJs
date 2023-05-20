@@ -1,12 +1,6 @@
-@import "../../styles/var";
-
-.gallery_container{
-    .gallery_title{
-        margin-bottom: 54px;
-    }
-    @include phone{
-        .gallery_title{
-            margin-bottom: 33px;
-        }
+.gallery{
+    section{
+        margin-top: 50px;
+        margin-bottom: 100px;
     }
 }

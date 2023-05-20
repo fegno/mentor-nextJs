@@ -15,6 +15,11 @@
             margin: auto;
         }
     }
+    .author_head_wrapper {
+        .auth_social_icon{
+            display: none;
+        }
+    }
     .author_detail_wrapper {
         display: flex;
         align-items: center;
@@ -102,6 +107,19 @@
                 color: #f3f3f3;
                 font-size: _rem(20px);
                 margin-right: 12px;
+                display: flex;
+                align-items: center;
+                gap:  0 10px;
+            }
+            .auth_social_icon{
+                a{
+                    line-height: 0;
+                    display: inline-block;
+                    img{
+                        margin: 0;
+                    }
+                }
+                display: block;
             }
         }
         .auth_social_icon {

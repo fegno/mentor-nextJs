@@ -30,6 +30,8 @@ const Layout: React.FC<layoutProps> = ({ children }) => {
   useEffect(() => {
     if (router.route == "/about") {
       setHasPadding(false);
+    } else if (router.route == "/gallery") {
+      setHasPadding(false)
     } else if (router.route == "/") {
       setHasPadding(false);
     } else {
@@ -52,16 +54,16 @@ const Layout: React.FC<layoutProps> = ({ children }) => {
 
     images.forEach((image) => {
       if (image.complete) {
-        handleImageLoad()
-      }else{
-        image.addEventListener('load',handleImageLoad)
+        handleImageLoad();
+      } else {
+        image.addEventListener("load", handleImageLoad);
       }
     });
-    return(()=>{
-      images.forEach(image=>{
-        image.removeEventListener('load',handleImageLoad)
-      })
-    })
+    return () => {
+      images.forEach((image) => {
+        image.removeEventListener("load", handleImageLoad);
+      });
+    };
   }, [router.route]);
 
   return (

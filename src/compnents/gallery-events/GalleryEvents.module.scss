@@ -1,0 +1,15 @@
+@import "../../styles/var";
+
+.gallery_container{
+    .gallery_title{
+        margin-bottom: 54px;
+    }
+    .gallery_card_wrapper{
+        cursor: pointer;
+    }
+    @include phone{
+        .gallery_title{
+            margin-bottom: 33px;
+        }
+    }
+}
