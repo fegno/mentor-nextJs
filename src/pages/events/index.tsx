@@ -32,7 +32,7 @@ const Events: React.FC = () => {
         <div className={`${style.event_name}`}>
           <Title title="Events" align="left" />
         </div>
-        <div className={`${style.event_count}`}>20-25 of 60 articles</div>
+        {/* <div className={`${style.event_count}`}>20-25 of 60 articles</div> */}
         <div className={`${style.event_card_container}`}>
           {data.map((event: any, index: number) => {
             return (

@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Container from "@/compnents/container";
-import style from "./Event-detail.module.scss";
-import eventbanner from "../../assets/code_ninja_tech.jpg";
-import intel from "../../assets/intel.png";
-import hp from "../../assets/hp.png";
-import asus from "../../assets/asus.png";
-import nvidia from "../../assets/nvidia.png";
-import codingindia from "../../assets/codingindia.png";
+import style from "./Blog.module.scss";
 import { useRouter } from "next/router";
 import { http } from "../../axios/http";
 import { CONFIG } from "@/config/config";
@@ -21,7 +15,7 @@ const EventDetail: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      let response = await http.get(`/events/${id}?populate=deep`);
+      let response = await http.get(`/newsandblogs/${id}?populate=deep`);
       if (response.data.data) {
         setData(response.data.data);
         setLoading(false);
@@ -48,18 +42,18 @@ const EventDetail: React.FC = () => {
           )}
           <div className={style.event_detail_head}>{event?.title}</div>
           <div className={style.event_details}>
-            <div className={style.eve_type}>
+           {event?.date && <div className={style.eve_type}>
               Event date: <span className={style.eve_value}>{event?.date}</span>
-            </div>
-            <div className={style.eve_type}>
+            </div>}
+           {event?.event_organized_by && <div className={style.eve_type}>
               Event organized by :{" "}
               <span className={style.eve_value}>
                 {event?.event_organized_by}
               </span>
-            </div>
-            <div className={style.eve_type}>
+            </div>}
+           {event?.venue && <div className={style.eve_type}>
               Venue : <span className={style.eve_value}>{event?.venue}</span>
-            </div>
+            </div>}
           </div>
           <div className={style.eve_dec}>
             <p>{event?.description}</p>
