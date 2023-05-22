@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                   </div>
                   <div className={style.address}>
                     Ettapilly, Mannathoor(PO), Pampakuda via Muvattupuzha
-                    Ernakulam, Kerala 686667, INDIA Contact : 6282089866
+                    Ernakulam, Kerala 686667, INDIA <br/> Contact :+91 6282089866
                   </div>
                 </div>
                 <div className="col-12">

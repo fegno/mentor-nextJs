@@ -21,7 +21,7 @@
         &:nth-child(2) {
           border-left: 1px solid #474dd4;
         }
-        &:nth-child(2) {
+        &:nth-child(3) {
           background: linear-gradient(
               104.81deg,
               rgba(68, 76, 235, 0.12) 3.66%,
@@ -43,14 +43,14 @@
         &:nth-child(2) {
           border-left: 1px solid #474dd4;
         }
-        &:nth-child(2) {
+        &:nth-child(3) {
           background: linear-gradient(
               104.81deg,
               rgba(68, 76, 235, 0.12) 3.66%,
               rgba(66, 14, 176, 0.12) 101.42%
             ),
             #000000;
-            color: #fff;
+          color: #fff;
         }
       }
       .first_cell {
@@ -75,21 +75,70 @@
     .mobile_view {
       display: block !important;
       border-radius: 12px;
-      background: #0A0A0A;
+      background: #0a0a0a;
+      .head {
+        padding: 0 15px;
+        font-size: _rem(18px);
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding:15px 20px;
+        }
+        .bg {
+          background: linear-gradient(
+              104.81deg,
+              rgba(68, 76, 235, 0.12) 3.66%,
+              rgba(66, 14, 176, 0.12) 101.42%
+            ),
+            #000000;
+        }
+      }
+      .content {
+        border-top: 2px solid #474dd4;
+      }
       .row {
-        border-top: 1px solid #494848;
-        padding: 20px 10px;
-        font-size: _rem(14px);
+        padding:0 15px;
+        font-size: _rem(18px);
         .inner_title {
           text-align: center;
-          padding-bottom: 20px;
+          padding: 15px;
           font-size: _rem(22px);
           line-height: 40px;
+          background: linear-gradient(
+              104.81deg,
+              rgba(68, 76, 235, 0.12) 3.66%,
+              rgba(66, 14, 176, 0.12) 101.42%
+            ),
+            #000000;
         }
         .descrpition {
-          color: #9c9c9c;
           font-family: " Be Vietnam Pro", sans-serif;
-          line-height: 22px;
+          line-height: 28px;
+          padding:0 10px ;
+          padding-left: 20px;
+          margin: 20px 0;
+          position: relative;
+          &:first-child{
+            color: #9c9c9c;
+          }
+          &::before{
+            content: "";
+            background-image: url("../../assets/list-style.png");
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: 3px;
+            top: 7px;
+          }
+          &:first-child{
+            &::before{
+              background-image: url("../../assets/list-gray.png");
+            }
+          }
         }
       }
       .title {

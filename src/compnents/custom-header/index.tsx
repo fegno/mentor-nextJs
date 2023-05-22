@@ -36,7 +36,7 @@ const CustomHeader: React.FC = () => {
     { title: "Introduction", link: "/about" },
     { title: "Programs", link: "/course-listing" },
     { title: "Events", link: "/events" },
-    { title: "News and blog", link: "/blog-and-views" },
+    // { title: "News and blog", link: "/blog-and-views" },
     { title: "Campus", link: "/gallery" },
     { title: "Contact Us", link: "/contact" },
   ];

@@ -8,8 +8,11 @@ const GalleryBanner: React.FC = () => {
       <Container>
         <div className={style.inner_wrapper}>
           <div className={style.data_wrapper}>
-            <div className={style.title}>Gallery</div>
-            <div className={style.desc}>Our three main campuses in Cambridge, Allston, and Boston are a home to students and faculty, a hub of research and innovation, and a destination for visitors from all over the world.</div>
+            <div className={style.title}>Explore</div>
+            <div className={style.desc}>
+              Immerse yourself in the captivating essence of our campus through
+              stunning imagery.
+            </div>
           </div>
         </div>
       </Container>

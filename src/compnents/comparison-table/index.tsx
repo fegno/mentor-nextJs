@@ -66,8 +66,8 @@ const ComparisonTable: React.FC = () => {
         <thead>
           <tr>
             <th></th>
-            <th>Mentor Approach</th>
             <th>Traditional Education</th>
+            <th> Mentor Approach</th>
           </tr>
         </thead>
         <tbody>
@@ -76,13 +76,13 @@ const ComparisonTable: React.FC = () => {
               <tr key={index} className={style.table_row}>
                 <td className={style.first_cell}>{row.cell1}</td>
                 <td>
-                  <ul className={style.mentor_list}>
-                    <li>{row.cell2}</li>
+                  <ul className={style.others_list}>
+                    <li>{row.cell3}</li>
                   </ul>
                 </td>
                 <td>
-                  <ul className={style.others_list}>
-                    <li>{row.cell3}</li>
+                  <ul className={style.mentor_list}>
+                    <li>{row.cell2}</li>
                   </ul>
                 </td>
               </tr>
@@ -90,37 +90,37 @@ const ComparisonTable: React.FC = () => {
           })}
         </tbody>
       </table>
-      <div className={`d-block card-glowing-blue rounded-20 animated-border-glow ${style.mobile_view}`}>
+      <div
+        className={`d-block card-glowing-blue rounded-20  ${style.mobile_view}`}
+      >
         <div className={style.title}>Comparison</div>
-        {TABLE_CONTENT.map((row: any, index: number) => {
-          return (
-            <div className={`${style.row}`} key={index}>
-              <div className="row">
-                <div className={`col-12 ${style.inner_title}`}>{row.cell1}</div>
-                <div className="col-12">
-                  <div className="row pb-4">
-                    <div className={`col-4 ${style.colllege_ttile}`}>
-                      Mentor Approach
-                    </div>
-                    <div className={`col-8 ${style.descrpition}`}>
-                      {row.cell2}
-                    </div>
+        <div className={`row ${style.head}`}>
+          <div className="col-6">Traditional Education</div>
+          <div className={`col-6 ${style.bg}`}>Mentor Approach</div>
+        </div>
+        <div className={style.content}>
+          {TABLE_CONTENT.map((row: any, index: number) => {
+            return (
+              <div className={`${style.row}`} key={index}>
+                <div className="row">
+                  <div className={`col-12 ${style.inner_title}`}>
+                    {row.cell1}
                   </div>
-                </div>
-                <div className="col-12">
-                  <div className="row">
-                    <div className={`col-4 ${style.colllege_ttile}`}>
-                      Traditional Education
-                    </div>
-                    <div className={`col-8 ${style.descrpition}`}>
-                      {row.cell3}
+                  <div className="col-12">
+                    <div className="row pb-4">
+                    <div className={`col-6 ${style.descrpition}`}>
+                        {row.cell3}
+                      </div>
+                      <div className={`col-6 ${style.descrpition}`}>
+                        {row.cell2}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

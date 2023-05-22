@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import { http } from "../../axios/http";
 import { CONFIG } from "@/config/config";
 import Loading from "@/compnents/loading";
+import sanitizeHtml from 'sanitize-html';
+
 
 const EventDetail: React.FC = () => {
   const [data, setData]: any = useState([]);
@@ -28,6 +30,7 @@ const EventDetail: React.FC = () => {
     }
   }, [id]);
   const event = data?.attributes;
+  const sanitizedContent =sanitizeHtml(event?.description)
   return (
     <Container>{loading &&<Loading />}
       <div className={style.event_detail_container}>
@@ -55,8 +58,8 @@ const EventDetail: React.FC = () => {
               Venue : <span className={style.eve_value}>{event?.venue}</span>
             </div>}
           </div>
-          <div className={style.eve_dec}>
-            <p>{event?.description}</p>
+          <div className={style.eve_dec} dangerouslySetInnerHTML={{ __html: sanitizedContent }}>
+            {/* {ReactHtmlParser(event?.description)} */}
           </div>
           {event?.powered_by?.data && (
             <div className={style.event_sponsors}>

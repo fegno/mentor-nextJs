@@ -10,10 +10,10 @@ export const CONST = {
         },{
             title:"About Us",link:"/about"
         },{
-            title:"Admin",link:"/admin"
+            title:"Blog",link:"/blog-and-views"
         },{
-            title:"Blog",link:"/Blog"
-        },
+            title:"Contact",link:"/contact"
+        }
     ],
     COURSES:[
         {title:"B.Tech CSE",link:"/"},
