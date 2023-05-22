@@ -1,7 +1,8 @@
 @import "../../styles/var";
 
 .event_detail_container{
-    padding-top: 30%;
+    .event_banner_img {
+        padding-top: 30%;
         position: relative;
         img{
         width: 100%;
@@ -15,6 +16,7 @@
         object-fit: cover;
         background-position: center;
         }
+    }
     .event_detail_head{
         font-size: _rem(42px);
         line-height: 49px;
