@@ -2,7 +2,6 @@
 
 .expand_list_component {
     user-select: none;
-    opacity: 0;
   .title {
     padding: 32px 20px;
     border-bottom: 1px solid #747474;
@@ -12,6 +11,9 @@
   .lists {
     width: 93%;
     margin: auto;
+    // display: none;
+    // opacity: 0;
+    // display: none;
     .list {
       padding: 28px 0;
       font-family: "Be Vietnam Pro", sans-serif;

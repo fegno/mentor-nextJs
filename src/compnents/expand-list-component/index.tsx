@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import style from "./ExpandListComponent.module.scss";
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 
 type expandListProps = {
   data: any;
@@ -13,26 +13,57 @@ const ExpandListComponent: React.FC<expandListProps> = ({
   expanded,
   title,
 }) => {
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   const listRef: any = useRef(null);
+  const menuRef: any = useRef(null);
 
   useEffect(() => {
-    let list = listRef.current;
-    if (expanded) {
-      setShowMenu(true);
+    if(expanded){
+      setShowMenu(true)
     }
-    gsap.from(list, {
-      opacity: 1,
-      duration: 1,
-      scrollTrigger: {
-        trigger: list,
-        start: 'top 10%', // Change this value as needed
-        end: 'bottom 80%', // Change this value as needed
-        toggleActions: 'play none none reverse',
-      },
-    });
+    // let list = listRef.current;
+    // let menu = menuRef.current;
+    // if (expanded) {
+    //   setShowMenu(true);
+    // }
+    // gsap.to(list, {
+    //   duration: 1,
+    //   opacity:0,
+    //   display:"block",
+    //   scrollTrigger: {
+    //     markers: true,
+    //     trigger: menu,
+    //     start: "top center", // Change this value as needed
+    //     end: "bottom 80%", // Change this value as needed
+    //     toggleActions: "restart none reverse pause",
+    //   },
+    // });
   }, []);
+ 
+  // useEffect(() => {
+  //   const element = listRef.current;
+  //   const title = element.querySelector('.title');
+  //   const list = element.querySelector('ul');
+
+  //   gsap.set([title, list], { opacity: 0 });
+
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: element,
+  //       start: 'top center+=100',
+  //       end: 'bottom center',
+  //       toggleActions: 'play none none reverse',
+  //     },
+  //   });
+
+  //   tl.to(title, { opacity: 1, duration: 0.5 })
+  //     .to(list, { opacity: 1, duration: 0.5 ,display:"block"}, '-=0.25');
+
+  //   return () => {
+  //     tl.kill();
+  //   };
+  // }, []);
 
   const handleListShow = () => {
     setShowMenu(!showMenu);
@@ -40,11 +71,11 @@ const ExpandListComponent: React.FC<expandListProps> = ({
 
   return (
     <div className={style.expand_list_component} ref={listRef}>
-      <div className={style.title} onClick={handleListShow}>
+      <div className={`title ${style.title}`} onClick={handleListShow}>
         {title}
       </div>
       {showMenu && (
-        <ul className={style.lists}>
+        <ul className={style.lists} ref={menuRef}>
           {data?.map((list: any, index: number) => {
             return (
               <li className={style.list} key={`list${index}`}>
