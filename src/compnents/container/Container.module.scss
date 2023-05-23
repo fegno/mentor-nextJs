@@ -5,6 +5,11 @@
   margin: auto;
   width: 90%;
   height: 100%;
+  @include small-screen{
+    &.no_padding{
+      width: 100%;
+    }
+  }
   @include phone{
     width: 93%;
   }

@@ -91,7 +91,7 @@ const ComparisonTable: React.FC = () => {
         </tbody>
       </table>
       <div
-        className={`d-block card-glowing-blue rounded-20  ${style.mobile_view}`}
+        className={`d-block  ${style.mobile_view}`}
       >
         <div className={style.title}>Comparison</div>
         <div className={`row ${style.head}`}>
@@ -107,11 +107,11 @@ const ComparisonTable: React.FC = () => {
                     {row.cell1}
                   </div>
                   <div className="col-12">
-                    <div className="row pb-4">
+                    <div className="row ">
                     <div className={`col-6 ${style.descrpition}`}>
                         {row.cell3}
                       </div>
-                      <div className={`col-6 ${style.descrpition}`}>
+                      <div className={`col-6 ${style.descrpition} ${style.bg}`}>
                         {row.cell2}
                       </div>
                     </div>

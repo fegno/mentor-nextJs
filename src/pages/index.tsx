@@ -50,7 +50,7 @@ export default function Home() {
         </Container>
       </section>
       <section className={styles.comparison_table}>
-        <Container>
+        <Container noPadding>
           <ComparisonTable />
         </Container>
       </section>

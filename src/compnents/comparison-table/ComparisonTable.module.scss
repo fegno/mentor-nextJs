@@ -75,22 +75,23 @@
     .mobile_view {
       display: block !important;
       border-radius: 12px;
-      background: #0a0a0a;
+      background: #000;
+      font-size: _rem(14px);
       .head {
-        padding: 0 15px;
-        font-size: _rem(18px);
+        padding: 0 10px;
+        // font-size: _rem(18px);
         div {
           display: flex;
           justify-content: center;
           align-items: center;
           text-align: center;
-          padding:15px 20px;
+          padding:20px 35px;
         }
         .bg {
           background: linear-gradient(
               104.81deg,
-              rgba(68, 76, 235, 0.12) 3.66%,
-              rgba(66, 14, 176, 0.12) 101.42%
+              rgba(68, 76, 235, 0.26) 3.66%,
+              rgba(66, 14, 176, 0.26) 101.42%
             ),
             #000000;
         }
@@ -99,13 +100,15 @@
         border-top: 2px solid #474dd4;
       }
       .row {
-        padding:0 15px;
-        font-size: _rem(18px);
+        padding: 0 10px;
+        // font-size: _rem(18px);
         .inner_title {
           text-align: center;
+          font-family: 'Gilroy',sans-serif;
           padding: 15px;
-          font-size: _rem(22px);
+          font-size: _rem(18px);
           line-height: 40px;
+          color: #EFEFEF;
           background: linear-gradient(
               104.81deg,
               rgba(68, 76, 235, 0.12) 3.66%,
@@ -114,16 +117,25 @@
             #000000;
         }
         .descrpition {
-          font-family: " Be Vietnam Pro", sans-serif;
+          font-family: "Be Vietnam", sans-serif;
           line-height: 28px;
-          padding:0 10px ;
-          padding-left: 20px;
-          margin: 20px 0;
+          padding: 30px 10px;
+          padding-left: 28px;
+          color: #9C9C9C;
           position: relative;
-          &:first-child{
+          &.bg {
+            color: #F8F8F8;
+            background: linear-gradient(
+                104.81deg,
+                rgba(68, 76, 235, 0.26) 3.66%,
+                rgba(66, 14, 176, 0.26) 101.42%
+              ),
+              #000000;
+          }
+          &:first-child {
             color: #9c9c9c;
           }
-          &::before{
+          &::before {
             content: "";
             background-image: url("../../assets/list-style.png");
             background-repeat: no-repeat;
@@ -131,11 +143,11 @@
             width: 15px;
             height: 15px;
             position: absolute;
-            left: 3px;
-            top: 7px;
+            left: 10px;
+            top: 37px;
           }
-          &:first-child{
-            &::before{
+          &:first-child {
+            &::before {
               background-image: url("../../assets/list-gray.png");
             }
           }

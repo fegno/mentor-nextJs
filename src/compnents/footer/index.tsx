@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import logo from "../../assets/mentor-logo-full.svg";
 import NewsletterForm from "../newsletter-form";
@@ -9,14 +9,24 @@ import Whatsapp from "../whatsapp";
 import acte from "../../assets/aicte.svg";
 import sm from "../../assets/sm.svg";
 import ApplyNow from "../apply-now";
+import apj from "../../assets/APJ_Abdul_Kalam_Technological_University_logo.png";
+import { http } from "../../axios/http";
 
 const Footer: React.FC = () => {
+  
+  // const [data, setData]:any = useState([]);
+
+  // useEffect(()=>{
+  //  http.get('courses?populate=deep').then((res)=>{
+    
+  //  })
+  // },[])
 
   const AWARDS = [
     { title: "All India Council for Technical Education", image: acte.src },
-    { title: "Kerala Startup Mission", image: sm.src }
-  ]
-
+    { title: "Kerala Startup Mission", image: sm.src },
+    { title: "APJ Abdul Kalam Technological University", image: apj.src },
+  ];
 
   return (
     <footer className={`${style.footer}`}>
@@ -53,7 +63,8 @@ const Footer: React.FC = () => {
                   </div>
                   <div className={style.address}>
                     Ettapilly, Mannathoor(PO), Pampakuda via Muvattupuzha
-                    Ernakulam, Kerala 686667, INDIA <br/> Contact :+91 6282089866
+                    Ernakulam, Kerala 686667, INDIA <br /> Contact :+91
+                    6282089866
                   </div>
                 </div>
                 <div className="col-12">
@@ -63,18 +74,22 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className="`col-12 col-lg-6 col-xl-7">
-            <div className="row"
-            >
+            <div className="row">
               <div
                 className={`col-12 col-lg-6 col-xl-4 mb-4 ${style.links_wrapper}`}
               >
                 <div className={`row ${style.social_links}`}>
                   {CONST.SOCIAL_LINKS.map((social: any, index: number) => {
                     return (
-                      <div className={`col-6 col-lg-12 ${style.link}`} key={index}>
+                      <div
+                        className={`col-6 col-lg-12 ${style.link}`}
+                        key={index}
+                      >
                         <Link href={social.link} target="_blank">
                           <img src={social.icon} />
-                          <div className={style.social_media}>{social.title}</div>
+                          <div className={style.social_media}>
+                            {social.title}
+                          </div>
                         </Link>
                       </div>
                     );
@@ -95,34 +110,32 @@ const Footer: React.FC = () => {
               <div
                 className={`col-12 col-lg-6 col-xl-4 mb-4 ${style.courses_list_wrapper}`}
               >
-                {CONST.COURSES.map((course: any, index: number) => {
+                {/* {CONST.COURSES.map((course: any, index: number) => {
                   return (
                     <div className={`d-block`} key={index}>
                       <Link href={course.link}>{course.title}</Link>
                     </div>
                   );
-                })}
+                })} */}
               </div>
-
             </div>
           </div>
-
         </div>
-        <div className="row pt-4">
-            <div className={style.bottom_title}>
-              Recognized by :
-            </div>
-          <div className="col-12 col-xl-6 pb-4">
+        <div className="row py-4">
+          <div className={style.bottom_title}>Recognized by :</div>
+          <div className="col-12 pb-2">
             <div className={style.awards_wrapper}>
               {AWARDS.map((awards: any, index: number) => {
-                return <div className={style.award} key={index}>
-                  <img src={awards.image} />
-                  <span className={style.title}>{awards.title}</span>
-                </div>
+                return (
+                  <div className={style.award} key={index}>
+                    <img src={awards.image} />
+                    <span className={style.title}>{awards.title}</span>
+                  </div>
+                );
               })}
             </div>
           </div>
-          <div className={`col-12 col-xl-6 pb-4 ${style.copy_right}`}>
+          <div className={`col-12  ${style.copy_right}`}>
             &copy; MENTOR COLLEGE OF ENGINEERING. ALL RIGHTS RESERVED
           </div>
         </div>

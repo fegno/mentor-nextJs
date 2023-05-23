@@ -5,8 +5,7 @@ import { useRouter } from "next/router";
 import { http } from "../../axios/http";
 import { CONFIG } from "@/config/config";
 import Loading from "@/compnents/loading";
-import sanitizeHtml from 'sanitize-html';
-
+import ReactMarkdown from "react-markdown";
 
 const EventDetail: React.FC = () => {
   const [data, setData]: any = useState([]);
@@ -30,9 +29,9 @@ const EventDetail: React.FC = () => {
     }
   }, [id]);
   const event = data?.attributes;
-  const sanitizedContent =sanitizeHtml(event?.description)
   return (
-    <Container>{loading &&<Loading />}
+    <Container>
+      {loading && <Loading />}
       <div className={style.event_detail_container}>
         <div className={style.event_detail_wrapper}>
           {event?.cover_image?.data && (
@@ -45,21 +44,30 @@ const EventDetail: React.FC = () => {
           )}
           <div className={style.event_detail_head}>{event?.title}</div>
           <div className={style.event_details}>
-           {event?.date && <div className={style.eve_type}>
-              Event date: <span className={style.eve_value}>{event?.date}</span>
-            </div>}
-           {event?.event_organized_by && <div className={style.eve_type}>
-              Event organized by :{" "}
-              <span className={style.eve_value}>
-                {event?.event_organized_by}
-              </span>
-            </div>}
-           {event?.venue && <div className={style.eve_type}>
-              Venue : <span className={style.eve_value}>{event?.venue}</span>
-            </div>}
+            {event?.date && (
+              <div className={style.eve_type}>
+                Event date:{" "}
+                <span className={style.eve_value}>{event?.date}</span>
+              </div>
+            )}
+            {event?.event_organized_by && (
+              <div className={style.eve_type}>
+                Event organized by :{" "}
+                <span className={style.eve_value}>
+                  {event?.event_organized_by}
+                </span>
+              </div>
+            )}
+            {event?.venue && (
+              <div className={style.eve_type}>
+                Venue : <span className={style.eve_value}>{event?.venue}</span>
+              </div>
+            )}
           </div>
-          <div className={style.eve_dec} dangerouslySetInnerHTML={{ __html: sanitizedContent }}>
-            {/* {ReactHtmlParser(event?.description)} */}
+          <div className={style.eve_dec}>
+            <ReactMarkdown>
+              {event?.description}
+            </ReactMarkdown>
           </div>
           {event?.powered_by?.data && (
             <div className={style.event_sponsors}>
