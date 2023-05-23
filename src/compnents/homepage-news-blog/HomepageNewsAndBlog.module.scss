@@ -5,6 +5,14 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  .card {
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
   @include small-screen {
     .card {
       padding: 25px 20px !important;
@@ -21,13 +29,13 @@
       }
     }
   }
-  @include tab{
-    .trending_news{
+  @include tab {
+    .trending_news {
       display: none;
     }
   }
-  @include phone{
-    .card{
+  @include phone {
+    .card {
       padding: 18px 12px !important;
     }
   }

@@ -27,6 +27,7 @@ const Mentors: React.FC = () => {
 
   return (
     <div className={style.mentors}>
+     {data && data.length >0 && <>
       {loading && <Loading />}
       <div className={style.title}>
         <Title title="Mentors" />
@@ -43,6 +44,7 @@ const Mentors: React.FC = () => {
           );
         })}
       </div>
+      </>}
     </div>
   );
 };
