@@ -18,11 +18,11 @@ const GalleryImages: React.FC<galleryImageProps> = ({ images }) => {
 
   return (
     <div className={style.gallery_images}>
-      <CustomModal isOpen={isModalOpen} close={()=>{setIsModalOpen(false)}}>
+     {images && images[selectedIndex] && <CustomModal isOpen={isModalOpen} close={()=>{setIsModalOpen(false)}}>
         <div className={style.image_view}>
           <img src={`${CONFIG.baseUrl}${images[selectedIndex]?.attributes?.url}`} />
         </div>
-      </CustomModal>
+      </CustomModal>}
       <div className="row" style={{ gap: "20px 0" }}>
         {images?.map((image: any, index: number) => {
           return (
