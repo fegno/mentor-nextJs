@@ -46,10 +46,8 @@ const GalleryImages: React.FC<galleryImageProps> = ({ images }) => {
                 }}
               >
                 <LazyLoad placeholder={<div>loading</div>} >
-                  <Image
+                  <img
                     src={`${CONFIG.baseUrl}${image?.attributes?.url}`}
-                    width={300}
-                    height={300}
                     alt="mentor"
                   />
                 </LazyLoad>
