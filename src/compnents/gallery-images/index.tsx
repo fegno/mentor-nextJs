@@ -45,12 +45,14 @@ const GalleryImages: React.FC<galleryImageProps> = ({ images }) => {
                   handleImageClick(index);
                 }}
               >
+                <LazyLoad placeholder={<div>loading</div>} >
                   <Image
                     src={`${CONFIG.baseUrl}${image?.attributes?.url}`}
                     objectFit="cover"
                     layout="fill"
                     alt="mentor"
                   />
+                </LazyLoad>
               </div>
             </div>
           );
