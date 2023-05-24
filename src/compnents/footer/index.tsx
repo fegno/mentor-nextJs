@@ -110,13 +110,13 @@ const Footer: React.FC = () => {
               <div
                 className={`col-12 col-lg-6 col-xl-4 mb-4 ${style.courses_list_wrapper}`}
               >
-                {/* {CONST.COURSES.map((course: any, index: number) => {
+                {CONST.COURSES.map((course: any, index: number) => {
                   return (
                     <div className={`d-block`} key={index}>
                       <Link href={course.link}>{course.title}</Link>
                     </div>
                   );
-                })} */}
+                })}
               </div>
             </div>
           </div>

@@ -16,12 +16,12 @@ export const CONST = {
         }
     ],
     COURSES:[
-        {title:"B.Tech CSE",link:"/"},
-        {title:"B.Tech CSE AI and ML",link:"/"},
-        {title:"B.Tech CSE AI and DSC",link:"/"},
-        {title:"B.Tech CSE IOT",link:"/"},
-        {title:"B.Tech CSE CYBER SECURITY",link:"/"},
-        {title:"B.Tech CSE BLOCKCHAIN",link:"/"},
+        {title:"B.Tech in CS",link:"/course-detail/6"},
+        {title:"B.Tech in AI and ML",link:"/course-detail/3"},
+        {title:"B.Tech in AI and DSC",link:"/course-detail/5"},
+        {title:"B.Tech in IOT",link:"/course-detail/8"},
+        {title:"B.Tech in CYBER SECURITY",link:"/course-detail/7"},
+        {title:"B.Tech in BLOCKCHAIN",link:"/course-detail/4"},
     ],
     SOCIAL_LINKS :[
      {title:"Facebook",icon: facebook.src,link:"https://www.facebook.com/MADEITMENTOR/"},
