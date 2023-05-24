@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import style from "./GalleryEvents.module.scss";
 import GalleryCard from "../gallery-card";
 import Title from "../title";
-import fest1 from "../../assets/fest1.png";
-import fest2 from "../../assets/fest2.png";
 import CustomModal from "../modal";
 import GalleryEventSlider from "../gallery-event-slider";
 

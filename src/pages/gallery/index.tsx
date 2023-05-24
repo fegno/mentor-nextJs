@@ -24,9 +24,9 @@ useEffect(()=>{
         <section>
           <GalleryCampus />
         </section>
-        <GalleryImages images={data[0]?.attributes?.images.data}/>
+        <GalleryImages images={data[0]?.attributes?.images.data} />
         <section>
-          <GalleryEvents events={data[0]?.attributes?.events}/>
+          <GalleryEvents events={data[0]?.attributes?.events} />
         </section>
       </Container>
     </div>
