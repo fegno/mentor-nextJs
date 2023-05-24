@@ -3,12 +3,14 @@ import style from "./CourseListingCard.module.scss";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { useRouter } from "next/router";
 import { CONFIG } from "@/config/config";
+import Image from "next/image";
+import LazyLoad from "react-lazyload";
 type cardProps = {
   imageLeft?: boolean;
   data: any;
   marginRight?: boolean;
   showDetailButton?: boolean;
-  id?:number
+  id?: number;
 };
 
 const CourseListingCard: React.FC<cardProps> = ({
@@ -16,26 +18,39 @@ const CourseListingCard: React.FC<cardProps> = ({
   imageLeft,
   marginRight,
   showDetailButton,
-  id
+  id,
 }) => {
-
   const router = useRouter();
 
   return (
     <div
-      className={`row ${style.course_card} ${imageLeft ? style.left : ""} ${marginRight ? style.right : ""
-        } ${!showDetailButton?style.detail:""}`}
+      className={`row ${style.course_card} ${imageLeft ? style.left : ""} ${
+        marginRight ? style.right : ""
+      } ${!showDetailButton ? style.detail : ""}`}
     >
       <div className={`col-12 col-lg-7 ${style.data_wrapper} `}>
         <div className={style.inner_wrapper}>
           <div className={style.title}>{data?.title}</div>
-          <div className={`col-12 col-lg-5 ${style.image_wrapper} ${style.mobile}`}>
-            <img src={`${CONFIG.baseUrl}${data?.cover_image?.data?.attributes?.url}`} alt="course-image" height="500px" />
+          <div
+            className={`col-12 col-lg-5 ${style.image_wrapper} ${style.mobile}`}
+          >
+            <LazyLoad>
+              <Image
+                src={`${CONFIG.baseUrl}${data?.cover_image?.data?.attributes?.url}`}
+                alt="course-image"
+                height={500}
+                width={500}
+              />
+            </LazyLoad>
           </div>
           <div className={style.description}>{data?.description}</div>
           {showDetailButton && (
             <div className={style.btn_wrapper}>
-              <button onClick={() => { router.push(`/course-detail/${id}`) }}>
+              <button
+                onClick={() => {
+                  router.push(`/course-detail/${id}`);
+                }}
+              >
                 View details{" "}
                 <span className={style.icon}>
                   <BsArrowRightCircle />
@@ -45,9 +60,16 @@ const CourseListingCard: React.FC<cardProps> = ({
           )}
         </div>
       </div>
-      <div className={`col-12 col-lg-5 ${style.image_wrapper}`}>
-        <img src={`${CONFIG.baseUrl}${data?.cover_image?.data?.attributes.url}`} alt="course-image" height="500px" />
-      </div>
+      {data?.cover_image?.data?.attributes.url && (
+        <div className={`col-12 col-lg-5 ${style.image_wrapper}`}>
+          <Image
+            src={`${CONFIG.baseUrl}${data?.cover_image?.data?.attributes.url}`}
+            alt="course-image"
+            height={500}
+            width={500}
+          />
+        </div>
+      )}
     </div>
   );
 };

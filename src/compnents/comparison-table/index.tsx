@@ -16,7 +16,7 @@ const ComparisonTable: React.FC = () => {
       cell3: "No industry experience",
     },
     {
-      cell1: "Assigments",
+      cell1: "Assignments",
       cell2: "50+ Apps and Products to be Coded",
       cell3: "Theoretical written papers",
     },
@@ -44,11 +44,11 @@ const ComparisonTable: React.FC = () => {
     {
       cell1: "Live project experience",
       cell2:
-        "Opportunity to work part time at SW development companies from 2nd yr after completing IIJRC prgrm",
+        "Opportunity to work part time at SW development companies from 2nd yr after completing IIJRC program",
       cell3: "Lack of resources",
     },
     {
-      cell1: "Add on cerification",
+      cell1: "Add on certification",
       cell2: "Vetted with industry- IIJRC",
       cell3: "Some local training programs not vetted with industry",
     },

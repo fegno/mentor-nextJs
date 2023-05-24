@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Event-card.module.scss';
 import { CONFIG } from '@/config/config';
+import Image from 'next/image';
 type EventProps = {
    data:any;
   };
@@ -10,7 +11,7 @@ type EventProps = {
         <div className={style.event_card}>
             <div className={`row ${style.event_row}`}>
                 <div className={`col-4 col-sm-2 ${style.event_img}`}>
-                    <img src={`${CONFIG.baseUrl}${data?.thumbnail?.data.attributes?.url}`} alt="img" />
+                    <Image src={`${CONFIG.baseUrl}${data?.thumbnail?.data.attributes?.url}`} alt="img" width={500} height={200}/>
                 </div>
                 <div className={`col-8 col-sm-10 ${style.event_data_wrapper}`}>
                     <div className={`${style.event_head}`}>

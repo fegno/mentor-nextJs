@@ -5,6 +5,7 @@ import first from "../../assets/gallery/1.jpg";
 import second from "../../assets/gallery/2.jpg";
 import third from "../../assets/gallery/3.jpg";
 import Slider from "react-slick";
+import Image from "next/image";
 
 const GalleryCampus: React.FC = () => {
   const IMAGES = [first.src, second.src, third.src];
@@ -22,7 +23,7 @@ const GalleryCampus: React.FC = () => {
         {IMAGES.map((image: any, index: number) => {
           return (
             <div className={style.image_box} key={index}>
-              <img src={image} alt={`image${index}`} />
+              <Image src={image} alt={`image${index}`} objectFit="cover" layout="fill"/>
             </div>
           );
         })}

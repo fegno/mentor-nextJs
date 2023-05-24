@@ -6,62 +6,34 @@ type expandListProps = {
   data: any;
   title: string;
   expanded?: boolean;
+  index: number;
 };
 
 const ExpandListComponent: React.FC<expandListProps> = ({
   data,
   expanded,
   title,
+  index,
 }) => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const listRef: any = useRef(null);
-  const menuRef: any = useRef(null);
-
-  useEffect(() => {
-    if(expanded){
-      setShowMenu(true)
-    }
-    // let list = listRef.current;
-    // let menu = menuRef.current;
-    // if (expanded) {
-    //   setShowMenu(true);
-    // }
-    // gsap.to(list, {
-    //   duration: 1,
-    //   opacity:0,
-    //   display:"block",
-    //   scrollTrigger: {
-    //     markers: true,
-    //     trigger: menu,
-    //     start: "top center", // Change this value as needed
-    //     end: "bottom 80%", // Change this value as needed
-    //     toggleActions: "restart none reverse pause",
-    //   },
-    // });
-  }, []);
- 
   // useEffect(() => {
-  //   const element = listRef.current;
-  //   const title = element.querySelector('.title');
-  //   const list = element.querySelector('ul');
+  //   const handleScroll = () => {
+  //     const windowHeight = window.innerHeight;
+  //     const scrollTop = window.scrollY;
+  //     const component = document.getElementById(`component${index}`);
 
-  //   gsap.set([title, list], { opacity: 0 });
+  //     if (component) {
+  //       const { top, bottom } = component.getBoundingClientRect();
+  //       const isInViewport =
+  //         top < windowHeight / 2 && bottom > windowHeight / 2;
+  //       setShowMenu(isInViewport);
+  //     }
+  //   };
 
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: element,
-  //       start: 'top center+=100',
-  //       end: 'bottom center',
-  //       toggleActions: 'play none none reverse',
-  //     },
-  //   });
-
-  //   tl.to(title, { opacity: 1, duration: 0.5 })
-  //     .to(list, { opacity: 1, duration: 0.5 ,display:"block"}, '-=0.25');
-
+  //   window.addEventListener("scroll", handleScroll);
   //   return () => {
-  //     tl.kill();
+  //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
 
@@ -70,12 +42,12 @@ const ExpandListComponent: React.FC<expandListProps> = ({
   };
 
   return (
-    <div className={style.expand_list_component} ref={listRef}>
+    <div className={style.expand_list_component} id={`component${index}`}>
       <div className={`title ${style.title}`} onClick={handleListShow}>
         {title}
       </div>
       {showMenu && (
-        <ul className={style.lists} ref={menuRef}>
+        <ul className={style.lists}>
           {data?.map((list: any, index: number) => {
             return (
               <li className={style.list} key={`list${index}`}>

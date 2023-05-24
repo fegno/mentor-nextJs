@@ -26,7 +26,7 @@ if(window.innerWidth>991){
 const TABS=[
   {title:"Skills"},
   {title:"Market Growth"},
-  {title:"Job Oppurtunities"},
+  {title:"Job Opportunities"},
 ]
 
   return (

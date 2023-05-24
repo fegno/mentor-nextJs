@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import { http } from "../../axios/http";
 import { CONFIG } from "@/config/config";
 import Loading from "@/compnents/loading";
+import Image from "next/image";
 
 const EventDetail: React.FC = () => {
   const [data, setData]: any = useState([]);
@@ -40,9 +41,11 @@ const EventDetail: React.FC = () => {
         <div className={style.event_detail_wrapper}>
           {event?.cover_image?.data && (
             <div className={style.event_banner_img}>
-              <img
+              <Image
                 src={`${CONFIG.baseUrl}${event?.cover_image?.data?.attributes?.url}`}
                 alt="banner"
+                width={1000}
+                height={400}
               />
             </div>
           )}

@@ -6,6 +6,7 @@ import CoursesTab from "../courses-tab";
 import HologramButton from "../hologram-button";
 import particle from "../../assets/particle.gif";
 import { CONFIG } from "@/config/config";
+import Image from "next/image";
 
 type coursesProps = {
   courses: any;
@@ -44,7 +45,7 @@ const HomepageCoursesWeb: React.FC<coursesProps> = ({ courses, hasContainer }) =
             }}
           >
             <div className={`${style.course_icon} ${style[course.clasname]}`}>
-              <img src={`${CONFIG.baseUrl}${course?.attributes?.gif_icon?.data?.attributes?.url}`} />
+              <img src={`${CONFIG.baseUrl}${course?.attributes?.gif_icon?.data?.attributes?.url}`} alt="icon"/>
             </div>
             <div className={`${style.course_title} ${style[course.clasname]}`}>
               <div>B.Tech in</div>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import style from "./GalleryImages.module.scss";
 import { CONFIG } from "@/config/config";
 import CustomModal from "../modal";
+import Image from "next/image";
+import LazyLoad from "react-lazyload";
 
 type galleryImageProps = {
   images: any;
@@ -9,20 +11,30 @@ type galleryImageProps = {
 
 const GalleryImages: React.FC<galleryImageProps> = ({ images }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isModalOpen,setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleImageClick = (index: number) => {
     setSelectedIndex(index);
-    setIsModalOpen(true)
+    setIsModalOpen(true);
   };
 
   return (
     <div className={style.gallery_images}>
-     {images && images[selectedIndex] && <CustomModal isOpen={isModalOpen} close={()=>{setIsModalOpen(false)}}>
-        <div className={style.image_view}>
-          <img src={`${CONFIG.baseUrl}${images[selectedIndex]?.attributes?.url}`} />
-        </div>
-      </CustomModal>}
+      {images && images[selectedIndex] && (
+        <CustomModal
+          isOpen={isModalOpen}
+          close={() => {
+            setIsModalOpen(false);
+          }}
+        >
+          <div className={style.image_view}>
+            <img
+              src={`${CONFIG.baseUrl}${images[selectedIndex]?.attributes?.url}`}
+              alt="image"
+            />
+          </div>
+        </CustomModal>
+      )}
       <div className="row" style={{ gap: "20px 0" }}>
         {images?.map((image: any, index: number) => {
           return (
@@ -33,7 +45,14 @@ const GalleryImages: React.FC<galleryImageProps> = ({ images }) => {
                   handleImageClick(index);
                 }}
               >
-                <img src={`${CONFIG.baseUrl}${image?.attributes?.url}`} />
+                <LazyLoad placeholder={<div>loading</div>} >
+                  <Image
+                    src={`${CONFIG.baseUrl}${image?.attributes?.url}`}
+                    objectFit="cover"
+                    layout="fill"
+                    alt="mentor"
+                  />
+                </LazyLoad>
               </div>
             </div>
           );

@@ -67,7 +67,7 @@ const CAPTIONS = [
     line2: "begins",
     highlight: "here!",
     description:
-      "Experience the willingness of new changes in learning, something new to learn to be the movers and shakers for the making of anindefinite future.",
+      "Experience the willingness of new changes in learning, something new to learn to be the movers and shakers for the making of an indefinite future.",
   },
   {
     line1: "Stay ahead",

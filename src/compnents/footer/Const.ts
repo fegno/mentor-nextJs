@@ -6,7 +6,7 @@ import reddit from "../../assets/reddit.svg";
 export const CONST = {
     MENU:[
         {
-            title:"Home",link:"/home"
+            title:"Home",link:"/"
         },{
             title:"About Us",link:"/about"
         },{
