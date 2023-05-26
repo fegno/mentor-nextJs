@@ -2,6 +2,13 @@
     Form{
         max-width: 670px;
     }
+    .error{
+        color: red;
+    }
+    .success{
+        color: green;
+        margin-top: 10px;
+    }
     input{
         width: 100%;
         padding: 14px 0;

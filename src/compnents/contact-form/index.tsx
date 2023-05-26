@@ -15,16 +15,23 @@ const FormErrorField: React.FC<{ name: string }> = ({ name }) => {
         return <span className={style.error}>{msg}</span>;
       }}
     />
-  );                                                                                                                                                                                                                                                                                                                                                                                                    
+  );
 };
 const ContactForm: React.FC = () => {
-
-
   const [isSuccess, setIsSuccess] = useState(false);
 
   const onSubmitHandler = async () => {
-    setIsSuccess(true)
+    setIsSuccess(true);
   };
+  const COURSES = [
+    { title: "Select Course", value: "" },
+    { title: "B.Tech in CS", value: "B.Tech in CS" },
+    { title: "B.Tech in AI and ML", value: "B.Tech in AI and ML" },
+    { title: "B.Tech in AI and DSC", value: "B.Tech in AI and DSC" },
+    { title: "B.Tech in IOT", value: "B.Tech in IOT" },
+    { title: "B.Tech in CYBER SECURITY", value: "B.Tech in CYBER SECURITY" },
+    { title: "B.Tech in BLOCKCHAIN", value: "B.Tech in BLOCKCHAIN" },
+  ];
   return (
     <Container>
       <div className={`${style.form}`}>
@@ -89,20 +96,32 @@ const ContactForm: React.FC = () => {
                         <FormErrorField name="state" />
                       </div>
                       <div className={`col-12 ${style.wrapper}`}>
-                        <input
-                          type="text"
-                          className={style.input}
-                          placeholder="Course"
+                        <select
+                          name="course"
+                          className={style.select}
+                          value={values.course}
                           onChange={handleChange}
                           onBlur={handleBlur}
-                          value={values.course}
-                          name="course"
-                        />
+                        >
+                          {COURSES.map((course: any, index: number) => {
+                            return (
+                              <option
+                                key={index}
+                                value={course.value}
+                                disabled={course.value == ""}
+                              >
+                                {course.title}
+                              </option>
+                            );
+                          })}
+                        </select>
                         <FormErrorField name="course" />
                       </div>
-                      {isSuccess && <div className="col-12" style={{color:"green"}}>
-                       Application submitted
-                      </div>}
+                      {isSuccess && (
+                        <div className="col-12" style={{ color: "green" }}>
+                          Application submitted
+                        </div>
+                      )}
                       <div className="col-12">
                         <button type="submit" className={style.submit}>
                           Submit

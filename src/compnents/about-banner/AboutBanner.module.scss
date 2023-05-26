@@ -64,7 +64,7 @@
                 .description {
                     font-size: _rem(16px);
                     line-height: 25px;
-                    // -webkit-line-clamp: 3;
+                    -webkit-line-clamp: unset;
                 }
             }
         }

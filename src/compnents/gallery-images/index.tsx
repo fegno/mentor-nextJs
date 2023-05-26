@@ -49,6 +49,8 @@ const GalleryImages: React.FC<galleryImageProps> = ({ images }) => {
                   <Image
                     src={`${CONFIG.baseUrl}${image?.attributes?.url}`}
                     alt="mentor"
+                    width={500}
+                    height={500}
                   />
                 </LazyLoad>
               </div>

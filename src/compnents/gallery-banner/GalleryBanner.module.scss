@@ -49,6 +49,7 @@
     }
   }
   @include small-screen{
+    background-position: bottom;
     .inner_wrapper{
       .data_wrapper{
         display: block;

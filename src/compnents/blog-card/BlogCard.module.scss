@@ -1,70 +1,99 @@
 @import "../../styles/var";
-.blog_card{
-    margin-top: 81px;
-    font-family: "Be Vietnam Pro", sans-serif;
-    .blog_row{
-        margin:62px 0;
+.blog_card {
+  margin-top: 81px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  .blog_row {
+    margin: 62px 0;
+  }
+  .blog_img {
+    .image_wrapper {
+      padding-top: 70%;
+      position: relative;
+      img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+        height: 100%;
+      }
     }
-    .blog_img{
-        img{
-            width: 100%;;
-        }
-    } 
-    .blog_title{
-        font-weight: 300;
-        color: #cdcdcd;
-        font-size: _rem(24px);
+  }
+  .blog_title {
+    font-weight: 300;
+    color: #cdcdcd;
+    font-size: _rem(24px);
+    line-height: 140%;
+  }
+  .blog_detail {
+    font-weight: 700;
+    font-size: _rem(18px);
+    line-height: 36px;
+    .blog_author {
+      color: #474dd4;
+    }
+    .blog_author:after {
+      content: "|";
+      color: #929292;
+      margin: 0 5px;
+      font-size: 20px;
+      font-weight: 200;
+    }
+    .blog_dop {
+      color: #929292;
+    }
+  }
+  .blog_content {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: _rem(18px);
+    line-height: 36px;
+    color: #737373;
+    height: 72px;
+  }
+  @include small-screen {
+    .blog_title {
+        font-size: _rem(20px);
         line-height: 140%;
-        } 
-    .blog_detail{
-        font-weight: 700;
-        font-size: _rem(18px);
-        line-height: 36px;
-        .blog_author{
-            color: #474DD4;
-        }  
-        .blog_author:after{
-            content:'|';
-            color: #929292;
-            margin: 0 5px;
-            font-size: 20px;
-            font-weight: 200;
+      }
+      .blog_detail {
+        font-size: _rem(16px);
+        line-height: 26px;
+        .blog_author:after {
+          font-size: 16px;
         }
-        .blog_dop{
-            color: #929292;
-        }
+      }
+      .blog_content {
+        font-size: _rem(15px);
+        line-height: 26px;
+        height: auto;
+      }
+  }
+  @include phone {
+    .blog_img {
+      padding: 5px 0 0;
     }
-    .blog_content{
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
-        font-weight: 400;
-        font-size: _rem(18px);
-        line-height: 36px;
-        color: #737373;
-        height: 72px;
+    .blog_data_wrapper {
+      padding-right: 0;
     }
-
-    @media only screen and (max-width:600px){
-        .blog_img{
-            padding: 5px 0 0;
-        }
-        .blog_data_wrapper{
-            padding-right: 0;
-        }
-        .blog_title{
-            font-size: _rem(16px);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            overflow: hidden;
-        }
-        .blog_content{
-            display: none;
-        }
-        .blog_detail{
-            font-size: _rem(14px);  
-        }
+    .blog_title {
+      font-size: _rem(16px);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      overflow: hidden;
     }
+    .blog_content {
+      display: none;
+    }
+    .blog_detail {
+      font-size: _rem(14px);
+    }
+  }
 }
