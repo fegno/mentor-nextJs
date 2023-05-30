@@ -7,7 +7,7 @@ import ApplyNow from "../apply-now";
 const Whatsapp: React.FC = () => {
   return (
     <div className={style.whatsapp}>
-      <Link href="https://wa.me/9745680111" target="_blank">
+      <Link href="https://wa.me/70348661111" target="_blank">
         <img src={icon.src} alt="whatsapp" />
       </Link>
     </div>

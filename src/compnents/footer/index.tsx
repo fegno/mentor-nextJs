@@ -62,8 +62,8 @@ const Footer: React.FC = () => {
                     Mentor Academy of Excellence
                   </div>
                   <div className={style.address}>
-                    Ettapilly, Mannathoor(PO), Pampakuda via Muvattupuzha
-                    Ernakulam, Kerala 686667, INDIA <br /> Contact :+91
+                    Ettapilly, Mannathoor P.O., Pampakuda via Muvattupuzha,
+                    Ernakulam,Kerala, INDIA. PIN: 686 667. <br /> Contact :+91
                     6282089866
                   </div>
                 </div>

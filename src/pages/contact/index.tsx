@@ -37,12 +37,12 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
                         </Link>
-                        <Link href="mailto:contact@mentorcollege.in">
+                        <Link href="mailto:contact@mentorcolleges.com">
                             <div className={`${style.loc_sec}`}>
                                 <div className={`${style.addr_icons}`}>
                                     <CiGlobe />
                                 </div>
-                                <div className={`${style.addr_detail}`}>contact@mentorcollege.in</div>
+                                <div className={`${style.addr_detail}`}>contact@mentorcolleges.com</div>
                             </div>
                         </Link>
                     </div>

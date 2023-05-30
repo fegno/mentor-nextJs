@@ -6,13 +6,13 @@ const ComparisonTable: React.FC = () => {
     {
       cell1: "Curriculum",
       cell2:
-        "Industry vetted curriculum. Redesigning with our R& D team consisting of industry experts who have more than 10yrs experience.",
+        "Industry vetted curriculum. Redesigning with our R& D team consisting of industry experts who have more than 10 years experience.",
       cell3: "Outdated",
     },
     {
       cell1: "Instructors",
       cell2:
-        "Our experienced instructors are having more than 10yrs experience in MNC’s with coding and development experience.",
+        "Our experienced instructors are having more than 10 years experience in MNC’s with coding and development experience.",
       cell3: "No industry experience",
     },
     {
@@ -55,7 +55,7 @@ const ComparisonTable: React.FC = () => {
     {
       cell1: "Teaching Methodology",
       cell2:
-        "Targeting students to pass exams with the knowledge of how these theories effectively is used in their SW careers.",
+        "Targeting students to pass exams with the knowledge of how these theories are effectively used in their SW careers.",
       cell3:
         "Following university curriculum same as school to get marks through theory studies.",
     },

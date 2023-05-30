@@ -25,7 +25,7 @@ const HomepageOurVision: React.FC = () => {
             MADEIT is committed to offer an integrated training on the eight
             pillars of IR 4.0 to the people. Our unique position in the world of
             higher education is based on strong values: inclusivity, open
-            culture, and always aiming at excellence. The ultimate goal is
+            culture and always aiming at excellence. The ultimate goal is
             sustainable professional integration into the labor market
           </p>
         </div>
