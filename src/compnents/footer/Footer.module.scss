@@ -6,7 +6,7 @@
   color: #c1c1c1;
   line-height: 36px;
   font-family: "Be Vietnam Pro", sans-serif;
-  .floating{
+  .floating {
     position: fixed;
     bottom: 50px;
     right: 50px;
@@ -18,7 +18,7 @@
   }
   .inner_wrapper {
     max-width: 501px;
-    .logo{
+    .logo {
       max-width: 240px;
       width: 100%;
     }
@@ -32,15 +32,15 @@
       font-size: 18px;
       line-height: 36px;
     }
-    .menus_mobile{
+    .menus_mobile {
       display: none;
     }
   }
-  .achievement_wrapper{
+  .achievement_wrapper {
     padding-top: 60%;
     position: relative;
     max-width: 200px;
-    .achievement_icon{
+    .achievement_icon {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -60,51 +60,60 @@
       }
     }
   }
-  .bottom_title{
+  .bottom_title {
     font-size: _rem(18px);
-    color: #C1C1C1;
+    color: #c1c1c1;
     margin-bottom: 10px;
   }
-  .awards_wrapper{
+  .awards_wrapper {
     display: flex;
     width: 100%;
-    gap: 0 20px;
-    justify-content: space-between;
-    .award{
-      img{
+    gap: 0 150px;
+    justify-content: center;
+    .award {
+      max-width: 200px;
+      text-align: center;
+      img {
         // max-width: 30px;
         max-height: 30px;
         // height: 100%;
         // width: 100%;
+        display: block;
+        margin: auto;
       }
-      .title{
-        margin-left: 10px;
+      .title {
         font-size: _rem(14px);
+        line-height: 25px !important;
+        display: block;
       }
     }
   }
-  @include large-screen{
-    .bottom_title{
+  .copy_right{
+    text-align: center;
+  }
+  @include large-screen {
+    .bottom_title {
       text-align: center;
       font-size: _rem(14px);
     }
-    .awards_wrapper{
+    .awards_wrapper {
       display: block;
       text-align: center;
-      .award{
-        .title{
+      .award {
+        margin: auto;
+        .title {
           font-size: _rem(12px);
         }
       }
     }
-    .copy_right{
+    .copy_right {
       font-size: _rem(12px);
     }
   }
   @include small-screen {
     padding-top: 50px;
     font-size: _rem(14px);
-    .floating{
+    .floating {
       right: 20px;
       bottom: 20px;
     }

@@ -35,7 +35,7 @@ const CourseDetailAbout: React.FC<aboutProps> = ({ data }) => {
       <div className={`row ${style.card_wrapper}`}>
 
         <div className="col-12 col-lg-6 mb-4" >
-          <CourseAboutCard data={data?.who_this_course_is_for} title="Who this course is for" icon={icon_who.src}/>
+          <CourseAboutCard data={data?.who_this_course_is_for} title="Whom this course is for" icon={icon_who.src}/>
         </div>
         <div className="col-12 col-lg-6 mb-4" >
           <CourseAboutCard data={data?.what_this_course_will_give} title="What this course will give you" icon={icon_what.src}/>

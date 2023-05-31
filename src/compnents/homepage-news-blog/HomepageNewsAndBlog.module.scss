@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   .card {
-    p {
-      display: -webkit-box;
+    .description {
+      display: -webkit-box !important;
       -webkit-line-clamp: 9;
       -webkit-box-orient: vertical;
       overflow: hidden;

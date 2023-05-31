@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="row py-4">
           <div className={style.bottom_title}>Recognized by :</div>
-          <div className="col-12 pb-2">
+          <div className="col-12 pb-4">
             <div className={style.awards_wrapper}>
               {AWARDS.map((awards: any, index: number) => {
                 return (

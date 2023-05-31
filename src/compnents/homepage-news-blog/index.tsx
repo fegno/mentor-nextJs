@@ -3,6 +3,7 @@ import Button from "../button";
 import Title from "../title";
 import style from "./HomepageNewsAndBlog.module.scss";
 import { http } from "@/axios/http";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const HomepageNewsAndBlog: React.FC = () => {
   const [data, setData]: any = useState([]);
@@ -23,22 +24,29 @@ const HomepageNewsAndBlog: React.FC = () => {
         </div>
         <div className="row py-4">
           <div className="col-12 col-md-7 ">
-           {data[0] && <div className="row">
-              <div className={`col-12 card-gray rounded-20 p-5 ${style.card}`}>
-                <div className="d-block">
+            {data[0] && (
+              <div className="row">
+                <div
+                  className={`col-12 card-gray rounded-20 p-5 ${style.card}`}
+                >
                   <div className="d-block">
-                    <h3>{data[0]?.attributes?.title}</h3>
-                  </div>
-                  <div className="d-block">
-                    <p>{data[0]?.attributes?.description}</p>
-                  </div>
-                  <div className="d-block">
-                    <strong>{data[0]?.attributes?.Author}</strong> |{" "}
-                    {data[0]?.attributes?.date}
+                    <div className="d-block">
+                      <h3>{data[0]?.attributes?.title}</h3>
+                    </div>
+                    <div className={`d-block ${style.description}`}>
+                      <ReactMarkdown>
+                        {data[0]?.attributes?.description}
+                      </ReactMarkdown>
+                      {/* <p>{data[0]?.attributes?.description}</p> */}
+                    </div>
+                    <div className="d-block">
+                      <strong>{data[0]?.attributes?.Author}</strong> |{" "}
+                      {data[0]?.attributes?.date}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>}
+            )}
           </div>
           <div className="col-12 col-md-5 px-4">
             <div className={`row ${style.trending_news}`}>
