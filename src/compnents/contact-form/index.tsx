@@ -6,6 +6,8 @@ import image from "../../assets/Form_vector.svg";
 import arrow from "../../assets/arrow-right.svg";
 import Container from "../container";
 import sgMail from "@sendgrid/mail";
+import { http } from "@/axios/http";
+import Loading from "../loading";
 
 const FormErrorField: React.FC<{ name: string }> = ({ name }) => {
   return (
@@ -19,9 +21,20 @@ const FormErrorField: React.FC<{ name: string }> = ({ name }) => {
 };
 const ContactForm: React.FC = () => {
   const [isSuccess, setIsSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const onSubmitHandler = async () => {
-    setIsSuccess(true);
+  const onSubmitHandler =  (values:any,{resetForm}:any) => {
+    setLoading(true);
+    http
+      .post("/send-email/", { ...values })
+      .then((res: any) => {
+        setIsSuccess(true);
+        resetForm({});
+        setLoading(false);
+      })
+      .catch((err: any) => {
+        setLoading(false);
+      });
   };
   const COURSES = [
     { title: "Select Course", value: "" },
@@ -34,6 +47,7 @@ const ContactForm: React.FC = () => {
   ];
   return (
     <Container>
+      {loading && <Loading />}
       <div className={`${style.form}`}>
         <div className="row" style={{ alignItems: "center" }}>
           <div className="col-12 col-lg-5">

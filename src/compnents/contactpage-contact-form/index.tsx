@@ -11,7 +11,7 @@ const ContactForm: React.FC = () => {
 
   const initialValues = {
     name: "",
-    mob: "",
+    mobile: "",
     course: "",
     email: "",
     state: "",
@@ -22,7 +22,7 @@ const ContactForm: React.FC = () => {
       .min(2, "The name tou entered is too short")
       .max(30, "The name you entered is too Long")
       .required("Name required"),
-    mob: Yup.string()
+    mobile: Yup.string()
       .min(10, "Please enter a valid mobile number")
       .max(12, "Please enter a valid mobile number")
       .required("Mobile number required"),
@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (values: any, { resetForm }: any) => {
     setLoading(true);
     http
-      .post("/send-email", { ...values })
+      .post("/send-email/", { ...values })
       .then((res: any) => {
         setIsSuccess(true);
         resetForm({});
@@ -89,14 +89,14 @@ const ContactForm: React.FC = () => {
               <input
                 type="text"
                 id="fm_mob"
-                name="mob"
+                name="mobile"
                 placeholder="Mobile*"
-                value={values.mob}
+                value={values.mobile}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              {errors.mob && touched.mob && (
-                <div className={style.error}>{errors.mob}</div>
+              {errors.mobile && touched.mobile && (
+                <div className={style.error}>{errors.mobile}</div>
               )}
             </div>
 
