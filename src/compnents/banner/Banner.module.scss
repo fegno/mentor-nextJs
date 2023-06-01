@@ -1,26 +1,38 @@
 @import "../../styles/var";
-
 .banner {
   position: relative;
-
   .contents {
     width: 100%;
-    background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 100%);
+    background: -moz-linear-gradient(
+      left,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 62%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 62%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 62%,
+      rgba(0, 0, 0, 0) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);
     align-items: flex-start;
-    // display: flex;
     padding: 0 10%;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
+    right: 0;
     pointer-events: none;
     height: 100vh;
     z-index: 9;
     color: #fff;
-
     .caption {
       font-size: pxToRem(100px);
       font-weight: bolder;
@@ -39,12 +51,18 @@
     }
     .description {
       font-family: " Be Vietnam Pro", sans-serif;
-      color: #F0F0F0;
+      color: #f0f0f0;
       font-size: _rem(18px);
     }
-    .view_link{
+    .view_link {
       font-size: _rem(18px);
       text-align: right;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      z-index: 999;
+      border: 1px solid yellow;
+      background-color: red;
     }
   }
 
@@ -55,6 +73,7 @@
     min-height: 100vh;
     background-size: contain;
     background-position: right;
+    // border: 1px solid red;
   }
 
   :global {
@@ -95,9 +114,24 @@
   }
   @include small-screen {
     .contents {
-      background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 27%, rgba(0, 0, 0, 0) 100%);
-      background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 27%, rgba(0, 0, 0, 0) 100%);
-      background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 27%, rgba(0, 0, 0, 0) 100%);
+      background: -moz-linear-gradient(
+        bottom,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 27%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background: -webkit-linear-gradient(
+        bottom,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 27%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 27%,
+        rgba(0, 0, 0, 0) 100%
+      );
       .caption {
         font-size: pxToRem(80px);
       }
@@ -126,9 +160,24 @@
   }
   @include phone {
     .contents {
-      background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 39%, rgba(0, 0, 0, 0) 100%);
-      background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 39%, rgba(0, 0, 0, 0) 100%);
-      background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 39%, rgba(0, 0, 0, 0) 100%);
+      background: -moz-linear-gradient(
+        bottom,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 39%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background: -webkit-linear-gradient(
+        bottom,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 39%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 39%,
+        rgba(0, 0, 0, 0) 100%
+      );
       .caption {
         font-size: pxToRem(40px);
       }

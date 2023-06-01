@@ -101,11 +101,11 @@ const Slider2: React.FC<any> = ({ caption, id, description }: any) => {
             {description}
           </p>
         </div>
-        {/* <div className={`mt-5 ${style.view_link}`} onClick={()=>{router.push('/course-listing')}}>
+        <div className={`mt-5 ${style.view_link}`} >
           <Link href="/course-listing">
             View all programs <BsArrowRight />
           </Link>
-        </div> */}
+        </div>
       </div>
     </div>
   );

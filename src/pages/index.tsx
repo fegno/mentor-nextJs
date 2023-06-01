@@ -20,6 +20,7 @@ export default function Home() {
       href="/public/favicon-32x32.png"
       type="image/x-icon"
     />
+    <title>Mentor Academy of Excellence</title>
   </Head>;
   return (
     <div >

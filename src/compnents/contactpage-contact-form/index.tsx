@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import style from "./Contactfrom.module.scss";
+import { http } from "@/axios/http";
+import Loading from "../loading";
 
 const ContactForm: React.FC = () => {
-  const [data, setData] = useState("");
+  const [loading, setLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const initialValues = {
@@ -30,11 +32,30 @@ const ContactForm: React.FC = () => {
   });
 
   const handleSubmit = (values: any, { resetForm }: any) => {
-    setIsSuccess(true);
-    resetForm({});
+    setLoading(true);
+    http
+      .post("/send-email", { ...values })
+      .then((res: any) => {
+        setIsSuccess(true);
+        resetForm({});
+        setLoading(false);
+      })
+      .catch((err: any) => {
+        setLoading(false);
+      });
   };
+  const COURSES = [
+    { title: "Select Course", value: "" },
+    { title: "B.Tech in CS", value: "B.Tech in CS" },
+    { title: "B.Tech in AI and ML", value: "B.Tech in AI and ML" },
+    { title: "B.Tech in AI and DSC", value: "B.Tech in AI and DSC" },
+    { title: "B.Tech in IOT", value: "B.Tech in IOT" },
+    { title: "B.Tech in CYBER SECURITY", value: "B.Tech in CYBER SECURITY" },
+    { title: "B.Tech in BLOCKCHAIN", value: "B.Tech in BLOCKCHAIN" },
+  ];
   return (
     <div className={`${style.form_container}`}>
+      {loading && <Loading />}
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
@@ -80,15 +101,25 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className={`${style.fos_fld}`}>
-              <input
-                type="text"
+              <select
                 name="course"
-                id="fm_fos"
-                placeholder="Interested field of study"
+                className={style.select}
                 value={values.course}
                 onChange={handleChange}
                 onBlur={handleBlur}
-              />
+              >
+                {COURSES.map((course: any, index: number) => {
+                  return (
+                    <option
+                      key={index}
+                      value={course.value}
+                      disabled={course.value == ""}
+                    >
+                      {course.title}
+                    </option>
+                  );
+                })}
+              </select>
               {errors.course && touched.course && (
                 <div className={style.error}>{errors.course}</div>
               )}
