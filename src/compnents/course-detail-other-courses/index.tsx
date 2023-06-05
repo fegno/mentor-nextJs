@@ -10,8 +10,8 @@ const CourseDetailOtherCourses: React.FC = () => {
         Mentor College offers a wide range of future-ready courses from the
         field of computer science that is aimed at crafting you into an expert
         under the guidance of those who already excel at their respective
-        fields. given below are some of the other courses that you may be
-        interested in ;
+        fields. Given below are some of the other courses that you may be
+        interested in:
       </div>
       <HomepageCourses hasContainer/>
     </div>

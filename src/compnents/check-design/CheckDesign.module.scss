@@ -1,0 +1,31 @@
+.check_design {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .cover {
+    position: absolute;
+    background-position: center;
+    object-fit: cover;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .content{
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .gradiant {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(50% 50% at 50% 50%, #3391FF 0%, rgba(71, 77, 212, 0) 100%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    // transition: all ease 0.1s;
+  }
+}

@@ -11,29 +11,24 @@ import HomepageBenefits from "@/compnents/homepage-benefits";
 import HomePageClassroom from "@/compnents/class-room";
 import HomepageCourses from "../compnents/homepage-courses";
 import ComparisonTable from "@/compnents/comparison-table";
-
+import CheckDesign from "@/compnents/check-design";
 
 export default function Home() {
-  <Head>
-    <link
-      rel="shortcut icon"
-      href="/public/favicon-32x32.png"
-      type="image/x-icon"
-    />
-    <title>Mentor Academy of Excellence</title>
-  </Head>;
   return (
-    <div >
+    <div>
       <Banner />
+      {/* <CheckDesign /> */}
       <section className="mt-5">
         <Container>
           <HomePageClassroom />
         </Container>
       </section>
       <section className={styles.courses}>
-       <Container>
-       <HomepageCourses hasContainer/>
-       </Container>
+        {/* <CheckDesign> */}
+          <Container>
+            <HomepageCourses hasContainer />
+          </Container>
+        {/* </CheckDesign> */}
       </section>
       <section className={styles.our_vision}>
         <Container>

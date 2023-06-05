@@ -3,12 +3,19 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <link rel="icon" href="/public/favicon.ico" />
+        <title>Mentor Academy of Excellence</title>
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }

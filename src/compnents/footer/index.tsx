@@ -13,12 +13,11 @@ import apj from "../../assets/APJ_Abdul_Kalam_Technological_University_logo.png"
 import { http } from "../../axios/http";
 
 const Footer: React.FC = () => {
-  
   // const [data, setData]:any = useState([]);
 
   // useEffect(()=>{
   //  http.get('courses?populate=deep').then((res)=>{
-    
+
   //  })
   // },[])
 
@@ -63,8 +62,9 @@ const Footer: React.FC = () => {
                   </div>
                   <div className={style.address}>
                     Ettapilly, Mannathoor P.O., Pampakuda via Muvattupuzha,
-                    Ernakulam,Kerala, INDIA. PIN: 686 667. <br /> Contact :+91
-                    6282089866
+                    Ernakulam,Kerala, INDIA. PIN: 686 667. <br /> Contact :
+                    <Link href="tel:+91 7034866111">+91 7034866111</Link>,
+                    <Link href="tel:+91 7034 733 111">+91 7034733111</Link>
                   </div>
                 </div>
                 <div className="col-12">
