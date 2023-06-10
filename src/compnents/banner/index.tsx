@@ -1,17 +1,17 @@
 import react, { useEffect, useRef, useState, useCallback } from "react";
 import style from "./Banner.module.scss";
 import Slider from "react-slick";
-import bg from "../../assets/bg.jpg";
 import bg_small from "../../assets/bg-small.png";
-import BannerPopup from "../banner-popup";
+import banner2 from "../../assets/banner-2.png";
 import { gsap } from "gsap";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
 const SETTINGS = {
   slidesToShow: 1,
   dots: true,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 3000,
 };
 const SETTINGS_2 = {
@@ -20,18 +20,19 @@ const SETTINGS_2 = {
   arrows: false,
   fade: true,
   draggable: false,
-  autoplay: false,
+  autoplaySpeed: 3000,
+  autoplay: true,
 };
 const getSelector = (id: number, type: string) => {
   return `_item_${id}_${type}`;
 };
 const SPILTTED_CLASS_NAME = "splited-item";
-const Slide: React.FC<{ image: string; id: any }> = ({ image, id }) => {
+const Slide: React.FC<{ image: any; id: any }> = ({ image, id }) => {
   return (
     <div
       className={style.slide}
       style={{
-        backgroundImage: `url(${bg_small.src})`,
+        backgroundImage: `url(${image.src})`,
       }}
     ></div>
   );
@@ -66,13 +67,16 @@ const CAPTIONS = [
     line1: "Your future",
     line2: "begins",
     highlight: "here!",
+    image:bg_small,
     description:
       "Experience the willingness of new changes in learning, something new to learn to be the movers and shakers for the making of an indefinite future.",
   },
+
   {
     line1: "Stay ahead",
     line2: "of the",
     highlight: "Curve",
+    image:banner2,
     description:
       "Stay ahead of the curve with our tech education that prepares you for the ever-evolving industry landscape. Our program empowers you with the latest skills and knowledge to excel in tomorrow's job market.",
   },
@@ -180,7 +184,7 @@ const Banner: React.FC = () => {
                     <Slide
                       key={index}
                       id={index}
-                      image={`https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.besthdwallpaper.com%2Fmusic%2Fle-sserafim-all-members-kpop-girls-group-dt_en-US-100024.html&psig=AOvVaw3dhXb_V_LIuDi8OlZo0Jvs&ust=1679924045431000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIDjr_fa-f0CFQAAAAAdAAAAABAE`}
+                      image={item.image}
                     />
                   );
                 })}
