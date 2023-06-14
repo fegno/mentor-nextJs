@@ -16,19 +16,27 @@ const Contact: React.FC = () => {
           Reach out to us by filling the form below
         </div>
         <div className={"row"} mt-5>
-          <div className={`col-xl-8 col-lg-7 col-md-12 col-sm-12 ${style.form_section}`}>
+          <div
+            className={`col-xl-8 col-lg-7 col-md-12 col-sm-12 ${style.form_section}`}
+          >
             <div className={`${style.icon_form}`}>
               <ContactForm />
             </div>
           </div>
-          <div className={`col-xl-4 col-lg-5 col-md-12 col-sm-12 ${style.addr_section}`}>
+          <div
+            className={`col-xl-4 col-lg-5 col-md-12 col-sm-12 ${style.addr_section}`}
+          >
             <div className={`${style.loc_sec}`}>
               <div className={`${style.addr_icons}`}>
                 <CiLocationOn />
               </div>
               <div className={`${style.addr_detail}`}>
-                Ettapilly, Mannathoor P.O. <br/> Pampakuda via Muvattupuzha, <br />
-                Ernakulam,Kerala, INDIA.<br /> PIN: 686667.
+                Mentor Academy of Excellence
+                <br />
+                Ettapilly, Mannathoor P.O. <br /> Pampakuda via Muvattupuzha,{" "}
+                <br />
+                Ernakulam,Kerala, INDIA.
+                <br /> PIN: 686667.
               </div>
             </div>
 
