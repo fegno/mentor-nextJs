@@ -29,6 +29,7 @@
             display: flex;
             align-items: center;
             font-family: " Be Vietnam Pro", sans-serif;
+            // flex-wrap: nowrap;
             a{
                 color: inherit;
             }
@@ -46,6 +47,27 @@
         background-color: #474DD4;
         font-size: _rem(30px);
         margin-right: 35px;
+      }
+      @include extra-large-screen{
+        .loc_sec{
+            .addr_detail{
+                flex-direction: column;
+            }
+        }
+      }
+      @include small-screen{
+        .loc_sec{
+            .addr_detail{
+               flex-direction: row;
+            }
+        }
+      }
+      @include phone{
+        .loc_sec{
+            .addr_detail{
+               flex-direction: column;
+            }
+        }
       }
 }
 @media only screen and (max-width:600px){

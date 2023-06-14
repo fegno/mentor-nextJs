@@ -26,5 +26,10 @@
     border: 1px solid #c1c1c1;
     outline: none;
     color: #c1c1c1;
+    transition: all ease 0.5s;
+    &:hover{
+      background-color: #00313c;
+      transition: all ease 0.5s;
+    }
   }
 }

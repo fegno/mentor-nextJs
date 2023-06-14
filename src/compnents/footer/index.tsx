@@ -62,8 +62,8 @@ const Footer: React.FC = () => {
                   </div>
                   <div className={style.address}>
                     Ettapilly, Mannathoor P.O., Pampakuda via Muvattupuzha,
-                    Ernakulam,Kerala, INDIA. PIN: 686 667. <br /> Contact :
-                    <Link href="tel:+91 7034866111">+91 7034866111</Link>,
+                    Ernakulam,Kerala, INDIA. PIN: 686667. <br /> Contact :
+                    <Link href="tel:+91 7034866111">+91 7034866111</Link> , 
                     <Link href="tel:+91 7034 733 111">+91 7034733111</Link>
                   </div>
                 </div>
