@@ -13,6 +13,7 @@ const SETTINGS = {
   dots: true,
   autoplay: true,
   autoplaySpeed: 3000,
+  fade:true,
 };
 const SETTINGS_2 = {
   dots: false,
