@@ -16,6 +16,7 @@ const LoaAndEoa: React.FC = () => {
     { status: "EOA Recommended by Council", report: "/pdf/EOA 2019-20.PDF", academic_year: "2019-2020" },
     { status: "EOA Recommended by Council", report: "/pdf/EOA_HO_Report2020-21(16).pdf", academic_year: "2020-2021" },
     { status: "EOA Recommended by Council", report: "/pdf/EOA 2021-22.pdf", academic_year: "2021-2022" },
+    { status: "EOA Recommended by Council", report: "/pdf/MENTOR-EOA_Report_22-23-1(3).PDF", academic_year: "2022-2023" },
 ];
 
 const DATA2 = [
