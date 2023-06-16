@@ -27,35 +27,35 @@ const Author: React.FC<authorProps> = ({ data, isRight }) => {
         <div className={`col-12 col-lg-4 ${style.author_img}`}>
           <div className={style.gradiant}></div>
           <LazyLoad>
-            <Image src={data.photo} alt="mentor" width={500} height={500} />
+            <Image src={data?.photo} alt="mentor" width={500} height={500} />
           </LazyLoad>
         </div>
         <div className={`col-12 col-lg-8 ${style.author_detail_wrapper}`}>
           <div className={style.author_bio}>
             <div className={style.author_head_wrapper}>
               <div className={style.author_name}>
-                {data.name}
-                <div className={style.auth_social_icon}>
+                {data?.name}
+               {data.linked_in_profile && <div className={style.auth_social_icon}>
                   <Link href={data.linked_in_profile} target="_blank">
                     <img src={authsocial.src} alt="linkedIn" />
                   </Link>
-                </div>
+                </div>}
               </div>
               <div className={style.author_social}>
                 <img src={authsocial.src} alt="img" />
               </div>
             </div>
-            <div className={style.author_designation}>{data.designation}</div>
+            <div className={style.author_designation}>{data?.designation}</div>
             <div className={style.border}></div>
             <div className={style.author_dec}>
-              {data.description}
-              <p>{data.description2}</p>
+              {data?.description}
+              <p>{data?.description2}</p>
             </div>
-            <div className={style.auth_social_icon}>
-              <Link href={data.linked_in_profile} target="_blank">
+           {data?.linked_in_profile && <div className={style.auth_social_icon}>
+              <Link href={data?.linked_in_profile} target="_blank">
                 <img src={authsocial.src} alt="linkedIn" />
               </Link>
-            </div>
+            </div>}
           </div>
         </div>
       </div>

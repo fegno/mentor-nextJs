@@ -39,6 +39,10 @@ export const CONST = {
       link: "https://www.aicte-india.org/bureaus/grievance-redressal",
       redirect:true
     },
+    {
+      title: "Governing board and advisory board",
+      link: "/governing-board",
+    },
   ],
   SOCIAL_LINKS: [
     {
