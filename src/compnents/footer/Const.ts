@@ -26,6 +26,11 @@ export const CONST = {
       link: "/loa-and-eoa",
     },
     {
+      title: "MOOCS",
+      link: "https://swayam.gov.in/",
+      redirect:true
+    },
+    {
       title: "Mandatory Disclosure",
       link: "/mandatory-disclosure",
     },
