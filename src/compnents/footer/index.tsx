@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
           <div className="`col-12 col-lg-6 col-xl-7">
             <div className="row">
               <div
-                className={`col-12 col-lg-6 col-xl-4 mb-4 ${style.links_wrapper}`}
+                className={`col-12 col-lg-6 col-xl-6 mb-4 ${style.links_wrapper}`}
               >
                 <div className={`row ${style.social_links}`}>
                   {CONST.SOCIAL_LINKS.map((social: any, index: number) => {
@@ -97,17 +97,17 @@ const Footer: React.FC = () => {
                 </div>
               </div>
               <div
-                className={`col-12 col-lg-6 col-xl-4 mb-4 ${style.menus_wrapper}`}
+                className={`col-12 col-lg-6 col-xl-6 mb-4 ${style.menus_wrapper}`}
               >
                 {CONST.MENU.map((menu: any, index: number) => {
                   return (
                     <div className={`d-block ${style.menu}`} key={index}>
-                      <Link href={menu.link}>{menu.title}</Link>
+                      <Link href={menu.link} target={menu?.redirect?'_blank':"_self"}>{menu.title}</Link>
                     </div>
                   );
                 })}
               </div>
-              <div
+              {/* <div
                 className={`col-12 col-lg-6 col-xl-4 mb-4 ${style.courses_list_wrapper}`}
               >
                 {CONST.COURSES.map((course: any, index: number) => {
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
                     </div>
                   );
                 })}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

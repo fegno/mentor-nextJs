@@ -10,20 +10,30 @@ export const CONST = {
       link: "/",
     },
     {
-      title: "About Us",
-      link: "/about",
-    },
-    {
-      title: "Blog",
+      title: "Blogs",
       link: "/blog-and-views",
     },
-    {
-      title: "Contact",
-      link: "/contact",
-    },
+    // {
+    //   title: "Contact",
+    //   link: "/contact",
+    // },
     {
       title: "Privacy",
       link: "/privacy-policy",
+    },
+    {
+      title: "LOA and EOA",
+      link: "/loa-and-eoa",
+    },
+    {
+      title: "Grievance Redressal Cell - College",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSd4XIBIabEK4X3dUcj-E2nySTghOatHsf9JgK10jnHdGCRjFQ/viewform?usp=send_form",
+      redirect:true
+    },
+    {
+      title: "Grievance Redressal Cell - University",
+      link: "https://www.aicte-india.org/bureaus/grievance-redressal",
+      redirect:true
     },
   ],
   COURSES: [
