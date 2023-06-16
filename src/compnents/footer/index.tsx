@@ -11,15 +11,12 @@ import sm from "../../assets/sm.svg";
 import ApplyNow from "../apply-now";
 import apj from "../../assets/APJ_Abdul_Kalam_Technological_University_logo.png";
 import { http } from "../../axios/http";
+import facebook from "../../assets/facebook.svg";
+import linkedin from "../../assets/linkedin.svg";
+import instagram from "../../assets/instagram.svg";
+import reddit from "../../assets/reddit.svg";
 
 const Footer: React.FC = () => {
-  // const [data, setData]:any = useState([]);
-
-  // useEffect(()=>{
-  //  http.get('courses?populate=deep').then((res)=>{
-
-  //  })
-  // },[])
 
   const AWARDS = [
     { title: "All India Council for Technical Education", image: acte.src },

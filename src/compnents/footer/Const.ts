@@ -26,23 +26,19 @@ export const CONST = {
       link: "/loa-and-eoa",
     },
     {
-      title: "Grievance Redressal Cell - College",
+      title: "Mandatory Disclosure",
+      link: "/mandatory-disclosure",
+    },
+    {
+      title: "Grievance Redressal Cell",
       link: "https://docs.google.com/forms/d/e/1FAIpQLSd4XIBIabEK4X3dUcj-E2nySTghOatHsf9JgK10jnHdGCRjFQ/viewform?usp=send_form",
       redirect:true
     },
     {
-      title: "Grievance Redressal Cell - University",
+      title: "AICTE Grievance Redressal Cell",
       link: "https://www.aicte-india.org/bureaus/grievance-redressal",
       redirect:true
     },
-  ],
-  COURSES: [
-    { title: "B.Tech in CS", link: "/course-detail/6" },
-    { title: "B.Tech in AI and ML", link: "/course-detail/3" },
-    { title: "B.Tech in AI and DSc", link: "/course-detail/5" },
-    { title: "B.Tech in IOT", link: "/course-detail/8" },
-    { title: "B.Tech in CYBER SECURITY", link: "/course-detail/7" },
-    { title: "B.Tech in BLOCKCHAIN", link: "/course-detail/4" },
   ],
   SOCIAL_LINKS: [
     {

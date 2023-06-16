@@ -5,8 +5,13 @@
   border-radius: 8px;
   overflow: hidden;
   tr{
+    transition: all ease 0.5s;
     &:nth-child(even){
       background-color: #040409;
+    }
+    &:hover{
+      background-color: #0d0d22;
+      transition: all ease 0.5s;
     }
   }
   thead {
@@ -21,6 +26,11 @@
       #000000;
     th {
       padding: 30px 5px;
+    }
+    tr{
+      &:hover{
+        background-color: transparent;
+      }
     }
   }
   th,
