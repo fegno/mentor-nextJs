@@ -12,6 +12,10 @@ const MandatoryDisclosure: React.FC = () => {
       title: "COLLEGE LEVEL COMMITEE",
       file: "/pdf/disclosure/COLLEGE LEVEL COMMITEE.docx.pdf",
     },
+    {
+      title: "Mandatory-Disclosure-2023-2024",
+      file: "/pdf/disclosure/Mandatory-Disclosure-2023-2024 .docx.pdf",
+    },
   ];
 
   return (

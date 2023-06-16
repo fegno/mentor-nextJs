@@ -41,7 +41,7 @@ export const CONST = {
     },
     {
       title: "Governing board and advisory board",
-      link: "/governing-board",
+      link: "/governing-board-and-advisory-board",
     },
   ],
   SOCIAL_LINKS: [
