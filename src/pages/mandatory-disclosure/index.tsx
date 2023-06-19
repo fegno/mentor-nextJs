@@ -14,7 +14,7 @@ const MandatoryDisclosure: React.FC = () => {
     },
     {
       title: "Mandatory-Disclosure-2023-2024",
-      file: "/pdf/disclosure/Mandatory-Disclosure-2023-2024 .docx.pdf",
+      file: "/pdf/disclosure/Mandatory-Disclosure-2023-2024 .docx (2).pdf",
     },
   ];
 
