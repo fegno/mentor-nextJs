@@ -5,7 +5,9 @@ import Spinner from "../spinner";
 
 const HomepageOurVision: React.FC = () => {
   return (
-    <div className={`d-block card-glowing-blue rounded-20 animated-border-glow ${style.our_vision}`}>
+    <div
+      className={`d-block card-glowing-blue rounded-20 animated-border-glow ${style.our_vision}`}
+    >
       <div>
         <div className={style.header}>
           <div className={style.title}>
@@ -23,10 +25,11 @@ const HomepageOurVision: React.FC = () => {
         <div className="col-12">
           <p>
             MADEIT is committed to offer an integrated training on the eight
-            pillars of IR 4.0 to the people. Our unique position in the world of
-            higher education is based on strong values: inclusivity, open
+            pillars of IR 4.0 to the aspirants. Our unique position in the world
+            of higher education is based on strong values: inclusivity, open
             culture and always aiming at excellence. The ultimate goal is
-            sustainable professional integration into the labor market
+            sustainable professional integration career paths of today and
+            tomorrow.
           </p>
         </div>
       </div>

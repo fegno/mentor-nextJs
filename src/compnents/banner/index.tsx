@@ -79,7 +79,7 @@ const CAPTIONS = [
     highlight: "Curve",
     image:banner2,
     description:
-      "Our program empowers you with knowledge, skills and attitudes for tomorrow",
+      "Stay ahead of the curve with our tech education that prepares you for the ever-evolving industry landscape.Our program empowers you with knowledge, skills and attitudes for tomorrow",
   },
 ];
 const Slider2: React.FC<any> = ({ caption, id, description }: any) => {
