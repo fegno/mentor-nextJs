@@ -9,7 +9,7 @@ const HomepageOurVision: React.FC = () => {
       <div>
         <div className={style.header}>
           <div className={style.title}>
-            <Title align="left" title="Our Vision" />
+            <Title align="left" title="Our Mission" />
           </div>
           <div className={style.spinner_wrapper}>
             <Spinner />

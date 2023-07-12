@@ -70,7 +70,7 @@ const CAPTIONS = [
     highlight: "here!",
     image:bg_small,
     description:
-      "Experience the willingness of new changes in learning, something new to learn to be the movers and shakers for the making of an indefinite future.",
+      "Experience 21st century Learning, creating movers and shakers who create the world of tomorrow",
   },
 
   {
@@ -79,7 +79,7 @@ const CAPTIONS = [
     highlight: "Curve",
     image:banner2,
     description:
-      "Stay ahead of the curve with our tech education that prepares you for the ever-evolving industry landscape. Our program empowers you with the latest skills and knowledge to excel in tomorrow's job market.",
+      "Our program empowers you with knowledge, skills and attitudes for tomorrow",
   },
 ];
 const Slider2: React.FC<any> = ({ caption, id, description }: any) => {

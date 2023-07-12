@@ -62,7 +62,7 @@ const CourseDetailFeatures: React.FC<featuresProps> = ({ data }) => {
       },
     },
     {
-      title: "Job",
+      title: "Career",
       data: [
         {
           title: "Types of companies posting jobs in India",

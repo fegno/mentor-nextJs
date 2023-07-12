@@ -15,7 +15,7 @@ const AboutBanner: React.FC = () => {
               Entrepreneurship Innovation and Technology) is an engineering
               institution to educate and future-proof computer science graduates
               enabling them to encounter the next generation challenges, making
-              use of the opportunities being created by Industry 5.0.
+              use of the opportunities being created by Industry 4.0.
             </div>
           </div>
         </Container>

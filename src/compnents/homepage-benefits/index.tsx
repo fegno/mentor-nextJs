@@ -10,11 +10,11 @@ import mentor from "../../assets/benefits/mentor.png";
 
 const HomepageBenefits: React.FC = () => {
   const BENEFITS = [
-    { title: "Not Just a job : A Career", icon: career.src },
-    { title: "Capstone (project) - Based Pedagogy", icon: capstone.src },
-    { title: "Peer to peer learning", icon: peer.src },
+    { title: "Future Proofed Learning", icon: career.src },
+    { title: "Assured Careers – Not just jobs", icon: capstone.src },
+    { title: "21st Century skilling", icon: peer.src },
     { title: "Gamification", icon: game.src },
-    { title: "Chief technical officers as mentors", icon: mentor.src },
+    { title: "Professional Networking", icon: mentor.src },
   ];
 
   return (

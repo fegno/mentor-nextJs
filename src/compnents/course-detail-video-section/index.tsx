@@ -13,7 +13,7 @@ type courseVideoProps = {
 const CourseDetailVideoSection: React.FC<courseVideoProps> = ({ data }) => {
   return (
     <div className={style.course_detail_video}>
-      <div className={style.sub_title}>About the field</div>
+      {/* <div className={style.sub_title}>About the field</div> */}
       <div className={style.title}>
         <Title title={`What is ${data?.title}`} />
       </div>

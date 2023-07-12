@@ -34,19 +34,7 @@ const CourseDetail: React.FC = () => {
     }
   }, [id]);
 
-  const DETAILS = {
-    section1: {
-      title: "Machine Learning and AI",
-      description:
-        "Machine learning is a branch of AI that gives computer systems the ability to automatically learn and improve from experience, rather than being explicitly programmed. In machine learning, computers use massive sets of data and apply algorithms to train on and make predictions",
-      image: "",
-    },
-    video_section: {
-      title: "What is Machine Learning and AI?",
-      sub_title: "About the field",
-      video_url: "https://www.youtube.com/watch?v=9QErWiClGjM",
-    },
-  };
+
 
   return (
     <div className={style.course_detail}>
@@ -73,8 +61,8 @@ const CourseDetail: React.FC = () => {
           </section>
           <section>
             <ListExpand
-              jobs={data?.attributes?.jobs}
-              courses={data?.attributes?.courses}
+              jobs={data?.attributes?.courses}
+              courses={ data?.attributes?.jobs}
             />
           </section>
         </Container>
